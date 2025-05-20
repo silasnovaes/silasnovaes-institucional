@@ -8,22 +8,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Silas Novaes - Corretor de Planos de Saúde</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="operadoras.html">Operadoras</a></li>
-        <li><a href="formulario.html">Formulário</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="site-wrapper">
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo-link">
+          <img src="imagens/silasnovaes-logo1.png" alt="Logo Silas Novaes" class="logo">
+        </a>
+        <!-- Botão hamburguer -->
+<div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="trabalhe-comigo.html">Trabalhe comigo</a></li>
+            <li><a href="operadoras.html">Operadoras</a></li>
+            <li><a href="formulario.html">Formulário</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main>
+    <h1>Silas Novaes - Corretor de Planos de Saúde</h1>
     <section>
       <h2>Bem-vindo!</h2>
       <p>Sou Silas Novaes, corretor especializado em planos de saúde. Aqui você encontra informações claras, confiança e um atendimento personalizado para encontrar o melhor plano para você ou sua empresa.</p>
@@ -33,13 +45,23 @@
 
   <!-- FOOTER -->
   <footer>
+    <div class="container">
     <p>© 2025 Silas Novaes - Todos os direitos reservados.</p>
     <p>Contato: (00) 00000-0000 | contato@seusite.com</p>
     <p>Siga-me nas redes sociais:
       <a href="#">Instagram</a> |
       <a href="#">LinkedIn</a>
-    </p>
+    </p>  
+    </div>
   </footer>
+</div> <!-- Fim de .site-wrapper -->
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+</script>
+  </div> 
 </body>
 </html>

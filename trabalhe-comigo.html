@@ -8,21 +8,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-wrapper">
   <header>
-    <h1>Silas Novaes - Corretor de Planos de Saúde</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="planos.html">Planos</a></li>
-        <li><a href="operadoras.html">Operadoras</a></li>
-        <li><a href="formulario.html">Cotação</a></li>
-        <li><a href="trabalhe.html">Trabalhe Comigo</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="imagens/silasnovaes-logo1.png" alt="Logo Silas Novaes" class="logo">
+      </a>
+      <!-- Botão hamburguer -->
+<div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="trabalhe-comigo.html">Trabalhe comigo</a></li>
+          <li><a href="operadoras.html">Operadoras</a></li>
+          <li><a href="formulario.html">Formulário</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
+  <h1>Silas Novaes - Corretor de Planos de Saúde</h1>
     <h2>Trabalhe Comigo</h2>
     <p>Quer fazer parte da equipe de vendas de planos de saúde e crescer junto comigo? Preencha o formulário abaixo com seus dados e experiência. Entrarei em contato em breve!</p>
     <form action="#" method="POST">
@@ -45,13 +56,24 @@
     </form>
   </main>
   <footer>
+    <div class="container">
     <p>© 2025 Silas Novaes - Todos os direitos reservados.</p>
     <p>Contato: (00) 00000-0000 | contato@seusite.com</p>
     <p>Siga-me nas redes sociais:
       <a href="#">Instagram</a> |
       <a href="#">LinkedIn</a>
-    </p>
+    </p>  
+    </div>
   </footer>
+</div> <!-- Fim de .site-wrapper -->
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+</script> 
+  </div>
 </body>
 </html>
 

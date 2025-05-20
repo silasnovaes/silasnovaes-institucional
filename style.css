@@ -1,101 +1,175 @@
 /* Reset básico para tirar margens e paddings padrões */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garantir que a página use 100% da altura da janela */
+html, body {
+  height: 100%;
+}
+
+/* Wrapper da página para empurrar o footer para o final */
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fonte base e cor de fundo geral */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container padrão para centralizar conteúdo */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004488;
+  color: white;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* Container do cabeçalho */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+/* Navegação padrão */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #0066cc;
+}
+
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1; /* ocupa espaço entre header e footer */
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main section {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+main h2 {
+  margin-bottom: 15px;
+}
+
+main a {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #004488;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+main a:hover {
+  background-color: #0066cc;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  width: 100%;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade: até 768px */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  /* Fonte base e cor de fundo geral */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  /* Container para espaçamento interno */
-  main, header, footer {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  /* Cabeçalho (Header) */
-  header {
-    background-color: #004488;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
+
   nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  nav a:hover {
-    background-color: #0066cc;
-  }
-  
-  /* Conteúdo principal */
-  main section {
-    margin-top: 30px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
-  }
-  
-  main h2 {
-    margin-bottom: 15px;
-  }
-  
-  main a {
-    display: inline-block;
-    margin-top: 15px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
     background-color: #004488;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  main a:hover {
-    background-color: #0066cc;
-  }
-  
-  /* Rodapé (Footer) */
-  footer {
-    margin-top: 40px;
-    background-color: #222;
-    color: #eee;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
+    margin-top: 10px;
   }
-  
-  footer a {
-    color: #ddd;
-    text-decoration: none;
+
+  nav ul.active {
+    display: flex;
   }
-  
-  footer a:hover {
-    text-decoration: underline;
+
+  .menu-toggle {
+    display: flex;
   }
-  
+
+  .logo {
+    width: 120px;
+  }
+}
