@@ -21,24 +21,49 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #fefcea;
+  color: #002043;
 }
 
 /* Container padrão para centralizar conteúdo */
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
+}
+
+.faixa-topo {
+  width: 100%;
+  background-color: #002043; /* azul escuro */
+  color: #fefcea;
+  padding: 15px 0; /* altura aumentada */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faixa-topo .container {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.faixa-topo a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.faixa-topo a:hover {
+  color: #89b0d3;
+  text-decoration: none;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #004488;
-  color: white;
-  padding: 30px 0;
+  background-color: #fefcea;
+  color: #002043;
+  padding: 50px 0; /* Aumentado para deixar mais agradável */
   width: 100%;
 }
+
 
 /* Container do cabeçalho */
 .header-container {
@@ -63,7 +88,7 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: #002043;
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 4px;
@@ -71,7 +96,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #0066cc;
+  background-color: #89b0d3;
 }
 
 /* Botão hamburguer (mobile) */
@@ -93,7 +118,7 @@ nav a:hover {
 main {
   flex: 1; /* ocupa espaço entre header e footer */
   padding: 20px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
