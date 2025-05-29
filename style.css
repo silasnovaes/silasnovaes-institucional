@@ -59,7 +59,7 @@ body {
 /* Cabeçalho */
 header {
   background-color: #fefcea;
-  color: #002043;
+  color: #527dac;
   padding: 50px 0; /* Aumentado para deixar mais agradável */
   width: 100%;
 }
@@ -109,7 +109,7 @@ nav a:hover {
 .menu-toggle span {
   height: 3px;
   width: 25px;
-  background: white;
+  background: #002043;
   margin: 4px 0;
   transition: 0.3s;
 }
@@ -149,6 +149,49 @@ main a:hover {
   background-color: #0066cc;
 }
 
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.banner-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* leve escurecimento do fundo para destacar o texto */
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.banner-texto h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.banner-texto h2 {
+  text-align: left;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .banner-texto h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
 /* Rodapé */
 footer {
   background-color: #222;
@@ -172,9 +215,20 @@ footer a:hover {
 /* Responsividade: até 768px */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-between; /* Mantém logo à esquerda e hambúrguer à direita */
     align-items: center;
+    padding: 0 15px;
+    width: 100%; /* Garante que o container ocupe toda a largura */
+  }
+
+  .logo-link {
+    margin-right: auto; /* Empurra tudo à direita (hambúrguer) para o máximo possível */
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: auto; /* Garante que fique colado à direita */
   }
 
   nav ul {
@@ -183,14 +237,15 @@ footer a:hover {
     width: 100%;
     background-color: #004488;
     text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    margin: 0;
   }
 
   nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
     display: flex;
   }
 

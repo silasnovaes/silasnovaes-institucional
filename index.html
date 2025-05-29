@@ -17,7 +17,7 @@
     <header>
       <div class="container header-container">
         <a href="index.html" class="logo-link">
-          <img src="imagens/silasnovaes-logo2.webp" alt="Logo Silas Novaes" class="logo">
+          <img src="imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes" class="logo">
         </a>
         <!-- Botão hamburguer -->
 <div class="menu-toggle" onclick="toggleMenu()">
@@ -37,6 +37,25 @@
         </nav>
       </div>
     </header>
+
+    <section class="banner">
+      <div class="banner-wrapper">
+        <picture>
+          <!-- Imagem para mobile (até 768px) -->
+          <source 
+            srcset="imagens/banner-mobile.webp" 
+            media="(max-width: 768px)"
+          >
+          <!-- Imagem padrão (desktop) -->
+          <img 
+            src="imagens/plano-de-saude-mais-barato-banner-desktop.webp" 
+            alt="Plano de Saúde Familiar"
+          >
+        </picture>
+      </div>
+    </section>
+    
+    
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main>
@@ -64,7 +83,9 @@
 <script>
   function toggleMenu() {
     const menu = document.getElementById("menu");
+    const toggle = document.querySelector(".menu-toggle");
     menu.classList.toggle("active");
+    toggle.classList.toggle("active");
   }
 </script>
   </div> 
