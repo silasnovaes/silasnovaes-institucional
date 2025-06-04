@@ -3,64 +3,897 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entre em contato com Silas Novaes para dúvidas, cotações e mais informações sobre planos de saúde. Atendimento humanizado e transparente.">
-  <title>Contato</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- Meta tags otimizadas para SEO -->
+  <meta name="description" content="Entre em contato com Silas Novaes, corretor especialista em planos de saúde. Atendimento via WhatsApp, telefone, e-mail ou formulário. Atendemos todo o Brasil." />
+  <meta name="keywords" content="contato Silas Novaes, telefone Silas Novaes, whatsapp planos de saúde, email corretor saúde, falar com corretor, cotação planos de saúde contato" />
+  <meta name="author" content="Silas Novaes" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.silasnovaes.com.br/contato.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.silasnovaes.com.br/contato.html" />
+  <meta property="og:title" content="Contato | Fale com Silas Novaes - Corretor de Planos de Saúde" />
+  <meta property="og:description" content="Precisa de ajuda com seu plano de saúde? Entre em contato com Silas Novaes pelos nossos canais de atendimento ou preencha o formulário." />
+  <meta property="og:image" content="https://www.silasnovaes.com.br/imagens/og-image-contato-v2.webp" /> <!-- Sugestão: og-image-contato-v2.webp (1200x630px) -->
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.silasnovaes.com.br/contato.html" />
+  <meta property="twitter:title" content="Contato | Fale com Silas Novaes - Corretor de Planos de Saúde" />
+  <meta property="twitter:description" content="Precisa de ajuda com seu plano de saúde? Entre em contato com Silas Novaes pelos nossos canais de atendimento ou preencha o formulário." />
+  <meta property="twitter:image" content="https://www.silasnovaes.com.br/imagens/og-image-contato-v2.webp" /> <!-- Sugestão: og-image-contato-v2.webp (1200x630px) -->
+  
+  <!-- Favicon -->
+  <link rel="icon" href="imagens/favicon.ico" />
+  <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
+  
+  <title>Contato | Silas Novaes - Corretor de Planos de Saúde</title>
+  
+  <!-- Preload de fontes e recursos críticos -->
+  <link rel="preload" href="style.css" as="style" />
+  <!-- <link rel="preload" href="paginas-especificas.css" as="style" /> --> <!-- CSS externo removido temporariamente -->
+  <link rel="preload" href="imagens/silasnovaes-logo-azul.webp" as="image" />
+  <link rel="preload" href="imagens/contato-hero-bg.webp" as="image"> <!-- Nova imagem de fundo -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="paginas-especificas.css" /> --> <!-- CSS externo removido temporariamente -->
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Schema.org / JSON-LD (Mantido) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contato - Silas Novaes, Corretor de Planos de Saúde",
+      "description": "Entre em contato com Silas Novaes para obter consultoria especializada em planos de saúde. Atendimento disponível via WhatsApp, telefone, e-mail e formulário online.",
+      "url": "https://www.silasnovaes.com.br/contato.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Silas Novaes",
+        "jobTitle": "Corretor de Planos de Saúde",
+        "telephone": "+5583991092624",
+        "email": "contato@silasnovaes.com.br",
+        "url": "https://www.silasnovaes.com.br",
+        "sameAs": [
+          "https://wa.me/5583991092624",
+          "https://www.facebook.com/silasnovaesplanos",
+          "https://www.instagram.com/silasnovaes",
+          "https://www.linkedin.com/in/silasnovaes"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR",
+            "description": "Atendimento remoto em todo o Brasil"
+        }
+      }
+    }
+  </script>
+  
+  <!-- Novos Estilos Específicos para Contato V2 -->
+  <style>
+    /* Estilos específicos para a nova página de Contato (v2) */
+    .pagina-contato-v2 .hero-contato-v2 {
+      background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('imagens/contato-hero-bg.webp') no-repeat center center;
+      background-size: cover;
+      color: var(--cor-terciaria);
+      padding: var(--espacamento-extra) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* .pagina-contato-v2 .hero-contato-v2::before rule removed */
+    .pagina-contato-v2 .hero-contato-v2 .container {
+        position: relative;
+        z-index: 2;
+    }
+    .pagina-contato-v2 .hero-contato-v2 h1 {
+        font-size: 3rem;
+        margin-bottom: var(--espacamento-pequeno);
+        font-weight: 700;
+    }
+    .pagina-contato-v2 .hero-contato-v2 .subtitulo {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Removed grid styles from wrapper, applied to container below */
+    .pagina-contato-v2 .contato-wrapper {
+        padding: var(--espacamento-extra) 0;
+        background-color: var(--cor-fundo-claro);
+    }
+
+    .pagina-contato-v2 .contato-wrapper .container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; /* Coluna esquerda menor, direita maior */
+        gap: var(--espacamento-extra);
+        align-items: start;
+        /* max-width and margin: auto are likely inherited from the global .container style */
+    }
+
+    .pagina-contato-v2 .info-contato {
+        background-color: var(--cor-terciaria);
+        padding: var(--espacamento-grande);
+        border-radius: var(--borda-radius);
+        box-shadow: var(--sombra-media);
+        /* position: sticky; removed to fix scrolling issue */
+        /* top: 120px; removed */
+    }
+    .pagina-contato-v2 .info-contato h2 {
+        color: var(--cor-primaria);
+        margin-bottom: var(--espacamento-grande);
+        font-size: 1.8rem;
+        border-bottom: 2px solid var(--cor-secundaria);
+        padding-bottom: var(--espacamento-pequeno);
+    }
+    .pagina-contato-v2 .info-item {
+        display: flex;
+        align-items: center;
+        gap: var(--espacamento-medio);
+        margin-bottom: var(--espacamento-grande);
+        color: var(--cor-texto);
+    }
+    .pagina-contato-v2 .info-icon {
+        font-size: 1.5rem;
+        color: var(--cor-primaria);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: rgba(137, 176, 211, 0.1);
+        border-radius: 50%;
+    }
+    .pagina-contato-v2 .info-text span {
+        display: block;
+        font-weight: 600;
+        color: var(--cor-primaria);
+        margin-bottom: 0.2rem;
+    }
+    .pagina-contato-v2 .info-text a {
+        color: var(--cor-texto);
+        text-decoration: none;
+        transition: var(--transicao-rapida);
+    }
+    .pagina-contato-v2 .info-text a:hover {
+        color: var(--cor-secundaria);
+    }
+    .pagina-contato-v2 .info-social {
+        margin-top: var(--espacamento-grande);
+        padding-top: var(--espacamento-grande);
+        border-top: 1px solid var(--cor-borda);
+        text-align: center;
+    }
+    .pagina-contato-v2 .info-social h3 {
+        color: var(--cor-primaria);
+        margin-bottom: var(--espacamento-medio);
+        font-size: 1.2rem;
+    }
+    .pagina-contato-v2 .info-social-icons a {
+        font-size: 1.5rem;
+        color: var(--cor-primaria);
+        margin: 0 var(--espacamento-pequeno);
+        transition: var(--transicao-rapida);
+    }
+    .pagina-contato-v2 .info-social-icons a:hover {
+        color: var(--cor-secundaria);
+    }
+
+    .pagina-contato-v2 .formulario-contato-v2 {
+        background-color: var(--cor-terciaria);
+        padding: var(--espacamento-grande);
+        border-radius: var(--borda-radius);
+        box-shadow: var(--sombra-media);
+    }
+    .pagina-contato-v2 .formulario-contato-v2 h2 {
+        color: var(--cor-primaria);
+        margin-bottom: var(--espacamento-grande);
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    /* Estilos do formulário (reutilizados e adaptados) */
+    .pagina-contato-v2 .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--espacamento-grande);
+      margin-bottom: var(--espacamento-grande);
+    }
+    .pagina-contato-v2 .form-group {
+      flex: 1;
+      min-width: calc(50% - var(--espacamento-grande) / 2);
+      display: flex;
+      flex-direction: column;
+    }
+    .pagina-contato-v2 .form-group.full-width {
+        flex-basis: 100%;
+        min-width: 100%;
+    }
+    .pagina-contato-v2 .form-label {
+      display: block;
+      margin-bottom: var(--espacamento-pequeno);
+      font-weight: 600;
+      color: var(--cor-primaria);
+    }
+    .pagina-contato-v2 .form-label .optional {
+        font-weight: 400;
+        font-size: 0.9em;
+        color: #6c757d;
+    }
+    .pagina-contato-v2 .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--cor-texto);
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--borda-radius);
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .pagina-contato-v2 .form-control:focus {
+      border-color: var(--cor-secundaria);
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5);
+    }
+    .pagina-contato-v2 textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+    }
+    .pagina-contato-v2 .form-check-group {
+        margin-top: var(--espacamento-medio);
+    }
+    .pagina-contato-v2 .form-check {
+      display: flex;
+      align-items: center;
+      gap: var(--espacamento-pequeno);
+    }
+    .pagina-contato-v2 .form-check-input {
+      width: 1.1em;
+      height: 1.1em;
+      margin-top: 0.1em;
+      cursor: pointer;
+    }
+    .pagina-contato-v2 .form-check-label {
+      font-weight: 400;
+      color: var(--cor-texto);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .pagina-contato-v2 .form-check-label a {
+        color: var(--cor-primaria);
+        text-decoration: underline;
+    }
+    .pagina-contato-v2 .form-check-label a:hover {
+        color: var(--cor-secundaria);
+    }
+    .pagina-contato-v2 .form-error {
+      color: var(--cor-erro);
+      font-size: 0.875em;
+      margin-top: var(--espacamento-pequeno);
+      display: none;
+    }
+    .pagina-contato-v2 .form-control.is-invalid {
+        border-color: var(--cor-erro);
+    }
+    .pagina-contato-v2 .form-control.is-invalid:focus {
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+    .pagina-contato-v2 .form-control.is-invalid + .form-error,
+    .pagina-contato-v2 .form-check-input.is-invalid ~ .form-error {
+        display: block;
+    }
+    .pagina-contato-v2 .form-submit {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cor-terciaria);
+      background-color: var(--cor-primaria);
+      border: none;
+      border-radius: var(--borda-radius);
+      cursor: pointer;
+      transition: var(--transicao-rapida);
+      text-align: center;
+      margin-top: var(--espacamento-grande);
+    }
+    .pagina-contato-v2 .form-submit:hover,
+    .pagina-contato-v2 .form-submit:focus {
+      background-color: #003366;
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-media);
+    }
+    .pagina-contato-v2 .form-submit i {
+        margin-right: var(--espacamento-pequeno);
+    }
+    .pagina-contato-v2 .form-message {
+      margin-top: var(--espacamento-grande);
+      padding: var(--espacamento-medio);
+      border-radius: var(--borda-radius);
+      text-align: center;
+      display: none;
+    }
+    .pagina-contato-v2 .form-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      display: block;
+    }
+    .pagina-contato-v2 .form-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      display: block;
+    }
+
+    .pagina-contato-v2 .mapa-section {
+        padding: var(--espacamento-extra) 0;
+        background-color: var(--cor-fundo-medio);
+    }
+    .pagina-contato-v2 .mapa-section h2 {
+        text-align: center;
+        color: var(--cor-primaria);
+        margin-bottom: var(--espacamento-grande);
+    }
+    .pagina-contato-v2 .mapa-container {
+        position: relative;
+        padding-bottom: 50%; /* Proporção do mapa */
+        height: 0;
+        overflow: hidden;
+        border-radius: var(--borda-radius);
+        box-shadow: var(--sombra-media);
+    }
+    .pagina-contato-v2 .mapa-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .pagina-contato-v2 .mapa-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #e9ecef;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #6c757d;
+        border-radius: var(--borda-radius);
+    }
+    .pagina-contato-v2 .mapa-placeholder i {
+        font-size: 3rem;
+        margin-bottom: var(--espacamento-medio);
+    }
+
+    .pagina-contato-v2 .faq-contato-section {
+        background-color: var(--cor-terciaria);
+        padding: var(--espacamento-extra) 0;
+    }
+    .pagina-contato-v2 .faq-contato-section h2 {
+        text-align: center;
+        color: var(--cor-primaria);
+        margin-bottom: var(--espacamento-grande);
+    }
+    /* Estilos FAQ reutilizados de style.css ou adaptados se necessário */
+    .pagina-contato-v2 .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .pagina-contato-v2 .faq-item {
+      background-color: #fff;
+      margin-bottom: var(--espacamento-pequeno);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--borda-radius);
+      overflow: hidden;
+    }
+    .pagina-contato-v2 .faq-question {
+      background-color: transparent;
+      border: none;
+      padding: var(--espacamento-medio);
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cor-primaria);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+    .pagina-contato-v2 .faq-question:hover {
+        background-color: var(--cor-fundo-medio);
+    }
+    .pagina-contato-v2 .faq-icon {
+      transition: transform 0.3s ease;
+      font-size: 0.9rem;
+    }
+    .pagina-contato-v2 .faq-question[aria-expanded="true"] .faq-icon {
+      transform: rotate(180deg);
+    }
+    .pagina-contato-v2 .faq-answer {
+      /* padding: 0 var(--espacamento-medio) var(--espacamento-medio) var(--espacamento-medio); */ /* Original padding */
+      display: none; /* Hide by default */
+      padding: var(--espacamento-medio); /* Adjust padding for when visible */
+      padding-top: 0; /* Remove top padding as border-top provides separation */
+      color: var(--cor-texto);
+      line-height: 1.6;
+      border-top: 1px solid var(--cor-borda);
+      background-color: #fff;
+    }
+    .pagina-contato-v2 .faq-answer.faq-answer-visible {
+        display: block; /* Show when class is added */
+    }
+
+    /* Responsividade */
+    @media (max-width: 992px) {
+        .pagina-contato-v2 .contato-wrapper {
+            grid-template-columns: 1fr;
+        }
+        .pagina-contato-v2 .info-contato {
+            position: static; /* Remove sticky no mobile */
+            margin-bottom: var(--espacamento-grande);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .pagina-contato-v2 .hero-contato-v2 h1 {
+            font-size: 2.5rem;
+        }
+        .pagina-contato-v2 .hero-contato-v2 .subtitulo {
+            font-size: 1.1rem;
+        }
+        .pagina-contato-v2 .contato-wrapper,
+        .pagina-contato-v2 .mapa-section,
+        .pagina-contato-v2 .faq-contato-section {
+            padding: var(--espacamento-grande) 0;
+        }
+        .pagina-contato-v2 .info-contato,
+        .pagina-contato-v2 .formulario-contato-v2 {
+            padding: var(--espacamento-medio);
+        }
+        .pagina-contato-v2 .info-contato h2,
+        .pagina-contato-v2 .formulario-contato-v2 h2 {
+            font-size: 1.6rem;
+        }
+        .pagina-contato-v2 .form-row {
+            gap: var(--espacamento-medio);
+            margin-bottom: var(--espacamento-medio);
+        }
+        .pagina-contato-v2 .form-group {
+            min-width: 100%; /* Campos ocupam largura total */
+        }
+    }
+
+  </style>
+
 </head>
-<body>
+
+<body class="pagina-contato-v2"> <!-- Nova classe para evitar conflitos -->
+  <!-- Link de acessibilidade -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Faixa topo (Mantida) -->
   <div class="faixa-topo">
     <div class="container">
-      Contrate o seu plano de saúde <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">clicando aqui</a>
-    </div>
-  </div>  
-  <div class="site-wrapper">
-    <header>
-      <div class="container header-container">
-        <a href="index.html" class="logo-link">
-          <img src="imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes" class="logo">
+      <div class="contato-rapido">
+        <b>Contrate o seu plano de saúde</b> 
+        <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> (83) 99109-2624
         </a>
-        <!-- Botão hamburguer -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-        <nav>
-          <ul id="menu">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="sobre.html">SOBRE</a></li>
-            <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
-            <li><a href="operadoras.html">OPERADORAS</a></li>
-            <li><a href="formulario.html">FORMULÁRIO</a></li>
-            <li><a href="contato.html">CONTATOS</a></li>
-          </ul>
-        </nav>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-wrapper">
+    <!-- Header (Mantido) -->
+    <header class="bloco" id="topo">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo-link" aria-label="Silas Novaes - Página Inicial">
+            <img src="imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="logo" width="180" height="50" />
+          </a>
+          <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav aria-label="Menu principal">
+            <ul id="menu">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="sobre.html">SOBRE</a></li>
+              <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
+              <li><a href="operadoras.html">OPERADORAS</a></li>
+              <li><a href="formulario.html">FORMULÁRIO</a></li>
+              <li><a href="contato.html" class="active">CONTATOS</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
-  <main>
-    <h2>Fale Comigo</h2>
-    <p>Silas Novaes</p>
-    <p>E-mail: <a href="mailto:seuemail@email.com">seuemail@email.com</a></p>
-    <p>Telefone: (99) 99999-9999</p>
-  </main>
-  <footer>
-    <div class="container">
-    <p>© 2025 Silas Novaes - Todos os direitos reservados.</p>
-    <p>Contato: (00) 00000-0000 | contato@seusite.com</p>
-    <p>Siga-me nas redes sociais:
-      <a href="#">Instagram</a> |
-      <a href="#">LinkedIn</a>
-    </p>  
-    </div>
-  </footer>
-</div> <!-- Fim de .site-wrapper -->
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("active");
-  }
-</script>
-  </div>
+    <!-- Conteúdo principal -->
+    <main id="conteudo-principal" role="main">
+      <!-- Nova Seção Hero -->
+      <section class="hero-contato-v2" aria-labelledby="contato-titulo-v2">
+        <div class="container">
+          <h1 id="contato-titulo-v2">Vamos Conversar?</h1>
+          <p class="subtitulo">Estou pronto para ajudar você a encontrar a melhor solução em planos de saúde. Entre em contato ou envie sua mensagem!</p>
+        </div>
+      </section>
+
+      <!-- Wrapper para Informações e Formulário -->
+      <section class="bloco contato-wrapper" aria-label="Informações e Formulário de Contato">
+        <div class="container">
+          <!-- Coluna de Informações -->
+          <aside class="info-contato">
+            <h2>Informações de Contato</h2>
+            
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-text">
+                <span>Telefone</span>
+                <a href="tel:+5583991092624">(83) 99109-2624</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="info-text">
+                <span>WhatsApp</span>
+                <a href="https://wa.me/5583991092624?text=Ol%C3%A1%2C+Silas!+Gostaria+de+informa%C3%A7%C3%B5es+sobre+planos+de+sa%C3%BAde." target="_blank" rel="noopener noreferrer">(83) 99109-2624</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="far fa-envelope"></i></div>
+              <div class="info-text">
+                <span>E-mail</span>
+                <a href="mailto:contato@silasnovaes.com.br?subject=Contato%20pelo%20Site%20-%20Planos%20de%20Sa%C3%BAde">contato@silasnovaes.com.br</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="far fa-clock"></i></div>
+              <div class="info-text">
+                <span>Horário de Atendimento</span>
+                Segunda a Sexta: 8h às 18h
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-text">
+                <span>Atendimento</span>
+                Remoto para todo o Brasil
+              </div>
+            </div>
+
+            <div class="info-social">
+              <h3>Siga-me nas Redes</h3>
+              <div class="info-social-icons">
+                <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Coluna do Formulário -->
+          <div class="formulario-contato-v2">
+            <h2>Envie sua Mensagem</h2>
+            <form id="contato-form-v2" action="#" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome-contato-v2" class="form-label">Nome Completo:*</label>
+                  <input type="text" id="nome-contato-v2" name="nome_contato" class="form-control" placeholder="Digite seu nome completo" required aria-required="true">
+                  <div class="form-error" id="nome-contato-v2-error">Informe seu nome completo.</div>
+                </div>
+                <div class="form-group">
+                  <label for="email-contato-v2" class="form-label">E-mail:*</label>
+                  <input type="email" id="email-contato-v2" name="email_contato" class="form-control" placeholder="seu.email@exemplo.com" required aria-required="true">
+                  <div class="form-error" id="email-contato-v2-error">Informe um e-mail válido.</div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="telefone-contato-v2" class="form-label">Telefone/WhatsApp:*</label>
+                  <input type="tel" id="telefone-contato-v2" name="telefone_contato" class="form-control" placeholder="(XX) 9XXXX-XXXX" required aria-required="true">
+                  <div class="form-error" id="telefone-contato-v2-error">Informe um telefone válido.</div>
+                </div>
+                <div class="form-group">
+                  <label for="assunto-contato-v2" class="form-label">Assunto:*</label>
+                  <input type="text" id="assunto-contato-v2" name="assunto_contato" class="form-control" placeholder="Ex: Cotação Plano Individual" required aria-required="true">
+                  <div class="form-error" id="assunto-contato-v2-error">Informe o assunto.</div>
+                </div>
+              </div>
+              <div class="form-group full-width">
+                <label for="mensagem-contato-v2" class="form-label">Sua Mensagem:*</label>
+                <textarea id="mensagem-contato-v2" name="mensagem_contato" class="form-control" rows="6" placeholder="Descreva sua necessidade ou dúvida aqui..." required aria-required="true"></textarea>
+                <div class="form-error" id="mensagem-contato-v2-error">Digite sua mensagem.</div>
+              </div>
+              
+              <div class="form-check-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consentimento-contato-v2" name="consentimento_contato" value="sim" required aria-required="true">
+                    <label class="form-check-label" for="consentimento-contato-v2">
+                      Li e concordo com a <a href="#" target="_blank">Política de Privacidade</a>.*
+                    </label>
+                     <div class="form-error" id="consentimento-contato-v2-error">Você precisa concordar para continuar.</div>
+                  </div>
+              </div>
+              
+              <button type="submit" class="form-submit" id="submit-contato-button-v2">
+                <i class="fas fa-paper-plane"></i> Enviar Mensagem Agora
+              </button>
+              
+              <div class="form-message" id="form-contato-status-message-v2"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Mapa -->
+      <section class="bloco mapa-section" aria-labelledby="mapa-titulo">
+        <div class="container">
+          <h2 id="mapa-titulo">Atendimento em Todo o Brasil</h2>
+          <div class="mapa-container">
+            <!-- Substituir pelo iframe do Google Maps quando disponível -->
+            <div class="mapa-placeholder" aria-label="Mapa indicando atendimento em todo o Brasil">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Mapa interativo em breve</span>
+                <!-- <iframe 
+                    src="URL_DO_SEU_MAPA_AQUI" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção FAQ (Mantida e Estilizada) -->
+      <section class="bloco faq-contato-section" aria-labelledby="faq-titulo-v2">
+        <div class="container">
+          <h2 id="faq-titulo-v2">Perguntas Frequentes</h2>
+          <div class="faq-container">
+            <!-- Item FAQ 1 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1-v2">
+                Como funciona a consultoria para escolher o plano?
+                <i class="fas fa-chevron-down faq-icon"></i>
+              </button>
+              <div id="faq-answer-1-v2" class="faq-answer" hidden>
+                <p>Minha consultoria é personalizada. Primeiro, entendo suas necessidades (cobertura, rede, orçamento). Depois, apresento as melhores opções das operadoras parceiras, explico os detalhes e auxilio na contratação, sem custo adicional para você.</p>
+              </div>
+            </div>
+            <!-- Item FAQ 2 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2-v2">
+                Quais documentos são necessários para contratar um plano?
+                <i class="fas fa-chevron-down faq-icon"></i>
+              </button>
+              <div id="faq-answer-2-v2" class="faq-answer" hidden>
+                <p>Geralmente, são necessários documentos de identificação (RG, CPF), comprovante de residência e, para planos empresariais, documentos da empresa (CNPJ, contrato social). Para planos por adesão, pode ser exigido comprovante de vínculo com a entidade de classe.</p>
+              </div>
+            </div>
+            <!-- Item FAQ 3 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3-v2">
+                Qual o prazo para análise e implantação do plano?
+                <i class="fas fa-chevron-down faq-icon"></i>
+              </button>
+              <div id="faq-answer-3-v2" class="faq-answer" hidden>
+                <p>O prazo varia conforme a operadora e o tipo de plano (individual, familiar, empresarial, adesão). Após o envio da proposta e documentação, a análise costuma levar alguns dias úteis. Acompanho todo o processo para agilizar ao máximo.</p>
+              </div>
+            </div>
+             <!-- Item FAQ 4 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4-v2">
+                Posso incluir dependentes no meu plano?
+                <i class="fas fa-chevron-down faq-icon"></i>
+              </button>
+              <div id="faq-answer-4-v2" class="faq-answer" hidden>
+                <p>Sim, a maioria dos planos permite a inclusão de dependentes diretos (cônjuge, filhos). As regras específicas sobre quem pode ser incluído e os custos adicionais variam entre as operadoras e os tipos de contrato. Analisaremos juntos a melhor opção para sua família.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer (Mantido) -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-column">
+            <img src="imagens/silasnovaes-logo-branca.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="footer-logo" width="180" height="50" loading="lazy" />
+            <p class="footer-about">Silas Novaes, corretor especialista em planos de saúde, oferecendo consultoria personalizada e as melhores opções do mercado para você, sua família ou sua empresa.</p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Navegação</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="trabalhe-comigo.html">Trabalhe Comigo</a></li>
+              <li><a href="operadoras.html">Operadoras</a></li>
+              <li><a href="formulario.html">Formulário</a></li>
+              <li><a href="contato.html">Contatos</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Contato</h3>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+              <span>Atendimento em todo o Brasil</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fab fa-whatsapp footer-contact-icon"></i>
+              <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" style="color: var(--cor-texto-claro);">+55 (83) 99109-2624</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="far fa-envelope footer-contact-icon"></i>
+              <a href="mailto:contato@silasnovaes.com.br" style="color: var(--cor-texto-claro);">contato@silasnovaes.com.br</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; <span id="current-year"></span> Silas Novaes - Corretor de Planos de Saúde. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+  </div> <!-- Fim .site-wrapper -->
+
+  <!-- Scripts -->
+  <script>
+    // Script para menu hamburguer (Mantido)
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      const toggle = document.querySelector(".menu-toggle");
+      menu.classList.toggle("active");
+      toggle.classList.toggle("active");
+      const isExpanded = menu.classList.contains("active");
+      toggle.setAttribute("aria-expanded", isExpanded);
+    }
+
+    // Script para header sticky (Mantido)
+    window.addEventListener("scroll", function() {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    // Script para ano atual no footer (Mantido)
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // Script para FAQ Accordion (Adaptado para v2)
+    const faqQuestions = document.querySelectorAll('.pagina-contato-v2 .faq-question');
+    faqQuestions.forEach(button => {
+      button.addEventListener('click', () => {
+        const answerId = button.getAttribute('aria-controls');
+        const answer = document.getElementById(answerId);
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        button.setAttribute('aria-expanded', !isExpanded);
+        answer.classList.toggle("faq-answer-visible", !isExpanded); // Correção: Alterna a classe CSS
+      });
+    });
+
+    // Script para Validação e Envio do Formulário de Contato (Adaptado para v2)
+    const form = document.getElementById('contato-form-v2');
+    const statusMessage = document.getElementById('form-contato-status-message-v2');
+    const submitButton = document.getElementById('submit-contato-button-v2');
+
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão
+        let isValid = true;
+
+        // Limpa erros anteriores
+        form.querySelectorAll('.form-control, .form-check-input').forEach(input => {
+          input.classList.remove('is-invalid');
+        });
+        form.querySelectorAll('.form-error').forEach(error => {
+          error.style.display = 'none';
+        });
+        statusMessage.style.display = 'none';
+        statusMessage.className = 'form-message'; // Reseta classes de status
+
+        // Validação simples (pode ser aprimorada)
+        const requiredFields = form.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+          let fieldError = null;
+          if (field.type === 'checkbox') {
+            if (!field.checked) {
+              isValid = false;
+              field.classList.add('is-invalid');
+              fieldError = document.getElementById(field.id + '-error');
+            }
+          } else {
+            if (field.value.trim() === '') {
+              isValid = false;
+              field.classList.add('is-invalid');
+              fieldError = document.getElementById(field.id + '-error');
+            } else if (field.type === 'email') {
+              // Validação básica de email
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailPattern.test(field.value.trim())) {
+                isValid = false;
+                field.classList.add('is-invalid');
+                fieldError = document.getElementById(field.id + '-error');
+                if (fieldError) fieldError.textContent = 'Informe um e-mail válido.';
+              }
+            } else if (field.type === 'tel') {
+               // Validação básica de telefone (ex: min 10 dígitos)
+               const phonePattern = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+               if (!phonePattern.test(field.value.replace(/\D/g,''))) { // Remove não dígitos antes de testar
+                 isValid = false;
+                 field.classList.add('is-invalid');
+                 fieldError = document.getElementById(field.id + '-error');
+                 if (fieldError) fieldError.textContent = 'Informe um telefone válido (ex: (XX) 9XXXX-XXXX).';
+               }
+            }
+          }
+          if (fieldError && !isValid) {
+            fieldError.style.display = 'block';
+          }
+        });
+
+        if (isValid) {
+          // Simula envio (substituir por AJAX real se necessário)
+          submitButton.disabled = true;
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+          
+          setTimeout(() => {
+            statusMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+            statusMessage.classList.add('success');
+            statusMessage.style.display = 'block';
+            form.reset(); // Limpa o formulário
+            submitButton.disabled = false;
+            submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem Agora';
+          }, 1500); // Simula tempo de envio
+
+        } else {
+          statusMessage.textContent = 'Por favor, corrija os erros no formulário.';
+          statusMessage.classList.add('error');
+          statusMessage.style.display = 'block';
+        }
+      });
+    }
+
+  </script>
 </body>
 </html>
