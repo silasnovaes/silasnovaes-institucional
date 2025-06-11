@@ -1,584 +1,366 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Meta tags otimizadas para SEO -->
-  <meta name="description" content="Conheça Silas Novaes, seu corretor especialista em planos de saúde com atendimento personalizado em todo o Brasil. Descubra minha história, método de trabalho e compromisso com você." />
-  <meta name="keywords" content="Silas Novaes, corretor planos de saúde, sobre Silas Novaes, especialista planos de saúde, consultoria planos de saúde" />
-  <meta name="author" content="Silas Novaes" />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.silasnovaes.com.br/sobre.html" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://www.silasnovaes.com.br/sobre.html" />
-  <meta property="og:title" content="Sobre Silas Novaes | Corretor Especialista em Planos de Saúde" />
-  <meta property="og:description" content="Conheça a trajetória e o método de trabalho de Silas Novaes, seu parceiro na escolha do plano de saúde ideal." />
-  <meta property="og:image" content="https://www.silasnovaes.com.br/imagens/og-image-sobre.webp" /> <!-- Sugestão: og-image-sobre.webp (1200x630px) -->
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.silasnovaes.com.br/sobre.html" />
-  <meta property="twitter:title" content="Sobre Silas Novaes | Corretor Especialista em Planos de Saúde" />
-  <meta property="twitter:description" content="Conheça a trajetória e o método de trabalho de Silas Novaes, seu parceiro na escolha do plano de saúde ideal." />
-  <meta property="twitter:image" content="https://www.silasnovaes.com.br/imagens/og-image-sobre.webp" /> <!-- Sugestão: og-image-sobre.webp (1200x630px) -->
-  
-  <!-- Favicon -->
-  <link rel="icon" href="imagens/favicon.ico" />
-  <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
-  
-  <title>Sobre | Silas Novaes - Corretor de Planos de Saúde</title>
-  
-  <!-- Preload de fontes e recursos críticos -->
-  <link rel="preload" href="style.css" as="style" />
-  <link rel="preload" href="imagens/silasnovaes-logo-azul.webp" as="image" />
-  <!-- Preload da imagem principal da página (se houver uma específica) -->
-  <link rel="preload" href="imagens/silas-foto-perfil-desktop.webp" as="image" media="(min-width: 769px)">
-  <link rel="preload" href="imagens/silas-foto-perfil-mobile.webp" as="image" media="(max-width: 768px)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Conheça Silas Novaes, seu corretor especialista em planos de saúde com atendimento personalizado em todo o Brasil. Descubra minha história, método de trabalho e compromisso com você." />
+    <meta name="keywords" content="Silas Novaes, corretor planos de saúde, sobre Silas Novaes, especialista planos de saúde, consultoria planos de saúde" />
+    <meta name="author" content="Silas Novaes" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.silasnovaes.com.br/sobre.html" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://www.silasnovaes.com.br/sobre.html" />
+    <meta property="og:title" content="Sobre Silas Novaes | Corretor Especialista em Planos de Saúde" />
+    <meta property="og:description" content="Conheça a trajetória e o método de trabalho de Silas Novaes, seu parceiro na escolha do plano de saúde ideal." />
+    <meta property="og:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image-sobre.webp" />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.silasnovaes.com.br/sobre.html" />
+    <meta property="twitter:title" content="Sobre Silas Novaes | Corretor Especialista em Planos de Saúde" />
+    <meta property="twitter:description" content="Conheça a trajetória e o método de trabalho de Silas Novaes, seu parceiro na escolha do plano de saúde ideal." />
+    <meta property="twitter:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image-sobre.webp" />
+    
+    <link rel="icon" href="assets/imagens/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/imagens/apple-touch-icon.png" />
+    
+    <title>Sobre | Silas Novaes - Corretor de Planos de Saúde</title>
+    
+    <link rel="preload" href="assets/css/style.css" as="style" />
+    <link rel="preload" href="assets/imagens/silasnovaes-logo-azul.webp" as="image" />
+    <link rel="preload" href="assets/imagens/silas-foto-perfil-desktop.webp" as="image" media="(min-width: 769px)">
+    <link rel="preload" href="assets/imagens/silas-foto-perfil-mobile.webp" as="image" media="(max-width: 768px)">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  
-  <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Schema.org / JSON-LD -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Silas Novaes",
-      "jobTitle": "Corretor de Planos de Saúde",
-      "url": "https://www.silasnovaes.com.br/sobre.html",
-      "image": "https://www.silasnovaes.com.br/imagens/silas-foto-perfil-schema.webp", /* Sugestão: silas-foto-perfil-schema.webp (quadrada, ex: 600x600px) */
-      "description": "Corretor especialista em planos de saúde com atendimento personalizado em todo o Brasil, focado em encontrar a melhor solução para cada cliente.",
-      "sameAs": [
-        "https://www.facebook.com/silasnovaesplanos",
-        "https://www.instagram.com/silasnovaes",
-        "https://www.linkedin.com/in/silasnovaes"
-      ],
-      "knowsAbout": "Planos de Saúde, Seguro Saúde, Consultoria em Saúde Suplementar"
-    }
-  </script>
-  
-  <style>
-    /* Estilos específicos para a página Sobre, se necessário, para não afetar a home */
-    .sobre-hero {
-      display: flex;
-      align-items: center;
-      gap: var(--espacamento-grande);
-      background-color: var(--cor-fundo-claro); /* Fundo claro para esta seção */
-      padding: var(--espacamento-grande) 0;
-    }
-    .sobre-hero-imagem {
-      flex: 0 0 35%;
-      text-align: center;
-    }
-    .sobre-hero-imagem img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 50%; /* Foto em formato redondo */
-      box-shadow: var(--sombra-media);
-      border: 5px solid var(--cor-secundaria);
-    }
-    .sobre-hero-citacao {
-      flex: 1;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: var(--cor-primaria);
-      border-left: 4px solid var(--cor-secundaria);
-      padding-left: var(--espacamento-medio);
-      margin-top: var(--espacamento-medio);
-    }
-
-    .historia-section p {
-      margin-bottom: var(--espacamento-grande); /* Maior espaçamento entre parágrafos */
-      color: #333; /* Texto um pouco mais escuro */
-      text-align: left; /* Alinhamento à esquerda conforme instrução geral */
-    }
-
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: var(--espacamento-grande) auto;
-      padding: var(--espacamento-medio) 0;
-    }
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: var(--cor-secundaria);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
-    .timeline-item {
-      padding: var(--espacamento-medio) 40px;
-      position: relative;
-      background-color: inherit;
-      width: 50%;
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -14px;
-      background-color: var(--cor-terciaria);
-      border: 4px solid var(--cor-primaria);
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .timeline-item.left {
-      left: 0;
-    }
-    .timeline-item.right {
-      left: 50%;
-    }
-    .timeline-item.left::before {
-      content: " ";
-      height: 0;
-      position: absolute;
-      top: 22px;
-      width: 0;
-      z-index: 1;
-      right: 30px;
-      border: medium solid var(--cor-fundo-medio);
-      border-width: 10px 0 10px 10px;
-      border-color: transparent transparent transparent var(--cor-fundo-medio);
-    }
-    .timeline-item.right::before {
-      content: " ";
-      height: 0;
-      position: absolute;
-      top: 22px;
-      width: 0;
-      z-index: 1;
-      left: 30px;
-      border: medium solid var(--cor-fundo-medio);
-      border-width: 10px 10px 10px 0;
-      border-color: transparent var(--cor-fundo-medio) transparent transparent;
-    }
-    .timeline-item.right::after {
-      left: -14px;
-    }
-    .timeline-content {
-      padding: var(--espacamento-medio);
-      background-color: var(--cor-fundo-medio);
-      position: relative;
-      border-radius: var(--borda-radius);
-      box-shadow: var(--sombra-suave);
-      color: var(--cor-primaria);
-    }
-    .timeline-content h3 {
-        margin-bottom: var(--espacamento-pequeno);
-        font-size: 1.2rem;
-    }
-
-    .metodo-grid, .conquistas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--espacamento-grande);
-      margin-top: var(--espacamento-grande);
-    }
-    .metodo-item, .conquista-item {
-      background-color: var(--cor-terciaria); /* Fundo bege padrão */
-      padding: var(--espacamento-grande);
-      border-radius: var(--borda-radius);
-      box-shadow: var(--sombra-suave);
-      text-align: center;
-      transition: var(--transicao-media);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .metodo-item:hover, .conquista-item:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--sombra-media);
-    }
-    .metodo-icon, .conquista-icon {
-      font-size: 2.5rem;
-      color: var(--cor-primaria);
-      margin-bottom: var(--espacamento-medio);
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-      border-radius: 50%;
-      background-color: var(--cor-secundaria);
-      display: inline-block;
-    }
-    .metodo-item h3, .conquista-item h3 {
-      color: var(--cor-primaria);
-      margin-bottom: var(--espacamento-pequeno);
-      font-size: 1.3rem;
-    }
-    .metodo-item p, .conquista-item p {
-        color: var(--cor-primaria); /* Texto primário sobre fundo bege */
-        flex-grow: 1;
-    }
-
-    /* Ajustes de Responsividade Específicos */
-    @media (max-width: 768px) {
-      .sobre-hero {
-        flex-direction: column;
-        text-align: center;
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/sobre.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Silas Novaes",
+        "jobTitle": "Corretor de Planos de Saúde",
+        "url": "https://www.silasnovaes.com.br/sobre.html",
+        "image": "https://www.silasnovaes.com.br/assets/imagens/silas-foto-perfil-schema.webp",
+        "description": "Corretor especialista em planos de saúde com atendimento personalizado em todo o Brasil, focado em encontrar a melhor solução para cada cliente.",
+        "sameAs": [
+          "https://www.facebook.com/silasnovaesplanos",
+          "https://www.instagram.com/silasnovaes",
+          "https://www.linkedin.com/in/silasnovaes"
+        ],
+        "knowsAbout": "Planos de Saúde, Seguro Saúde, Consultoria em Saúde Suplementar"
       }
-      .sobre-hero-imagem {
-        margin-bottom: var(--espacamento-medio);
-        flex-basis: auto;
-      }
-      .sobre-hero-citacao {
-        border-left: none;
-        border-top: 4px solid var(--cor-secundaria);
-        padding-left: 0;
-        padding-top: var(--espacamento-medio);
-        text-align: center;
-      }
-      .historia-section p {
-          text-align: center; /* Centralizar texto em mobile */
-      }
-      .timeline::after {
-        left: 31px;
-      }
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-      .timeline-item.left::before, .timeline-item.right::before {
-        left: 60px;
-        border: medium solid var(--cor-fundo-medio);
-        border-width: 10px 10px 10px 0;
-        border-color: transparent var(--cor-fundo-medio) transparent transparent;
-      }
-      .timeline-item.left::after, .timeline-item.right::after {
-        left: 15px;
-      }
-      .timeline-item.right {
-        left: 0%;
-      }
-      .metodo-item, .conquista-item {
-          text-align: center; /* Centralizar itens do grid em mobile */
-      }
-    }
-  </style>
+    </script>
 </head>
 
 <body>
-  <!-- Link de acessibilidade -->
-  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- Faixa topo (Mantida do original) -->
-  <div class="faixa-topo">
-    <div class="container">
-      <div class="contato-rapido">
-        <b>Contrate o seu plano de saúde</b> 
-        <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> (83) 99109-2624
-        </a>
-      </div>
-      <div class="social-icons">
-        <a href="#" class="social-icon" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+    <div class="faixa-topo">
+        <div class="container">
+            <div class="contato-rapido">
+                <b>Contrate o seu plano de saúde</b> 
+                <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> (83) 99109-2624
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/osilasnovaes" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/silasnovaes1/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/silasnovaes/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="site-wrapper">
-    <!-- Header (Mantido do original) -->
-    <header class="bloco" id="topo">
-      <div class="container">
-        <div class="header-content">
-          <a href="index.html" class="logo-link" aria-label="Silas Novaes - Página Inicial">
-            <img src="imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="logo" width="180" height="50" />
-          </a>
-          <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <nav aria-label="Menu principal">
-            <ul id="menu">
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="sobre.html" class="active">SOBRE</a></li>
-              <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
-              <li><a href="operadoras.html">OPERADORAS</a></li>
-              <li><a href="formulario.html">FORMULÁRIO</a></li>
-              <li><a href="contato.html">CONTATOS</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <div class="site-wrapper">
+        <header class="bloco" id="topo">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo-link" aria-label="Silas Novaes - Página Inicial">
+                        <img src="assets/imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="logo" width="180" height="50" />
+                    </a>
 
-    <!-- Conteúdo principal -->
-    <main id="conteudo-principal" role="main">
-      
-      <!-- Seção Hero Sobre -->
-      <section class="bloco sobre-hero" aria-labelledby="sobre-titulo">
-        <div class="container">
-          <h1 id="sobre-titulo" class="heading heading--secondary" style="color: var(--cor-primaria); text-align: center; width: 100%; margin-bottom: var(--espacamento-grande);">Conheça Silas Novaes</h1>
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--espacamento-grande); width: 100%;">
-            <div class="sobre-hero-imagem">
-              <picture>
-                <source srcset="imagens/silas-foto-perfil-mobil.webp" media="(max-width: 768px)"> <!-- Sugestão: silas-foto-perfil-mobile.webp (ex: 300x300px) -->
-                <img src="imagens/silas-novaes-perfil.webp" alt="Foto de perfil de Silas Novaes, corretor de planos de saúde" width="350" height="350" loading="lazy"> <!-- Sugestão: silas-foto-perfil-desktop.webp (ex: 350x350px) -->
-              </picture>
-            </div>
-            <div class="sobre-hero-citacao">
-              <p>“Fazer o melhor pelas pessoas é transformar a oportunidade divina de servir em um testemunho de amor incondicional ao próximo. Minha existência permanecerá útil enquanto eu agir com excelência em favor daqueles que precisam de mim – ainda que de forma mínima.”</p>
-              <p style="text-align: right; font-weight: bold; margin-top: var(--espacamento-pequeno);">- Silas Novaes</p>
-            </div>
-          </div>
-        </div>
-      </section>
+                    <div class="menu-toggle" aria-expanded="false" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-      <!-- Seção Minha História -->
-      <section class="bloco historia-section" style="background-color: var(--cor-terciaria);" aria-labelledby="historia-titulo">
-        <div class="container">
-          <h2 id="historia-titulo" class="heading heading--secondary" style="color: var(--cor-primaria);">Minha História</h2>
-          <p class="subtitulo" style="color: var(--cor-primaria);">Uma jornada dedicada a cuidar do bem-estar das pessoas</p>
-          
-          <p>Aqui você insere o primeiro parágrafo da sua história. Fale sobre sua motivação inicial, seus valores e como começou sua trajetória no mercado de planos de saúde. Lembre-se de usar uma linguagem próxima e autêntica.</p>
-          
-          <p>Continue a narrativa no segundo parágrafo. Detalhe momentos importantes, desafios superados e aprendizados que moldaram sua forma de trabalhar. O objetivo é criar conexão com o leitor.</p>
-          
-          <p>No terceiro parágrafo, reforce seu propósito e como sua experiência se traduz em benefícios para os clientes. Destaque seu compromisso em oferecer um atendimento diferenciado e encontrar as melhores soluções.</p>
-        </div>
-      </section>
+                    <nav aria-label="Menu principal">
+                        <ul id="menu">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="sobre.html" class="active">SOBRE</a></li> <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
+                            <li><a href="operadoras.html">OPERADORAS</a></li>
+                            <li><a href="formulario.html">FORMULÁRIO</a></li>
+                            <li><a href="contato.html">CONTATOS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-      <!-- Seção Minha Trajetória (Linha do Tempo) -->
-      <section class="bloco" aria-labelledby="trajetoria-titulo">
-        <div class="container">
-          <h2 id="trajetoria-titulo" class="heading heading--secondary">Minha Trajetória</h2>
-          <p class="subtitulo">Marcos importantes na minha carreira</p>
-          
-          <div class="timeline">
-            <div class="timeline-item left">
-              <div class="timeline-content">
-                <h3>Ano/Marco 1</h3>
-                <p>Descrição do primeiro marco importante na sua carreira. Ex: Início no mercado de seguros.</p>
-              </div>
-            </div>
-            <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3>Ano/Marco 2</h3>
-                <p>Descrição do segundo marco. Ex: Especialização em planos de saúde.</p>
-              </div>
-            </div>
-            <div class="timeline-item left">
-              <div class="timeline-content">
-                <h3>Ano/Marco 3</h3>
-                <p>Descrição do terceiro marco. Ex: Fundação da própria corretora ou parceria importante.</p>
-              </div>
-            </div>
-             <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3>Ano/Marco 4</h3>
-                <p>Descrição do quarto marco. Ex: Reconhecimento ou prêmio recebido.</p>
-              </div>
-            </div>
-             <div class="timeline-item left">
-              <div class="timeline-content">
-                <h3>Ano/Marco 5</h3>
-                <p>Descrição do quinto marco. Ex: Expansão do atendimento para nível nacional.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <main id="conteudo-principal" role="main">
+            
+            <section class="bloco sobre-hero" aria-labelledby="sobre-titulo">
+                <div class="container">
+                    <h1 id="sobre-titulo" class="heading heading--primary visually-hidden">Conheça Silas Novaes</h1> 
+                    <div class="sobre-hero-content-wrapper"> 
+                        <div class="sobre-hero-imagem">
+                            <picture>
+                                <source srcset="assets/imagens/silas-novaes-perfil-mobile.webp" media="(max-width: 768px)">
+                                <img src="assets/imagens/silas-novaes-perfil.webp" alt="Foto de perfil de Silas Novaes, corretor de planos de saúde" width="350" height="350" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="sobre-hero-citacao">
+                            <p>“Fazer o melhor pelas pessoas é transformar a oportunidade divina de servir em um testemunho de amor incondicional ao próximo. Minha existência permanecerá útil enquanto eu agir com excelência em favor daqueles que precisam de mim – ainda que de forma mínima.”</p>
+                            <p class="citacao-autor">- Silas Novaes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- Seção Meu Método de Trabalho (Grids com Ícones) -->
-      <section class="bloco" style="background-color: var(--cor-terciaria);" aria-labelledby="metodo-titulo">
-        <div class="container">
-          <h2 id="metodo-titulo" class="heading heading--secondary" style="color: var(--cor-primaria);">Meu Método de Trabalho</h2>
-          <p class="subtitulo" style="color: var(--cor-primaria);">Como garanto a melhor solução para você</p>
-          
-          <div class="metodo-grid">
-            <div class="metodo-item">
-              <div class="metodo-icon"><i class="fas fa-comments"></i></div> <!-- Sugestão: icone-metodo-escuta.webp -->
-              <h3>Escuta Atenta</h3>
-              <p>Entendo profundamente suas necessidades, expectativas e orçamento antes de propor qualquer solução.</p>
-            </div>
-            <div class="metodo-item">
-              <div class="metodo-icon"><i class="fas fa-search-plus"></i></div> <!-- Sugestão: icone-metodo-analise.webp -->
-              <h3>Análise Detalhada</h3>
-              <p>Pesquiso e comparo as opções das melhores operadoras, considerando cobertura, rede e custo-benefício.</p>
-            </div>
-            <div class="metodo-item">
-              <div class="metodo-icon"><i class="fas fa-clipboard-check"></i></div> <!-- Sugestão: icone-metodo-recomendacao.webp -->
-              <h3>Recomendação Personalizada</h3>
-              <p>Apresento as opções mais adequadas ao seu perfil, explicando os detalhes de forma clara e transparente.</p>
-            </div>
-            <div class="metodo-item">
-              <div class="metodo-icon"><i class="fas fa-headset"></i></div> <!-- Sugestão: icone-metodo-suporte.webp -->
-              <h3>Suporte Contínuo</h3>
-              <p>Ofereço acompanhamento completo durante a contratação e suporte pós-venda para o que você precisar.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <section class="bloco historia-section" aria-labelledby="historia-titulo">
+                <div class="container">
+                    <h2 id="historia-titulo" class="heading heading--secondary">Minha História</h2>
+                    <p class="subtitulo historia-subtitulo">UMA JORNADA DEDICADA A CUIDAR DO BEM-ESTAR DAS PESSOAS</p>
+                    
+                    <p>Vindo de uma família simples, onde meu pai era servidor público e minha mãe dona de casa, enfrentei desafios corriqueiros à maioria das pessoas do nosso país. Sem muitas condições financeiras, minha única alternativa para cuidados médicos era o sistema público de saúde, normalmente sobrecarregado e com vagas limitadas ao pronto-socorro.</p>
+                    
+                    <p>Inconformado com essa situação, eu não entendia por que algumas pessoas não conseguiam desfrutar da dignidade de um atendimento médico de qualidade. Aprofundei-me nos estudos e descobri que a sobrecarga do sistema acontece quando os serviços públicos são utilizados por pessoas que, de fato, não necessitam dele.</p>
+                    
+                    <p>Impulsionado pelos meus pais a gerar valor para as pessoas, comecei a trabalhar desde os 16 anos. Em 2018, aos 20 anos de idade, iniciei minha carreira como corretor de planos de saúde. Entrei no mercado com uma proposta ousada: transformar a saúde do país. Aos meus clientes, passei a oferecer um serviço personalizado, e rapidamente esse modelo de trabalho tornou-se conhecido. Ao longo do tempo, sempre busquei oferecer o máximo de excelência para cada família.</p>
+                </div>
+            </section>
 
-      <!-- Seção Conquistas e Resultados (Grids com Ícones) -->
-      <section class="bloco" aria-labelledby="conquistas-titulo">
-        <div class="container">
-          <h2 id="conquistas-titulo" class="heading heading--secondary">Conquistas e Resultados</h2>
-          <p class="subtitulo">Meu compromisso refletido em números e satisfação</p>
-          
-          <div class="conquistas-grid">
-            <div class="conquista-item">
-              <div class="conquista-icon"><i class="fas fa-users"></i></div> <!-- Sugestão: icone-conquista-clientes.webp -->
-              <h3>+X Clientes Satisfeitos</h3>
-              <p>Número de clientes atendidos com sucesso ao longo da carreira.</p>
-            </div>
-            <div class="conquista-item">
-              <div class="conquista-icon"><i class="fas fa-map-marked-alt"></i></div> <!-- Sugestão: icone-conquista-brasil.webp -->
-              <h3>Atendimento Nacional</h3>
-              <p>Capacidade de oferecer soluções personalizadas em todo o território brasileiro.</p>
-            </div>
-            <div class="conquista-item">
-              <div class="conquista-icon"><i class="fas fa-star"></i></div> <!-- Sugestão: icone-conquista-avaliacao.webp -->
-              <h3>Alto Índice de Aprovação</h3>
-              <p>Feedback positivo e reconhecimento pela qualidade do atendimento e das soluções oferecidas.</p>
-            </div>
-             <div class="conquista-item">
-              <div class="conquista-icon"><i class="fas fa-handshake"></i></div> <!-- Sugestão: icone-conquista-parcerias.webp -->
-              <h3>Parcerias Estratégicas</h3>
-              <p>Relacionamento sólido com as principais operadoras de planos de saúde do mercado.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <section class="bloco" aria-labelledby="trajetoria-titulo">
+                <div class="container">
+                    <h2 id="trajetoria-titulo" class="heading heading--secondary">Minha Trajetória</h2>
+                    <p class="subtitulo">Marcos importantes na minha carreira</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>2014</h3>
+                                <p>Primeiro empreendimento aos 16 anos no ramo do agronegócio;</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h3>2018</h3>
+                                <p>Início das atividades como corretor;</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>2022</h3>
+                                <p>Expansão dos atendimentos para todo o Brasil;</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h3>2022</h3>
+                                <p>Conquistei o 1º lugar em vendas de planos de saúde;</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>2023</h3>
+                                <p>Conquistei novamente o 1º lugar em vendas de planos de saúde.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- Seção Histórias de Sucesso (Depoimentos - Mantida do original, se existir na home) -->
-      <!-- Se esta seção for igual à da home, pode ser reutilizada. Caso contrário, criar uma nova ou omitir. -->
-      <!-- Exemplo de reutilização (se a classe .depoimentos-section existir e for adequada): -->
-      <!-- 
-      <section class="depoimentos-section bloco" aria-labelledby="historias-sucesso-titulo">
-        <div class="container">
-          <h2 id="historias-sucesso-titulo" class="heading heading--primary">Histórias de Sucesso</h2>
-          <p class="subtitulo" style="color: var(--cor-terciaria);">Clientes que encontraram o plano ideal comigo</p>
-          <div class="depoimentos-container">
-             (Conteúdo dos depoimentos aqui) 
-          </div>
-        </div>
-      </section>
-      -->
+            <section class="bloco" aria-labelledby="metodo-titulo">
+                <div class="container">
+                    <h2 id="metodo-titulo" class="heading heading--secondary">Meu Método de Trabalho</h2>
+                    <p class="subtitulo">Como garanto a melhor solução para você</p>
+                    
+                    <div class="metodo-grid">
+                        <div class="metodo-item">
+                            <div class="metodo-icon"><i class="fas fa-comments"></i></div>
+                            <h3>Escuta Atenta</h3>
+                            <p>Entendo profundamente suas necessidades, expectativas e orçamento antes de propor qualquer solução.</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-icon"><i class="fas fa-search-plus"></i></div>
+                            <h3>Análise Detalhada</h3>
+                            <p>Pesquiso e comparo as opções das melhores operadoras, considerando cobertura, rede e custo-benefício.</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3>Recomendação Personalizada</h3>
+                            <p>Apresento as opções mais adequadas ao seu perfil, explicando os detalhes de forma clara e transparente.</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-icon"><i class="fas fa-headset"></i></div>
+                            <h3>Suporte Contínuo</h3>
+                            <p>Ofereço acompanhamento completo durante a contratação e suporte pós-venda para o que você precisar.</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3>Recomendação Personalizada</h3>
+                            <p>Apresento as opções mais adequadas ao seu perfil, explicando os detalhes de forma clara e transparente.</p>
+                        </div>
+                        <div class="metodo-item">
+                            <div class="metodo-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3>Recomendação Personalizada</h3>
+                            <p>Apresento as opções mais adequadas ao seu perfil, explicando os detalhes de forma clara e transparente.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- Seção CTA (Chamada para Ação) -->
-      <section class="cta-section bloco" aria-labelledby="cta-sobre-titulo">
-        <div class="container cta-container">
-          <h2 id="cta-sobre-titulo" class="cta-title">Pronto para Cuidar da Sua Saúde?</h2>
-          <p class="cta-text">Entre em contato e descubra como posso ajudar você a encontrar o plano de saúde perfeito para suas necessidades e orçamento.</p>
-          <div class="cta-buttons">
-            <a href="contato.html" class="botao-primario"><i class="fas fa-comments"></i> Falar com Silas</a>
-            <a href="formulario.html" class="botao-secundario"><i class="fas fa-file-alt"></i> Pedir Cotação</a>
-          </div>
-        </div>
-      </section>
+            <section class="bloco" aria-labelledby="conquistas-titulo">
+                <div class="container">
+                    <h2 id="conquistas-titulo" class="heading heading--secondary">Conquistas e Resultados</h2>
+                    <p class="subtitulo">Meu compromisso refletido em números e satisfação</p>
+                    
+                    <div class="conquistas-grid">
+                        <div class="conquista-item">
+                            <div class="conquista-icon"><i class="fas fa-users"></i></div>
+                            <h3>3000 Clientes Satisfeitos</h3>
+                            <p>Número de clientes atendidos com sucesso ao longo da carreira.</p>
+                        </div>
+                        <div class="conquista-item">
+                            <div class="conquista-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h3>Atendimento Nacional</h3>
+                            <p>Capacidade de oferecer soluções personalizadas em todo o território brasileiro.</p>
+                        </div>
+                        <div class="conquista-item">
+                            <div class="conquista-icon"><i class="fas fa-star"></i></div>
+                            <h3>Alto Índice de Aprovação</h3>
+                            <p>Feedback positivo e reconhecimento pela qualidade do atendimento e das soluções oferecidas.</p>
+                        </div>
+                        <div class="conquista-item">
+                            <div class="conquista-icon"><i class="fas fa-handshake"></i></div>
+                            <h3>Parcerias Estratégicas</h3>
+                            <p>Relacionamento sólido com as principais operadoras de planos de saúde do mercado.</p>
+                            <a href="https://www.linkedin.com/in/silasnovaes/" target="_blank"></a>
+                        </div>
+                        <div class="conquista-item">
+                            <div class="conquista-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h3>Atendimento Nacional</h3>
+                            <p>Capacidade de oferecer soluções personalizadas em todo o território brasileiro.</p>
+                        </div>
+                        <div class="conquista-item">
+                            <div class="conquista-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h3>Atendimento Nacional</h3>
+                            <p>Capacidade de oferecer soluções personalizadas em todo o território brasileiro.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    </main>
+            <section class="cta-section bloco" aria-labelledby="cta-sobre-titulo">
+                <div class="container cta-container">
+                    <h2 id="cta-sobre-titulo" class="cta-title">Pronto para Cuidar da Sua Saúde?</h2>
+                    <p class="cta-text">Entre em contato e descubra como posso ajudar você a encontrar o plano de saúde perfeito para suas necessidades e orçamento.</p>
+                    <div class="cta-buttons">
+                        <a href="contato.html" class="botao-primario"><i class="fas fa-comments"></i> Falar com Silas</a>
+                        <a href="formulario.html" class="botao-secundario"><i class="fas fa-file-alt"></i> Pedir Cotação</a>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
 
-    <!-- Footer (Mantido do original) -->
-    <footer>
-      <div class="container">
-        <div class="footer-container">
-          <div class="footer-column">
-            <img src="imagens/silasnovaes-logo-branca.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="footer-logo" width="180" height="50" loading="lazy" />
-            <p class="footer-about">Silas Novaes, corretor especialista em planos de saúde, oferecendo consultoria personalizada e as melhores opções do mercado para você, sua família ou sua empresa.</p>
-            <div class="footer-social">
-              <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <img src="assets/imagens/silasnovaes-logo-branca.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="footer-logo" width="160" height="45" loading="lazy" />
+                        <p class="footer-about">Soluções personalizadas em planos de saúde para você, sua família e sua empresa. Atendimento em todo o Brasil com as melhores operadoras do mercado.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/osilasnovaes" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/silasnovaes1/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/silasnovaes/" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">LINKS RÁPIDOS</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="sobre.html">SOBRE</a></li>
+                            <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
+                            <li><a href="operadoras.html">OPERADORAS</a></li>
+                            <li><a href="formulario.html">FORMULÁRIO</a></li>
+                            <li><a href="contato.html">CONTATOS</a></li>
+                            <li><a href="politica-de-privacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">TIPOS DE PLANOS</h3>
+                        <ul class="footer-links">
+                            <li><a href="formulario.html">Planos Individuais</a></li>
+                            <li><a href="formulario.html">Planos Familiares</a></li>
+                            <li><a href="formulario.html">Planos Empresariais</a></li>
+                            <li><a href="formulario.html">Planos por Adesão</a></li>
+                            <li><a href="formulario.html">Planos para MEI</a></li>
+                            <li><a href="formulario.html">Planos Odontológicos</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">CONTATO</h3>
+                        <ul class="footer-contact-list">
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">(83) 99109-2624</a>
+                            </li>
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <a href="mailto:contato@silasnovaes.com.br">contato@silasnovaes.com.br</a>
+                            </li>
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <a href="formulario.html">Atendimento em todo o Brasil</a>
+                            </li>
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <a href="formulario.html">Seg. a Sex.: 8h às 18h</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year"></span> Silas Novaes - Corretor de Planos de Saúde. Todos os direitos reservados.</p>
+                    <p class="mt-1">Este site não pertence a nenhuma operadora de plano de saúde. Silas Novaes é um corretor independente.</p>
+                </div>
             </div>
-          </div>
-          <div class="footer-column">
-            <h3 class="footer-heading">Navegação</h3>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="sobre.html">Sobre</a></li>
-              <li><a href="trabalhe-comigo.html">Trabalhe Comigo</a></li>
-              <li><a href="operadoras.html">Operadoras</a></li>
-              <li><a href="formulario.html">Formulário</a></li>
-              <li><a href="contato.html">Contatos</a></li>
-              <li><a href="#">Política de Privacidade</a></li> <!-- Adicionar link real -->
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3 class="footer-heading">Contato</h3>
-            <div class="footer-contact-item">
-              <i class="fas fa-map-marker-alt footer-contact-icon"></i>
-              <span>Atendimento em todo o Brasil</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fab fa-whatsapp footer-contact-icon"></i>
-              <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" style="color: var(--cor-texto-claro);">+55 (83) 99109-2624</a>
-            </div>
-            <div class="footer-contact-item">
-              <i class="far fa-envelope footer-contact-icon"></i>
-              <a href="mailto:contato@silasnovaes.com.br" style="color: var(--cor-texto-claro);">contato@silasnovaes.com.br</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          &copy; <span id="current-year"></span> Silas Novaes - Corretor de Planos de Saúde. Todos os direitos reservados.
-        </div>
-      </div>
-    </footer>
-  </div> <!-- Fim .site-wrapper -->
-
-  <!-- Scripts -->
-  <script>
-    // Script para menu hamburguer (se já existir no JS principal, não duplicar)
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      const toggle = document.querySelector('.menu-toggle');
-      menu.classList.toggle('active');
-      toggle.classList.toggle('active');
-      const isExpanded = menu.classList.contains('active');
-      toggle.setAttribute('aria-expanded', isExpanded);
-    }
-
-    // Script para header sticky (se já existir no JS principal, não duplicar)
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Script para ano atual no footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    
-    // Script para FAQ (se houver FAQ nesta página, caso contrário remover)
-    // function toggleFaq(element) {
-    //   const item = element.closest('.faq-item');
-    //   item.classList.toggle('active');
-    // }
-
-    // Adicionar classe 'active' ao item de menu correto (redundante se já feito com a classe 'active' no HTML)
-    // const currentPage = window.location.pathname.split('/').pop();
-    // const menuLinks = document.querySelectorAll('#menu a');
-    // menuLinks.forEach(link => {
-    //   if (link.getAttribute('href') === currentPage) {
-    //     link.classList.add('active');
-    //   }
-    // });
-  </script>
-</body>
+        </footer>
+    </div> 
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/sobre.js" defer></script> </body>
 </html>

@@ -1,0 +1,221 @@
+/* Estilos específicos para a página Operadoras */
+.pagina-operadoras .hero-operadoras {
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url("../imagens/hero-operadoras-bg.webp") no-repeat center center; /* Sugestão: hero-operadoras-bg.webp */
+    background-size: cover;
+    color: var(--cor-terciaria);
+    padding: var(--espacamento-grande) 0;
+    text-align: center;
+}
+
+.pagina-operadoras .filtros-section {
+    background-color: var(--cor-fundo-medio);
+    padding: var(--espacamento-grande) 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+.pagina-operadoras .filtros-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-medio);
+    align-items: flex-end;
+}
+.pagina-operadoras .filtro-grupo {
+    flex: 1 1 200px; /* Permite quebra em telas menores */
+    display: flex;
+    flex-direction: column;
+}
+.pagina-operadoras .filtro-label {
+    display: block;
+    margin-bottom: var(--espacamento-pequeno);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+}
+.pagina-operadoras .filtro-select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    appearance: none; /* Remove estilo padrão */
+    background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3e%3cpath fill=\'none\' stroke=\'%23343a40\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M2 5l6 6 6-6\'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+.pagina-operadoras .filtro-select:focus {
+    border-color: var(--cor-secundaria);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5);
+}
+.pagina-operadoras .filtro-botao {
+    padding: 0.65rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: var(--transicao-rapida);
+    height: fit-content; /* Alinha com selects */
+}
+.pagina-operadoras .filtro-botao:hover {
+    background-color: #003366;
+}
+.pagina-operadoras .filtro-botao i {
+    margin-right: var(--espacamento-pequeno);
+}
+
+.pagina-operadoras .operadoras-section {
+    background-color: var(--cor-fundo-claro);
+}
+.pagina-operadoras .operadoras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--espacamento-grande);
+    margin-top: var(--espacamento-grande);
+}
+.pagina-operadoras .operadora-card {
+    background-color: var(--cor-terciaria);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transicao-media);
+    border: 1px solid var(--cor-borda);
+}
+.pagina-operadoras .operadora-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+.pagina-operadoras .operadora-logo {
+    background-color: #f8f9fa; /* Fundo claro para logos */
+    padding: var(--espacamento-medio);
+    text-align: center;
+    border-bottom: 1px solid var(--cor-borda);
+    min-height: 100px; /* Altura mínima para alinhar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagina-operadoras .operadora-logo img {
+    max-width: 150px;
+    max-height: 60px;
+    object-fit: contain;
+}
+.pagina-operadoras .operadora-content {
+    padding: var(--espacamento-grande);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o conteúdo crescer */
+}
+.pagina-operadoras .operadora-nome {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-pequeno);
+    font-size: 1.4rem;
+}
+.pagina-operadoras .operadora-badges {
+    margin-bottom: var(--espacamento-medio);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-pequeno);
+}
+.pagina-operadoras .badge {
+    background-color: var(--cor-fundo-medio);
+    color: var(--cor-texto);
+    padding: 0.2em 0.6em;
+    border-radius: var(--borda-radius-pequena);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.pagina-operadoras .badge-destaque {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 0.2em 0.6em;
+    border-radius: var(--borda-radius-pequena);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.pagina-operadoras .operadora-desc {
+    color: var(--cor-texto);
+    margin-bottom: var(--espacamento-medio);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Empurra detalhes e botão para baixo */
+}
+.pagina-operadoras .operadora-detalhes {
+    margin-bottom: var(--espacamento-medio);
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.pagina-operadoras .operadora-detalhe {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+    margin-bottom: 0.3rem;
+}
+.pagina-operadoras .operadora-detalhe i {
+    color: var(--cor-primaria);
+    width: 15px;
+    text-align: center;
+}
+.pagina-operadoras .operadora-tipos {
+    margin-bottom: var(--espacamento-grande);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-pequeno);
+}
+.pagina-operadoras .tipo-plano {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.3em 0.7em;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+.pagina-operadoras .operadora-cta {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    text-align: center;
+    border-radius: var(--borda-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao-rapida);
+    margin-top: auto; /* Alinha botão no final */
+}
+.pagina-operadoras .operadora-cta:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+.pagina-operadoras .operadora-card.hidden {
+    display: none;
+}
+.pagina-operadoras #nenhuma-operadora {
+    display: none; /* Inicialmente oculto */
+    text-align: center;
+    padding: var(--espacamento-grande);
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    grid-column: 1 / -1; /* Ocupa toda a largura do grid */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pagina-operadoras .filtros-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .pagina-operadoras .filtro-botao {
+        width: 100%;
+    }
+    .pagina-operadoras .operadoras-grid {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+}

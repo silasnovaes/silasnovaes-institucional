@@ -1,0 +1,223 @@
+/* Estilos específicos para a página Formulário */
+.hero-formulario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    text-align: center;
+    padding: var(--espacamento-grande) 0;
+}
+
+.formulario-section {
+    background-color: var(--cor-terciaria); /* Fundo bege padrão */
+    padding: var(--espacamento-extra) 0;
+}
+
+.formulario-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--cor-secundaria); /* Fundo azul padrão */
+  padding: var(--espacamento-grande);
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-media);
+}
+
+.form-step {
+    margin-bottom: var(--espacamento-grande);
+    padding-bottom: var(--espacamento-grande);
+    border-bottom: 1px solid var(--cor-borda);
+}
+.form-step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-step-title {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-grande);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacamento-pequeno);
+}
+.form-step-title i {
+    font-size: 1.3rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacamento-grande);
+  margin-bottom: var(--espacamento-grande);
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px; /* Evita que os campos fiquem muito estreitos */
+  display: flex;
+  flex-direction: column;
+}
+.form-group.full-width {
+    flex-basis: 100%;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--espacamento-pequeno);
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+.form-label .optional {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #0d0d0d;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-radius);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+  border-color: var(--cor-secundaria);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5); /* Azul secundário com transparência */
+}
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estilos para Radio/Checkbox */
+.form-check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-medio);
+    margin-top: var(--espacamento-pequeno);
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-pequeno);
+}
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.1em;
+  cursor: pointer;
+}
+.form-check-label {
+  font-weight: 400;
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+.form-check-label a {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+.form-check-label a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Mensagens de Erro/Sucesso */
+.form-error {
+  color: var(--cor-erro);
+  font-size: 0.875em;
+  margin-top: var(--espacamento-pequeno);
+  display: none; /* Exibir via JS */
+}
+.form-control.is-invalid {
+    border-color: var(--cor-erro);
+}
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+.form-control.is-invalid + .form-error {
+    display: block;
+}
+
+.form-message {
+  margin-top: var(--espacamento-grande);
+  padding: var(--espacamento-medio);
+  border-radius: var(--borda-radius);
+  text-align: center;
+  display: none; /* Exibir via JS */
+}
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+.form-submit {
+  display: block;
+  width: 100%;
+  max-width: 300px; /* Limita largura do botão */
+  margin: var(--espacamento-grande) auto 0 auto; /* Centraliza botão */
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-terciaria);
+  background-color: var(--cor-primaria);
+  border: none;
+  border-radius: var(--borda-radius);
+  cursor: pointer;
+  transition: var(--transicao-rapida);
+  text-align: center;
+}
+.form-submit:hover,
+.form-submit:focus {
+  background-color: #003366;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-media);
+}
+.form-submit i {
+    margin-right: var(--espacamento-pequeno);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .formulario-section {
+        padding: var(--espacamento-grande) 0;
+    }
+    .formulario-container {
+        padding: var(--espacamento-medio);
+    }
+    .form-row {
+        flex-direction: column;
+        gap: var(--espacamento-medio);
+        margin-bottom: var(--espacamento-medio);
+    }
+    .form-step-title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .form-submit {
+        max-width: 100%;
+    }
+    /* Centralizar texto nos inputs e labels em mobile */
+    .form-label, .form-control, .form-check-label {
+        text-align: center;
+    }
+    .form-check-group {
+        justify-content: center;
+    }
+    .form-group {
+        align-items: center;
+    }
+}

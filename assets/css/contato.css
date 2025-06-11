@@ -1,0 +1,411 @@
+/* Estilos específicos para a nova página de Contato (v2) */
+.pagina-contato-v2 .hero-contato-v2 {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('../imagens/contato-hero-bg.webp') no-repeat center center;
+    background-size: cover;
+    color: var(--cor-terciaria);
+    padding: var(--espacamento-extra) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+/* .pagina-contato-v2 .hero-contato-v2::before rule removed */
+.pagina-contato-v2 .hero-contato-v2 .container {
+    position: relative;
+    z-index: 2;
+}
+.pagina-contato-v2 .hero-contato-v2 h1 { /* Este é um H1 no HTML, mas foi mudado para H2 na minha correção de HTML, então se tornará H2 */
+    font-size: 3rem;
+    margin-bottom: var(--espacamento-pequeno);
+    font-weight: 700;
+}
+.pagina-contato-v2 .hero-contato-v2 .subtitulo {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Removed grid styles from wrapper, applied to container below */
+.pagina-contato-v2 .contato-wrapper {
+    padding: var(--espacamento-extra) 0;
+    background-color: var(--cor-fundo-claro);
+}
+
+.pagina-contato-v2 .contato-wrapper .container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Coluna esquerda menor, direita maior */
+    gap: var(--espacamento-extra);
+    align-items: start;
+    /* max-width and margin: auto are likely inherited from the global .container style */
+}
+
+.pagina-contato-v2 .info-contato {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+    /* position: sticky; removed to fix scrolling issue */
+    /* top: 120px; removed */
+}
+.pagina-contato-v2 .info-contato h2 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-grande);
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: var(--espacamento-pequeno);
+}
+.pagina-contato-v2 .info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-medio);
+    margin-bottom: var(--espacamento-grande);
+    color: var(--cor-texto);
+}
+.pagina-contato-v2 .info-icon {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(137, 176, 211, 0.1);
+    border-radius: 50%;
+}
+.pagina-contato-v2 .info-text span {
+    display: block;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 0.2rem;
+}
+.pagina-contato-v2 .info-text a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: var(--transicao-rapida);
+}
+.pagina-contato-v2 .info-text a:hover {
+    color: var(--cor-secundaria);
+}
+.pagina-contato-v2 .info-social {
+    margin-top: var(--espacamento-grande);
+    padding-top: var(--espacamento-grande);
+    border-top: 1px solid var(--cor-borda);
+    text-align: center;
+}
+.pagina-contato-v2 .info-social h3 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-medio);
+    font-size: 1.2rem;
+}
+.pagina-contato-v2 .info-social-icons a {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin: 0 var(--espacamento-pequeno);
+    transition: var(--transicao-rapida);
+}
+.pagina-contato-v2 .info-social-icons a:hover {
+    color: var(--cor-secundaria);
+}
+
+.pagina-contato-v2 .formulario-contato-v2 {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+}
+.pagina-contato-v2 .formulario-contato-v2 h2 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-grande);
+    font-size: 1.8rem;
+    text-align: center;
+}
+/* Estilos do formulário (reutilizados e adaptados) */
+.pagina-contato-v2 .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-grande);
+    margin-bottom: var(--espacamento-grande);
+}
+.pagina-contato-v2 .form-group {
+    flex: 1;
+    min-width: calc(50% - var(--espacamento-grande) / 2);
+    display: flex;
+    flex-direction: column;
+}
+.pagina-contato-v2 .form-group.full-width {
+    flex-basis: 100%;
+    min-width: 100%;
+}
+.pagina-contato-v2 .form-label {
+    display: block;
+    margin-bottom: var(--espacamento-pequeno);
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+.pagina-contato-v2 .form-label .optional {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+.pagina-contato-v2 .form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.pagina-contato-v2 .form-control:focus {
+    border-color: var(--cor-secundaria);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5);
+}
+.pagina-contato-v2 textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+.pagina-contato-v2 .form-check-group {
+    margin-top: var(--espacamento-medium);
+}
+.pagina-contato-v2 .form-check {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+}
+.pagina-contato-v2 .form-check-input {
+    width: 1.1em;
+    height: 1.1em;
+    margin-top: 0.1em;
+    cursor: pointer;
+}
+.pagina-contato-v2 .form-check-label {
+    font-weight: 400;
+    color: var(--cor-texto);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.pagina-contato-v2 .form-check-label a {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+.pagina-contato-v2 .form-check-label a:hover {
+    color: var(--cor-secundaria);
+}
+.pagina-contato-v2 .form-error {
+    color: var(--cor-erro);
+    font-size: 0.875em;
+    margin-top: var(--espacamento-pequeno);
+    display: none;
+}
+.pagina-contato-v2 .form-control.is-invalid {
+    border-color: var(--cor-erro);
+}
+.pagina-contato-v2 .form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+.pagina-contato-v2 .form-control.is-invalid + .form-error,
+.pagina-contato-v2 .form-check-input.is-invalid ~ .form-error {
+    display: block;
+}
+.pagina-contato-v2 .form-submit {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: var(--transicao-rapida);
+    text-align: center;
+    margin-top: var(--espacamento-grande);
+}
+.pagina-contato-v2 .form-submit:hover,
+.pagina-contato-v2 .form-submit:focus {
+    background-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+}
+.pagina-contato-v2 .form-submit i {
+    margin-right: var(--espacamento-pequeno);
+}
+.pagina-contato-v2 .form-message {
+    margin-top: var(--espacamento-grande);
+    padding: var(--espacamento-medio);
+    border-radius: var(--borda-radius);
+    text-align: center;
+    display: none;
+}
+.pagina-contato-v2 .form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+.pagina-contato-v2 .form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.pagina-contato-v2 .mapa-section {
+    padding: var(--espacamento-extra) 0;
+    background-color: var(--cor-fundo-medio);
+}
+.pagina-contato-v2 .mapa-section h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-grande);
+}
+.pagina-contato-v2 .mapa-container {
+    position: relative;
+    padding-bottom: 50%; /* Proporção do mapa */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+}
+.pagina-contato-v2 .mapa-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.pagina-contato-v2 .mapa-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #6c757d;
+    border-radius: var(--borda-radius);
+}
+.pagina-contato-v2 .mapa-placeholder i {
+    font-size: 3rem;
+    margin-bottom: var(--espacamento-medio);
+}
+
+/* Estilos para a seção FAQ na página Contato (APRIMORADO) */
+.pagina-contato-v2 .faq-contato-section {
+    background-color: var(--cor-terciaria); /* Fundo da seção FAQ */
+    padding: var(--espacamento-extra) 0;
+}
+.pagina-contato-v2 .faq-contato-section h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-grande);
+}
+/* Estilos FAQ globais já estão em style.css e são aplicados via .faq-item.active */
+/* As regras abaixo são para refinar o visual específico desta página, mas sem conflitar com o JS global */
+
+.pagina-contato-v2 .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.pagina-contato-v2 .faq-item {
+    background-color: #fff; /* Fundo do item do FAQ */
+    margin-bottom: var(--espacamento-pequeno); /* Espaçamento entre itens */
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+.pagina-contato-v2 .faq-question {
+    background-color: transparent; /* Permite a cor de fundo do item se houver */
+    border: none;
+    padding: var(--espacamento-medio);
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.pagina-contato-v2 .faq-question:hover {
+    background-color: var(--cor-fundo-claro); /* Fundo sutil no hover */
+}
+
+/* Ícone de expansão (controlado pelo scripts.js via pseudo-elemento) */
+.pagina-contato-v2 .faq-question::after {
+    /* Estas regras já estão no style.css global e serão aplicadas */
+    /* content: '+'; font-size: 1.5rem; transition: transform 0.2s ease; */
+    /* Apenas garanta que o CSS global está sendo aplicado */
+}
+
+/* Resposta do FAQ (controlada pelo scripts.js via hidden attribute e classes) */
+.pagina-contato-v2 .faq-answer {
+    padding: 0 var(--espacamento-medio); /* Padding horizontal para o conteúdo da resposta */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding-top 0.3s ease-out, padding-bottom 0.3s ease-out;
+    background-color: var(--cor-fundo-claro); /* Fundo da resposta */
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto); /* Garante a cor do texto da resposta */
+    line-height: 1.6;
+}
+
+/* Quando o item.active é adicionado pelo scripts.js, a resposta expande */
+.pagina-contato-v2 .faq-item.active .faq-answer {
+    max-height: 500px; /* Suficiente para a maioria dos conteúdos */
+    padding-top: var(--espacamento-medio);
+    padding-bottom: var(--espacamento-medio);
+}
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .pagina-contato-v2 .contato-wrapper .container {
+        grid-template-columns: 1fr;
+    }
+    .pagina-contato-v2 .info-contato {
+        position: static;
+        margin-bottom: var(--espacamento-grande);
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-contato-v2 .hero-contato-v2 h2 { /* Era h1, agora h2 */
+        font-size: 2.5rem;
+    }
+    .pagina-contato-v2 .hero-contato-v2 .subtitulo {
+        font-size: 1.1rem;
+    }
+    .pagina-contato-v2 .contato-wrapper,
+    .pagina-contato-v2 .mapa-section,
+    .pagina-contato-v2 .faq-contato-section {
+        padding: var(--espacamento-grande) 0;
+    }
+    .pagina-contato-v2 .info-contato,
+    .pagina-contato-v2 .formulario-contato-v2 {
+        padding: var(--espacamento-medio);
+    }
+    .pagina-contato-v2 .info-contato h2,
+    .pagina-contato-v2 .formulario-contato-v2 h2 {
+        font-size: 1.6rem;
+    }
+    .pagina-contato-v2 .form-row {
+        gap: var(--espacamento-medio);
+        margin-bottom: var(--espacamento-medio);
+    }
+    .pagina-contato-v2 .form-group {
+        min-width: 100%;
+    }
+}

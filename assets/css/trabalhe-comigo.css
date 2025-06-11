@@ -1,0 +1,439 @@
+/* Estilos específicos para a página Trabalhe Comigo */
+.pagina-trabalhe .trabalhe-hero-section {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    padding: var(--espacamento-extra) 0;
+}
+
+.pagina-trabalhe .trabalhe-hero {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacamento-grande);
+}
+
+.pagina-trabalhe .trabalhe-hero-content {
+    flex: 1 1 50%;
+    text-align: left;
+    max-width: 600px;
+}
+
+.pagina-trabalhe .trabalhe-hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: var(--espacamento-medio);
+}
+
+.pagina-trabalhe .trabalhe-hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: var(--espacamento-grande);
+}
+
+.pagina-trabalhe .trabalhe-hero-btn { /* Nova classe específica para este botão */
+    margin-top: var(--espacamento-medio);
+}
+
+.pagina-trabalhe .trabalhe-hero-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.pagina-trabalhe .trabalhe-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+}
+
+/* Oportunidades Section */
+.pagina-trabalhe .oportunidades-section {
+    background-color: var(--cor-fundo-claro);
+}
+
+.pagina-trabalhe .oportunidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espacamento-grande);
+    margin-top: var(--espacamento-grande);
+}
+
+.pagina-trabalhe .oportunidade-item {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    transition: var(--transicao-media);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.pagina-trabalhe .oportunidade-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.pagina-trabalhe .oportunidade-icon {
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-medio);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    display: inline-block;
+}
+
+.pagina-trabalhe .oportunidade-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--espacamento-pequeno);
+    color: var(--cor-primaria);
+}
+
+.pagina-trabalhe .oportunidade-item p {
+    flex-grow: 1;
+}
+
+/* Perfil Section */
+.pagina-trabalhe .perfil-section {
+    background-color: var(--cor-fundo-medio);
+}
+
+.pagina-trabalhe .perfil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espacamento-grande);
+    margin-top: var(--espacamento-grande);
+}
+
+.pagina-trabalhe .perfil-item {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacamento-medio);
+    transition: var(--transicao-media);
+}
+
+.pagina-trabalhe .perfil-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.pagina-trabalhe .perfil-check {
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    flex-shrink: 0; /* Evita que o ícone encolha */
+    margin-top: 0.2rem;
+}
+
+.pagina-trabalhe .perfil-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-pequeno);
+}
+
+.pagina-trabalhe .perfil-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Depoimentos Equipe Section (Reutiliza estilos de depoimentos gerais, adiciona específicos) */
+.pagina-trabalhe .depoimentos-equipe-section {
+    background-color: var(--cor-primaria);
+}
+
+.pagina-trabalhe .depoimentos-equipe-section h2,
+.pagina-trabalhe .depoimentos-equipe-section .subtitulo {
+    color: var(--cor-terciaria);
+}
+
+.pagina-trabalhe .depoimentos-equipe-section .depoimento-texto {
+    color: var(--cor-terciaria);
+}
+
+.pagina-trabalhe .depoimentos-equipe-section .depoimento-autor,
+.pagina-trabalhe .depoimentos-equipe-section .depoimento-cargo {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pagina-trabalhe .depoimentos-equipe-section .depoimento-estrelas {
+    color: #FFD700; /* Estrelas amarelas, podem ser ajustadas */
+}
+
+/* Depoimento Slider para Equipe */
+.pagina-trabalhe #depoimentos-equipe-slider .depoimento {
+    background-color: rgba(137, 176, 211, 0.2); /* Fundo sutil para depoimentos da equipe */
+    border: 1px solid rgba(137, 176, 211, 0.3);
+    color: var(--cor-terciaria); /* Garante cor do texto */
+}
+.pagina-trabalhe #depoimentos-equipe-slider .depoimento-texto::before,
+.pagina-trabalhe #depoimentos-equipe-slider .depoimento-texto::after {
+    color: var(--cor-secundaria); /* Cor para as aspas */
+}
+
+.pagina-trabalhe .depoimentos-equipe-section .depoimentos-container {
+    padding-bottom: var(--espacamento-grande); /* Espaço para os dots */
+}
+
+.pagina-trabalhe .slider-controls {
+    text-align: center;
+    margin-top: var(--espacamento-medio);
+}
+
+.pagina-trabalhe .slider-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagina-trabalhe .slider-dot.active {
+    background-color: var(--cor-terciaria);
+    transform: scale(1.2);
+}
+
+/* Form Cadastro Section */
+.pagina-trabalhe .form-cadastro-section {
+    background-color: var(--cor-fundo-claro);
+}
+
+.pagina-trabalhe .form-cadastro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+    color: var(--cor-primaria);
+}
+
+.pagina-trabalhe .form-cadastro-container h2 {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-medio);
+    text-align: center;
+}
+
+/* Estilos de formulário reutilizados do style.css ou adaptados */
+.pagina-trabalhe .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-grande);
+    margin-bottom: var(--espacamento-grande);
+}
+
+.pagina-trabalhe .form-group {
+    flex: 1;
+    min-width: calc(50% - var(--espacamento-grande) / 2);
+    display: flex;
+    flex-direction: column;
+}
+.pagina-trabalhe .form-group.full-width {
+    flex-basis: 100%;
+    min-width: 100%;
+}
+
+.pagina-trabalhe .form-label {
+    display: block;
+    margin-bottom: var(--espacamento-pequeno);
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.pagina-trabalhe .form-label .optional {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.pagina-trabalhe .form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.pagina-trabalhe .form-control:focus {
+    border-color: var(--cor-secundaria);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5);
+}
+
+.pagina-trabalhe textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.pagina-trabalhe .form-check-group {
+    margin-top: var(--espacamento-medium);
+}
+
+.pagina-trabalhe .form-check {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+}
+
+.pagina-trabalhe .form-check-input {
+    width: 1.1em;
+    height: 1.1em;
+    margin-top: 0.1em;
+    cursor: pointer;
+}
+
+.pagina-trabalhe .form-check-label {
+    font-weight: 400;
+    color: var(--cor-texto);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.pagina-trabalhe .form-check-label a {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+
+.pagina-trabalhe .form-check-label a:hover {
+    color: var(--cor-secundaria);
+}
+
+.pagina-trabalhe .form-error {
+    color: var(--cor-erro);
+    font-size: 0.875em;
+    margin-top: var(--espacamento-pequeno);
+    display: none;
+}
+
+.pagina-trabalhe .form-control.is-invalid {
+    border-color: var(--cor-erro);
+}
+
+.pagina-trabalhe .form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.pagina-trabalhe .form-control.is-invalid + .form-error,
+.pagina-trabalhe .form-check-input.is-invalid ~ .form-error {
+    display: block;
+}
+
+.pagina-trabalhe .form-submit {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: var(--espacamento-grande) auto 0 auto;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: var(--transicao-rapida);
+    text-align: center;
+}
+
+.pagina-trabalhe .form-submit:hover,
+.pagina-trabalhe .form-submit:focus {
+    background-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+}
+
+.pagina-trabalhe .form-submit i {
+    margin-right: var(--espacamento-pequeno);
+}
+
+.pagina-trabalhe .form-message {
+    margin-top: var(--espacamento-grande);
+    padding: var(--espacamento-medio);
+    border-radius: var(--borda-radius);
+    text-align: center;
+    display: none;
+}
+
+.pagina-trabalhe .form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.pagina-trabalhe .form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+
+/* Responsividade para Trabalhe Comigo */
+@media (max-width: 992px) {
+    .pagina-trabalhe .trabalhe-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pagina-trabalhe .trabalhe-hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-trabalhe .trabalhe-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .pagina-trabalhe .trabalhe-hero-content p {
+        font-size: 1.1rem;
+    }
+    .pagina-trabalhe .oportunidade-item {
+        padding: var(--espacamento-medio);
+    }
+    .pagina-trabalhe .oportunidade-icon {
+        font-size: 2.5rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+    .pagina-trabalhe .oportunidade-title {
+        font-size: 1.3rem;
+    }
+    .pagina-trabalhe .perfil-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .pagina-trabalhe .perfil-check {
+        margin-bottom: var(--espacamento-pequeno);
+    }
+    .pagina-trabalhe .form-row {
+        flex-direction: column;
+        gap: var(--espacamento-medio);
+    }
+    .pagina-trabalhe .form-group {
+        min-width: 100%;
+    }
+    .pagina-trabalhe .form-submit {
+        max-width: 100%;
+    }
+}

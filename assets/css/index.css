@@ -1,0 +1,421 @@
+/* Estilos específicos para a página Index (Home) */
+
+/* Banner Section - Restaurado para o design original (apenas imagem) */
+.banner {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cor-primaria); /* Fundo caso a imagem não carregue */
+    /* Removidos estilos como padding, min-height, display: flex que seriam para o conteúdo sobreposto */
+  }
+  
+  .banner-wrapper {
+    position: relative;
+  }
+  
+  .banner-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  
+  /* Destaque Section (REMOVIDA DO HTML E SEUS ESTILOS JÁ NÃO SÃO MAIS APLICÁVEIS) */
+  /* Este bloco .destaque-section e seus sub-seletores foram removidos. */
+  
+  
+  /* Tipos de Planos / Serviços Grid Section - Cor de fundo alterada */
+  .servicos-home-section { 
+    background-color: var(--cor-terciaria); /* Fundo da seção: bege */
+    padding: var(--espacamento-grande) 0; 
+  }
+  
+  .servicos-home-section .heading--primary,
+  .servicos-home-section .subtitulo {
+      color: var(--cor-primaria); /* Cor do título e subtítulo: azul primário */
+  }
+  
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: var(--espacamento-grande);
+  }
+  
+  .servico {
+    background-color: var(--cor-secundaria); /* ALTERADO: Fundo do card: branco para contrastar */
+    border-radius: var(--borda-radius);
+    padding: var(--espacamento-grande);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao-media);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .servico:hover,
+  .servico:focus-within {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+  }
+  
+  .servico-img {
+    max-width: 300px;
+    height: auto;
+    border-radius: var(--borda-radius);
+    margin-bottom: var(--espacamento-medio);
+    transition: var(--transicao-media);
+  }
+  
+  .servico:hover .servico-img {
+    transform: scale(1.05);
+  }
+  
+  .servico p {
+    margin-bottom: var(--espacamento-grande);
+    flex-grow: 1;
+  }
+  
+  .botao-servico {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    border-radius: var(--borda-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao-rapida);
+    margin-top: auto;
+  }
+  
+  .botao-servico:hover,
+  .botao-servico:focus {
+    background-color: #003366;
+    transform: translateY(-2px);
+  }
+  
+  
+  /* Mapa Brasil Section - Alterado para azul escuro com texto bege */
+  .mapa-brasil-section {
+    background-color: var(--cor-primaria); /* Alterado para azul escuro */
+    text-align: center;
+  }
+  
+  .mapa-brasil-container {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-grande);
+  }
+  
+  .mapa-brasil-imagem {
+    flex: 0 0 35%;
+  }
+  
+  .mapa-brasil-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+  }
+  
+  .mapa-brasil-content {
+    flex: 0 0 60%;
+    text-align: left;
+  }
+  
+  .mapa-brasil-content p {
+    margin-bottom: var(--espacamento-medio);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--cor-terciaria); /* Alterado para bege */
+  }
+  
+  .mapa-brasil-content h2,
+  .mapa-brasil-content .subtitulo {
+    text-align: left;
+    color: var(--cor-terciaria); /* Alterado para bege */
+  }
+  
+  
+  /* Diferenciais Section */
+  .diferenciais-section {
+    background-color: var(--cor-fundo-medio); /* Alterado para azul claro */
+  }
+  
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: var(--espacamento-grande);
+  }
+  
+  .diferencial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--espacamento-grande);
+    background-color: #fefcea;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao-media);
+  }
+  
+  .diferencial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+  }
+  
+  .diferencial-icon {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-medio);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: rgba(137, 176, 211, 0.3); /* Círculo de fundo com leve transparência */
+    display: inline-block;
+  }
+  
+  .diferencial-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: var(--espacamento-pequeno);
+    color: var(--cor-primaria);
+  }
+  
+  
+  /* Depoimentos Section */
+  .depoimentos-section {
+    background-color: var(--cor-terciaria); /* Mantido bege */
+    color: var(--cor-texto);
+  }
+  
+  .depoimentos-container {
+    position: relative;
+    padding: var(--espacamento-medio) 0;
+    overflow: hidden;
+  }
+  
+  .depoimentos-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .depoimento {
+    flex: 0 0 100%; 
+    max-width: 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    padding: var(--espacamento-grande);
+    background-color: rgba(57, 90, 125, 0.1);
+    border-radius: var(--borda-radius);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .depoimento:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+  }
+  
+  /* Ícones de aspas decorativos */
+  .depoimento-texto::before,
+  .depoimento-texto::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    position: absolute;
+    opacity: 0.2;
+  }
+  
+  .depoimento-texto::before {
+    top: -10px;
+    left: -15px;
+  }
+  
+  .depoimento-texto::after {
+    bottom: -10px;
+    right: -15px;
+  }
+  
+  .depoimentos-section .heading--primary {
+    color: var(--cor-primaria) !important;
+  }
+  
+  .depoimentos-section .subtitulo {
+    color: var(--cor-primaria) !important;
+  }
+  
+  
+  .depoimento-texto {
+    font-style: italic;
+    margin-bottom: var(--espacamento-medio);
+    position: relative;
+  }
+  
+  .depoimento-autor {
+    font-weight: 700;
+    margin-top: var(--espacamento-pequeno);
+  }
+  
+  .depoimento-cargo {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .depoimento-estrelas {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin: var(--espacamento-pequeno) 0;
+  }
+  
+  /* Slider Controls for Depoimentos (Home Specific) */
+  .slider-controls {
+      text-align: center;
+      margin-top: var(--espacamento-medio);
+  }
+  
+  .slider-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .slider-dot.active {
+      background-color: var(--cor-primaria);
+      transform: scale(1.2);
+  }
+  
+  
+  /* FAQ Section */
+  .faq-section {
+    background-color: var(--cor-fundo-claro); /* Alterado para cor de fundo clara */
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: var(--espacamento-medio);
+    border-radius: var(--borda-radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    background-color: #fff;
+  }
+  
+  .faq-question {
+    padding: var(--espacamento-medio);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transicao-rapida);
+    border: none;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .faq-question:hover {
+    background-color: #7ba3c9;
+  }
+  
+  .faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: var(--transicao-rapida);
+  }
+  
+  .faq-item.active .faq-question::after {
+    content: '−';
+  }
+  
+  .faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transicao-media);
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: var(--espacamento-medio);
+    max-height: 500px;
+  }
+  
+  
+  /* ===== RESPONSIVIDADE PARA SEÇÕES DA HOME ===== */
+  
+  @media (max-width: 1024px) {
+    /* Banner */
+    .banner-wrapper img {
+      height: 500px; /* Example height for tablets */
+    }
+  
+    /* Depoimentos Slider */
+    .depoimento {
+      flex: 0 0 100%; /* Continua 100% para manter o slide unitário */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Banner */
+    .banner-wrapper img {
+      height: 400px; /* Example height for mobile */
+    }
+    
+    /* Serviços Grid (1 coluna em mobile) */
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+    .servico-img {
+        max-width: 200px; /* Adjust image size for mobile */
+    }
+  
+    /* Mapa Brasil Section */
+    .mapa-brasil-container {
+        flex-direction: column;
+    }
+    
+    .mapa-brasil-imagem,
+    .mapa-brasil-content {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .mapa-brasil-content {
+        text-align: center;
+        margin-top: var(--espacamento-medio);
+    }
+  
+    /* Depoimentos Slider (1 coluna em mobile) */
+    .depoimento {
+      flex: 0 0 100%; /* Uma coluna em mobile */
+      margin: 0; /* Remove margem entre slides para melhor visualização em mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Banner */
+    .banner-wrapper img {
+      height: 300px; /* Smaller height for very small mobile screens */
+    }
+  }

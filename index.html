@@ -1,554 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Meta tags otimizadas para SEO -->
-  <meta name="description" content="Silas Novaes - Corretor de planos de saúde com atendimento personalizado em todo o Brasil. Compare preços e operadoras como Unimed, Bradesco, Amil, SulAmérica e encontre o plano de saúde ideal para você e sua família." />
-  <meta name="keywords" content="planos de saúde, corretor de planos de saúde, plano de saúde mais barato, Unimed, Bradesco, Amil, SulAmérica, plano individual, plano familiar, plano empresarial, CNPJ" />
-  <meta name="author" content="Silas Novaes" />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Canonical URL -->
-  <meta rel="canonical" href="https://www.silasnovaes.com.br/" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.silasnovaes.com.br/" />
-  <meta property="og:title" content="Silas Novaes - Planos de Saúde | Atendimento em Todo Brasil" />
-  <meta property="og:description" content="Encontre o plano de saúde ideal para você e sua família. Atendimento personalizado e as melhores operadoras do mercado." />
-  <meta property="og:image" content="https://www.silasnovaes.com.br/imagens/og-image.webp" />
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.silasnovaes.com.br/" />
-  <meta property="twitter:title" content="Silas Novaes - Planos de Saúde | Atendimento em Todo Brasil" />
-  <meta property="twitter:description" content="Encontre o plano de saúde ideal para você e sua família. Atendimento personalizado e as melhores operadoras do mercado." />
-  <meta property="twitter:image" content="https://www.silasnovaes.com.br/imagens/og-image.webp" />
-  
-  <!-- Favicon -->
-  <link rel="icon" href="imagens/favicon.ico" />
-  <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
-  
-  <title>Silas Novaes - Planos de Saúde | Atendimento em Todo Brasil</title>
-  
-  <!-- Preload de fontes e recursos críticos -->
-  <link rel="preload" href="style.css" as="style" />
-  <link rel="preload" href="imagens/silasnovaes-logo-azul.webp" as="image" />
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  
-  <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Schema.org / JSON-LD -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Silas Novaes - Corretor de Planos de Saúde",
-      "image": "https://www.silasnovaes.com.br/imagens/silasnovaes-logo-azul.webp",
-      "url": "https://www.silasnovaes.com.br",
-      "telephone": "+5583991092624",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -15.7801,
-        "longitude": -47.9292
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/silasnovaesplanos",
-        "https://www.instagram.com/silasnovaes",
-        "https://www.linkedin.com/in/silasnovaes"
-      ]
-    }
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="description" content="Silas Novaes - Corretor de planos de saúde com atendimento personalizado em todo o Brasil. Compare preços e operadoras como Unimed, Bradesco, Amil, SulAmérica e encontre o plano de saúde ideal para você e sua família." />
+    <meta name="keywords" content="planos de saúde, corretor de planos de saúde, plano de saúde mais barato, Unimed, Bradesco, Amil, SulAmérica, plano individual, plano familiar, plano empresarial, CNPJ" />
+    <meta name="author" content="Silas Novaes" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.silasnovaes.com.br/" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.silasnovaes.com.br/" />
+    <meta property="og:title" content="Silas Novaes - Planos de Saúde | Atendimento em Todo Brasil" />
+    <meta property="og:description" content="Encontre o plano de saúde ideal para você e sua família. Atendimento personalizado e as melhores operadoras do mercado." />
+    <meta property="og:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image.webp" />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.silasnovaes.com.br/" />
+    <meta property="twitter:title" content="Silas Novaes - Planos de Saúde | Atendimento em Todo Brasil" />
+    <meta property="twitter:description" content="Encontre o plano de saúde ideal para você e sua família. Atendimento personalizado e as melhores operadoras do mercado." />
+    <meta property="twitter:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image.webp" />
+    
+    <link rel="icon" href="assets/imagens/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/imagens/apple-touch-icon.png" />
+    
+    <title>Silas Novaes - Planos de Saúde | Atendimento em Todo Brasil</title>
+    
+    <link rel="preload" href="assets/css/style.css" as="style" />
+    <link rel="preload" href="assets/imagens/silasnovaes-logo-azul.webp" as="image" />
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" /> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Silas Novaes - Corretor de Planos de Saúde",
+        "image": "https://www.silasnovaes.com.br/assets/imagens/silasnovaes-logo-azul.webp",
+        "url": "https://www.silasnovaes.com.br",
+        "telephone": "+5583991092624",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BR",
+          "addressLocality": "João Pessoa",
+          "addressRegion": "PB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -7.1194,
+          "longitude": -34.8645
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/silasnovaesplanos",
+          "https://www.instagram.com/silasnovaes",
+          "https://www.linkedin.com/in/silasnovaes"
+        ]
+      }
+    </script>
 </head>
 
 <body>
-  <!-- Link de acessibilidade -->
-  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
-
-  <!-- Faixa topo -->
-  <div class="faixa-topo">
-    <div class="container">
-      <div class="contato-rapido">
-        <b>Contrate o seu plano de saúde</b> 
-        <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> (83) 99109-2624
-        </a>
-      </div>
-      <div class="social-icons">
-        <a href="#" class="social-icon" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="faixa-topo">
+        <div class="container">
+            <div class="contato-rapido">
+                <b>Contrate o seu plano de saúde</b> 
+                <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> (83) 99109-2624
+                </a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/osilasnovaes" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/silasnovaes1/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/silasnovaes/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="site-wrapper">
-    <!-- Header -->
-    <header class="bloco" id="topo">
-      <div class="container">
-        <div class="header-content">
-          <a href="index.html" class="logo-link" aria-label="Silas Novaes - Página Inicial">
-            <img src="imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="logo" width="180" height="50" />
-          </a>
+    <div class="site-wrapper">
+        <header class="bloco" id="topo">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo-link" aria-label="Silas Novaes - Página Inicial">
+                        <img src="assets/imagens/silasnovaes-logo-azul.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="logo" width="180" height="50" />
+                    </a>
 
-          <!-- Botão hamburguer -->
-          <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+                    <div class="menu-toggle" aria-expanded="false" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-          <nav aria-label="Menu principal">
-            <ul id="menu">
-              <li><a href="index.html" class="active">HOME</a></li>
-              <li><a href="sobre.html">SOBRE</a></li>
-              <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
-              <li><a href="operadoras.html">OPERADORAS</a></li>
-              <li><a href="formulario.html">FORMULÁRIO</a></li>
-              <li><a href="contato.html">CONTATOS</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+                    <nav aria-label="Menu principal">
+                        <ul id="menu">
+                            <li><a href="index.html" class="active">HOME</a></li>
+                            <li><a href="sobre.html">SOBRE</a></li>
+                            <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
+                            <li><a href="operadoras.html">OPERADORAS</a></li>
+                            <li><a href="formulario.html">FORMULÁRIO</a></li>
+                            <li><a href="contato.html">CONTATOS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-    <!-- Banner principal -->
-    <section class="banner" aria-label="Banner principal">
-      <div class="banner-wrapper">
-        <picture>
-          <!-- Imagem para mobile (até 768px) -->
-          <source srcset="imagens/plano-de-saude-mais-barato-banner-mobile.webp" media="(max-width: 768px)" width="768" height="800" />
-          <!-- Imagem para tablet (até 1024px) -->
-          <source srcset="imagens/plano-de-saude-mais-barato-banner-tablet.webp" media="(max-width: 1024px)" width="1024" height="500" />
-          <!-- Imagem padrão (desktop) -->
-          <img src="imagens/plano-de-saude-mais-barato-banner-desktop.webp" alt="Família feliz com plano de saúde completo - Silas Novaes Corretor" width="1920" height="600" fetchpriority="high" />
-        </picture>
-      </div>
-    </section>
+        <main id="conteudo-principal" role="main">
+            <section class="banner" aria-label="Banner principal">
+                <div class="banner-wrapper">
+                    <picture>
+                        <source srcset="assets/imagens/plano-de-saude-mais-barato-banner-mobile.webp" media="(max-width: 768px)" width="768" height="800" />
+                        <source srcset="assets/imagens/plano-de-saude-mais-barato-banner-tablet.webp" media="(max-width: 1024px)" width="1024" height="500" />
+                        <img src="assets/imagens/plano-de-saude-mais-barato-banner-desktop.webp" alt="Família feliz com plano de saúde completo - Silas Novaes Corretor" width="1920" height="600" fetchpriority="high" />
+                    </picture>
+                </div>
+            </section>
+            <section class="bloco secao-boas-vindas animate-fade-in" aria-labelledby="boas-vindas-titulo">
+                <div class="container">
+                    <h1 id="boas-vindas-titulo" class="heading heading--secondary">Silas Novaes: Sua Consultoria Especializada em Planos de Saúde</h1>
+                    <p class="subtitulo">Encontre o plano ideal para você, sua família ou sua empresa, com atendimento personalizado em todo o Brasil.</p>
+                </div>
+            </section>
+            <section class="diferenciais-section bloco animate-fade-in" aria-labelledby="diferenciais-titulo">
+                <div class="container">
+                    <h2 id="diferenciais-titulo" class="heading heading--secondary">Por que escolher nossos serviços?</h2>
+                    <p class="subtitulo">Conheça os diferenciais que fazem da nossa consultoria a escolha certa para você</p>
+                    
+                    <div class="diferenciais-grid">
+                        <div class="diferencial-item animate-fade-in">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="diferencial-title">Atendimento Personalizado</h3>
+                            <p>Análise detalhada do seu perfil e necessidades para recomendar o plano mais adequado, com suporte contínuo antes e após a contratação.</p>
+                        </div>
+                        
+                        <div class="diferencial-item animate-fade-in">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3 class="diferencial-title">Comparativo entre Operadoras</h3>
+                            <p>Apresentação imparcial das opções disponíveis, destacando vantagens e limitações de cada plano para uma escolha consciente.</p>
+                        </div>
+                        
+                        <div class="diferencial-item animate-fade-in">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h3 class="diferencial-title">Preços Diretos da Fonte</h3>
+                            <p>Acesso às melhores condições comerciais diretamente das operadoras, sem custos adicionais para você.</p>
+                        </div>
+                        
+                        <div class="diferencial-item animate-fade-in">
+                            <div class="diferencial-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="diferencial-title">Suporte Contínuo</h3>
+                            <p>Assistência completa durante toda a vigência do seu plano, ajudando com dúvidas, reembolsos e procedimentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Nova seção abaixo do banner -->
-    <section class="bloco destaque-section" aria-labelledby="destaque-titulo">
-      <div class="container">
-        <div class="destaque-container">
-          <div class="destaque-imagem">
-            <picture>
-              <!-- Imagem para mobile -->
-              <source srcset="imagens/imagem-destaque-home-mobile.webp" media="(max-width: 768px)" width="300" height="300" />
-              <!-- Imagem para tablet -->
-              <source srcset="imagens/imagem-destaque-home-tablet.webp" media="(max-width: 1024px)" width="400" height="400" />
-              <!-- Imagem padrão (desktop) -->
-              <img src="imagens/imagem-destaque-home.webp" alt="Família protegida com plano de saúde de qualidade" class="destaque-img" loading="lazy" width="500" height="500" />
-            </picture>
-          </div>
-          <div class="destaque-content">
-            <h2 id="destaque-titulo" class="heading heading--secondary">Planos de saúde para cuidar de quem você ama</h2>
-            <p>Atendimento personalizado e as melhores condições do mercado para você e sua família. Encontre o plano ideal que se encaixa no seu orçamento e necessidades de saúde.</p>
-            <a href="formulario.html" class="botao-primario">
-              <i class="fas fa-clipboard-list"></i> Solicitar cotação
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+            <section class="bloco servicos-home-section animate-fade-in" aria-labelledby="tipos-planos-titulo">
+                <div class="container">
+                    <h2 id="tipos-planos-titulo" class="heading heading--secondary">Como escolher um plano de saúde?</h2>
+                    <p class="subtitulo" style="color: var(--cor-primaria);">Conheça as opções disponíveis e encontre a solução ideal para suas necessidades</p>
+                    
+                    <div class="servicos-grid">
+                        <div class="servico animate-fade-in">
+                            <img src="assets/imagens/plano_de_saude_individual_azul_claro.webp" alt="Plano Individual - Ícone representativo" class="servico-img" loading="lazy" width="300" height="300" />
+                            <h3 class="heading heading--tertiary">Planos Individuais</h3>
+                            <p>Ideal para quem busca atendimento médico de qualidade por conta própria. Oferece cobertura completa, atendendo bem as suas necessidades de saúde com rede credenciada de qualidade.</p>
+                            <a href="formulario.html" class="botao-servico">Saiba Mais</a>
+                        </div>
 
-    <!-- Conteúdo principal -->
-    <main id="conteudo-principal" role="main">
-      <!-- Seção de tipos de planos -->
-      <section class="bloco" style="background-color: #002043;" aria-labelledby="tipos-planos-titulo">
-        <div class="container">
-          <h2 id="tipos-planos-titulo" class="heading heading--primary">Como escolher um plano de saúde?</h2>
-          <p class="subtitulo" style="color: var(--cor-terciaria);">Conheça as opções disponíveis e encontre a solução ideal para suas necessidades</p>
-          
-          <div class="servicos-grid">
-            <div class="servico animate-fade-in">
-              <img src="imagens/plano_de_saude_individual_azul_claro.webp" alt="Plano Individual - Ícone representativo" class="servico-img" loading="lazy" width="300" height="300" />
-              <h3 class="heading heading--tertiary">Planos Individuais</h3>
-              <p>Ideal para quem busca atendimento médico de qualidade por conta própria. Oferece cobertura completa, atendendo bem as suas necessidades de saúde com rede credenciada de qualidade.</p>
-              <a href="formulario.html" class="botao-servico">Saiba Mais</a>
-            </div>
+                        <div class="servico animate-fade-in">
+                            <img src="assets/imagens/plano_de_saude_coletivo_por_adesao_azul_claro.webp" alt="Plano Coletivo Por Adesão - Ícone representativo" class="servico-img" loading="lazy" width="300" height="300" />
+                            <h3 class="heading heading--tertiary">Coletivo por Adesão</h3>
+                            <p>Soluções acessíveis para profissionais vinculados a entidades de classe, sindicatos ou associações, com vantagens exclusivas e mensalidades mais competitivas para você e seus dependentes.</p>
+                            <a href="formulario.html" class="botao-servico">Saiba Mais</a>
+                        </div>
 
-            <div class="servico animate-fade-in">
-              <img src="imagens/plano_de_saude_coletivo_por_adesao_azul_claro.webp" alt="Plano Coletivo Por Adesão - Ícone representativo" class="servico-img" loading="lazy" width="300" height="300" />
-              <h3 class="heading heading--tertiary">Coletivo por Adesão</h3>
-              <p>Soluções acessíveis para profissionais vinculados a entidades de classe, sindicatos ou associações, com vantagens exclusivas e mensalidades mais competitivas para você e seus dependentes.</p>
-              <a href="formulario.html" class="botao-servico">Saiba Mais</a>
-            </div>
+                        <div class="servico animate-fade-in">
+                            <img src="assets/imagens/plano_de_saude_cnpj_azul_claro.webp" alt="Plano Empresarial - Ícone representativo" class="servico-img" loading="lazy" width="300" height="300" />
+                            <h3 class="heading heading--tertiary">Planos Empresariais</h3>
+                            <p>Use o seu CNPJ para contratar os melhores planos de saúde com condições exclusivas para a sua família ou para seus colaboradores, nos melhores preços do mercado e com benefícios adicionais.</p>
+                            <a href="formulario.html" class="botao-servico">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="servico animate-fade-in">
-              <img src="imagens/plano_de_saude_cnpj_azul_claro.webp" alt="Plano Empresarial - Ícone representativo" class="servico-img" loading="lazy" width="300" height="300" />
-              <h3 class="heading heading--tertiary">Planos Empresariais</h3>
-              <p>Use o seu CNPJ para contratar os melhores planos de saúde com condições exclusivas para a sua família ou para seus colaboradores, nos melhores preços do mercado e com benefícios adicionais.</p>
-              <a href="formulario.html" class="botao-servico">Saiba Mais</a>
-            </div>
-          </div>
-        </div>
-      </section>
+            <section class="mapa-brasil-section bloco animate-fade-in" aria-labelledby="mapa-brasil-titulo">
+                <div class="container">
 
-      <!-- Seção Mapa Brasil - MODIFICADA -->
-      <section class="mapa-brasil-section bloco" aria-labelledby="mapa-brasil-titulo">
-        <div class="container">
+                    <div class="mapa-brasil-container">
+                        <div class="mapa-brasil-imagem">
+                            <picture>
+                                <source srcset="assets/imagens/mapa-brasil-mobile.webp" media="(max-width: 768px)" width="300" height="300" />
+                                <img src="assets/imagens/mapa-brasil-desktop.webp" alt="Mapa do Brasil destacando a cobertura nacional dos planos de saúde" class="mapa-brasil-img" loading="lazy" width="500" height="500" />
+                            </picture>
+                        </div>
+                        <div class="mapa-brasil-content">
+                            <h2 id="mapa-brasil-titulo" class="heading heading--secondary">Atendimento em Todo o Brasil</h2>
+                            <p class="subtitulo">Conte com nosso suporte especializado onde quer que você esteja</p> 
+                            <p>Como corretor especializado, ofereço soluções em planos de saúde para clientes em todas as regiões do Brasil. Trabalho com as principais operadoras do mercado, garantindo o melhor atendimento independentemente da sua localização.</p>
+                            <p class="mt-2">Meu compromisso é encontrar o plano ideal para você, considerando a rede de atendimento disponível em sua região e suas necessidades específicas de cobertura.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <div class="mapa-brasil-container">
-            <div class="mapa-brasil-imagem">
-              <picture>
-                <!-- Imagem para mobile -->
-                <source srcset="imagens/mapa-brasil-mobile.webp" media="(max-width: 768px)" width="300" height="300" />
-                <!-- Imagem padrão (desktop) -->
-                <img src="imagens/mapa-brasil-desktop.webp" alt="Mapa do Brasil destacando a cobertura nacional dos planos de saúde" class="mapa-brasil-img" loading="lazy" width="500" height="500" />
-              </picture>
-            </div>
-            <div class="mapa-brasil-content">
-              <h2 id="mapa-brasil-titulo" class="heading heading--secondary">Atendimento em Todo o Brasil</h2>
-              <p class="subtitulo">Conte com nosso suporte especializado onde quer que você esteja</p>    
-              <p>Como corretor especializado, ofereço soluções em planos de saúde para clientes em todas as regiões do Brasil. Trabalho com as principais operadoras do mercado, garantindo o melhor atendimento independentemente da sua localização.</p>
-              <p class="mt-2">Meu compromisso é encontrar o plano ideal para você, considerando a rede de atendimento disponível em sua região e suas necessidades específicas de cobertura.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <section class="depoimentos-section bloco animate-fade-in" aria-labelledby="depoimentos-titulo">
+                <div class="container">
+                    <h2 id="depoimentos-titulo" class="heading heading--primary">O que nossos clientes dizem</h2>
+                    <p class="subtitulo">Experiências reais de quem já contratou nossos serviços</p>
+                    
+                    <div class="depoimentos-container">
+                        <div class="depoimentos-slider" id="depoimentos-slider">
+                            <div class="depoimento">
+                                <p class="depoimento-texto">Silas me ajudou a encontrar um plano que atendesse toda minha família com um custo muito abaixo do que eu imaginava. O atendimento foi excelente do início ao fim!</p>
+                                <div class="depoimento-estrelas">★★★★★</div>
+                                <p class="depoimento-autor">Carlos Eduardo</p>
+                                <p class="depoimento-cargo">Empresário</p>
+                            </div>
+                            
+                            <div class="depoimento">
+                                <p class="depoimento-texto">Estava perdida entre tantas opções de planos, mas com a orientação do Silas consegui fazer a escolha certa para mim e meus filhos. Super recomendo!</p>
+                                <div class="depoimento-estrelas">★★★★★</div>
+                                <p class="depoimento-autor">Mariana Silva</p>
+                                <p class="depoimento-cargo">Professora</p>
+                            </div>
+                            
+                            <div class="depoimento">
+                                <p class="depoimento-texto">Contratei um plano empresarial para minha pequena empresa e o processo foi muito mais simples do que eu imaginava. Atendimento nota 10!</p>
+                                <div class="depoimento-estrelas">★★★★★</div>
+                                <p class="depoimento-autor">Roberto Almeida</p>
+                                <p class="depoimento-cargo">Microempresário</p>
+                            </div>
+                        </div>
+                        <div class="slider-controls" id="depoimentos-home-controls">
+                            <span class="slider-dot active" data-slide-index="0"></span>
+                            <span class="slider-dot" data-slide-index="1"></span>
+                            <span class="slider-dot" data-slide-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- Seção de Diferenciais -->
-      <section class="diferenciais-section bloco" aria-labelledby="diferenciais-titulo">
-        <div class="container">
-          <h2 id="diferenciais-titulo" class="heading heading--secondary">Por que escolher nossos serviços?</h2>
-          <p class="subtitulo">Conheça os diferenciais que fazem da nossa consultoria a escolha certa para você</p>
-          
-          <div class="diferenciais-grid">
-            <div class="diferencial-item animate-fade-in">
-              <div class="diferencial-icon">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <h3 class="diferencial-title">Atendimento Personalizado</h3>
-              <p>Análise detalhada do seu perfil e necessidades para recomendar o plano mais adequado, com suporte contínuo antes e após a contratação.</p>
-            </div>
-            
-            <div class="diferencial-item animate-fade-in">
-              <div class="diferencial-icon">
-                <i class="fas fa-balance-scale"></i>
-              </div>
-              <h3 class="diferencial-title">Comparativo entre Operadoras</h3>
-              <p>Apresentação imparcial das opções disponíveis, destacando vantagens e limitações de cada plano para uma escolha consciente.</p>
-            </div>
-            
-            <div class="diferencial-item animate-fade-in">
-              <div class="diferencial-icon">
-                <i class="fas fa-hand-holding-usd"></i>
-              </div>
-              <h3 class="diferencial-title">Preços Diretos da Fonte</h3>
-              <p>Acesso às melhores condições comerciais diretamente das operadoras, sem custos adicionais para você.</p>
-            </div>
-            
-            <div class="diferencial-item animate-fade-in">
-              <div class="diferencial-icon">
-                <i class="fas fa-headset"></i>
-              </div>
-              <h3 class="diferencial-title">Suporte Contínuo</h3>
-              <p>Assistência completa durante toda a vigência do seu plano, ajudando com dúvidas, reembolsos e procedimentos.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <section class="faq-section bloco animate-fade-in" aria-labelledby="faq-titulo">
+                <div class="container">
+                    <h2 id="faq-titulo" class="heading heading--secondary">Perguntas Frequentes</h2>
+                    <p class="subtitulo">Tire suas dúvidas sobre planos de saúde</p>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">Qual a diferença entre plano individual e familiar?</button>
+                            <div id="faq-answer-1" class="faq-answer" hidden>
+                                <p>O plano individual é contratado para uma única pessoa, enquanto o familiar permite incluir dependentes como cônjuge, filhos e outros familiares em um único contrato. O plano familiar geralmente oferece condições mais vantajosas em termos de custo-benefício quando comparado à contratação de planos individuais separados.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">O que é carência em planos de saúde?</button>
+                            <div id="faq-answer-2" class="faq-answer" hidden>
+                                <p>Carência é o período que o beneficiário precisa aguardar para ter direito a determinados procedimentos após a contratação do plano. Os prazos máximos de carência são regulamentados pela ANS: 24 horas para urgências e emergências, 30 dias para consultas e exames simples, 180 dias para cirurgias e procedimentos complexos, e 300 dias para parto.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">Posso usar meu CNPJ para contratar um plano de saúde?</button>
+                            <div id="faq-answer-3" class="faq-answer" hidden>
+                                <p>Sim, empresas de qualquer porte, incluindo MEI (Microempreendedor Individual), podem contratar planos de saúde empresariais. Esses planos geralmente oferecem vantagens como preços mais competitivos, menos carências e possibilidade de incluir sócios e familiares. Para MEI, é possível contratar a partir de 1 titular (o próprio microempreendedor).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">Qual a vantagem de contratar com um corretor?</button>
+                            <div id="faq-answer-4" class="faq-answer" hidden>
+                                <p>Um corretor especializado oferece consultoria imparcial, apresentando as melhores opções de diferentes operadoras que se adequam ao seu perfil e necessidades. Além disso, o corretor auxilia em todo o processo burocrático, desde a contratação até o suporte pós-venda, como orientações sobre carências, coberturas, reembolsos e resolução de problemas com a operadora, sem custo adicional para o cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- Seção de Depoimentos - MODIFICADA com 3 depoimentos -->
-      <section class="depoimentos-section bloco" aria-labelledby="depoimentos-titulo">
-        <div class="container">
-          <h2 id="depoimentos-titulo" class="heading heading--primary">O que nossos clientes dizem</h2>
-          <p class="subtitulo">Experiências reais de quem já contratou nossos serviços</p>
-          
-          <div class="depoimentos-container">
-            <div class="depoimentos-slider" id="depoimentos-slider">
-              <div class="depoimento">
-                <p class="depoimento-texto">Silas me ajudou a encontrar um plano que atendesse toda minha família com um custo muito abaixo do que eu imaginava. O atendimento foi excelente do início ao fim!</p>
-                <div class="depoimento-estrelas">★★★★★</div>
-                <p class="depoimento-autor">Carlos Eduardo</p>
-                <p class="depoimento-cargo">Empresário</p>
-              </div>
-              
-              <div class="depoimento">
-                <p class="depoimento-texto">Estava perdida entre tantas opções de planos, mas com a orientação do Silas consegui fazer a escolha certa para mim e meus filhos. Super recomendo!</p>
-                <div class="depoimento-estrelas">★★★★★</div>
-                <p class="depoimento-autor">Mariana Silva</p>
-                <p class="depoimento-cargo">Professora</p>
-              </div>
-              
-              <div class="depoimento">
-                <p class="depoimento-texto">Contratei um plano empresarial para minha pequena empresa e o processo foi muito mais simples do que eu imaginava. Atendimento nota 10!</p>
-                <div class="depoimento-estrelas">★★★★★</div>
-                <p class="depoimento-autor">Roberto Almeida</p>
-                <p class="depoimento-cargo">Microempresário</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <section class="cta-section bloco animate-fade-in" aria-labelledby="cta-titulo">
+                <div class="container">
+                    <div class="cta-container">
+                        <h2 id="cta-titulo" class="cta-title">Pronto para garantir mais tranquilidade para você e sua família?</h2>
+                        <p class="cta-text">Entre em contato agora mesmo e receba uma cotação personalizada, sem compromisso. Estou à disposição para esclarecer todas as suas dúvidas e encontrar o plano ideal para você.</p>
+                        <div class="cta-buttons">
+                            <a href="formulario.html" class="botao-primario">Solicitar uma Cotação</a>
+                            <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" class="botao-secundario">
+                                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-      <!-- Seção de FAQ -->
-      <section class="faq-section bloco" aria-labelledby="faq-titulo">
-        <div class="container">
-          <h2 id="faq-titulo" class="heading heading--secondary">Perguntas Frequentes</h2>
-          <p class="subtitulo">Tire suas dúvidas sobre planos de saúde</p>
-          
-          <div class="faq-container">
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">Qual a diferença entre plano individual e familiar?</div>
-              <div class="faq-answer">
-                <p>O plano individual é contratado para uma única pessoa, enquanto o familiar permite incluir dependentes como cônjuge, filhos e outros familiares em um único contrato. O plano familiar geralmente oferece condições mais vantajosas em termos de custo-benefício quando comparado à contratação de planos individuais separados.</p>
-              </div>
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <img src="assets/imagens/silasnovaes-logo-branca.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="footer-logo" width="160" height="45" loading="lazy" />
+                        <p class="footer-about">Soluções personalizadas em planos de saúde para você, sua família e sua empresa. Atendimento em todo o Brasil com as melhores operadoras do mercado.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/osilasnovaes" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/silasnovaes1/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/silasnovaes/" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">LINKS RÁPIDOS</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="sobre.html">SOBRE</a></li>
+                            <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
+                            <li><a href="operadoras.html">OPERADORAS</a></li>
+                            <li><a href="formulario.html">FORMULÁRIO</a></li>
+                            <li><a href="contato.html">CONTATOS</a></li>
+                            <li><a href="politica-de-privacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">TIPOS DE PLANOS</h3>
+                        <ul class="footer-links">
+                            <li><a href="formulario.html">Planos Individuais</a></li>
+                            <li><a href="formulario.html">Planos Familiares</a></li>
+                            <li><a href="formulario.html">Planos Empresariais</a></li>
+                            <li><a href="formulario.html">Planos por Adesão</a></li>
+                            <li><a href="formulario.html">Planos para MEI</a></li>
+                            <li><a href="formulario.html">Planos Odontológicos</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-heading">CONTATO</h3>
+                        <ul class="footer-contact-list">
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer">(83) 99109-2624</a>
+                            </li>
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <a href="mailto:contato@silasnovaes.com.br">contato@silasnovaes.com.br</a>
+                            </li>
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <a href="formulario.html">Atendimento em todo o Brasil</a>
+                            </li>
+                            <li class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <a href="formulario.html">Seg. a Sex.: 8h às 18h</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year"></span> Silas Novaes - Corretor de Planos de Saúde. Todos os direitos reservados.</p>
+                    <p class="mt-1">Este site não pertence a nenhuma operadora de plano de saúde. Silas Novaes é um corretor independente.</p>
+                </div>
             </div>
-            
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">O que é carência em planos de saúde?</div>
-              <div class="faq-answer">
-                <p>Carência é o período que o beneficiário precisa aguardar para ter direito a determinados procedimentos após a contratação do plano. Os prazos máximos de carência são regulamentados pela ANS: 24 horas para urgências e emergências, 30 dias para consultas e exames simples, 180 dias para cirurgias e procedimentos complexos, e 300 dias para parto.</p>
-              </div>
-            </div>
-            
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">Posso usar meu CNPJ para contratar um plano de saúde?</div>
-              <div class="faq-answer">
-                <p>Sim, empresas de qualquer porte, incluindo MEI (Microempreendedor Individual), podem contratar planos de saúde empresariais. Esses planos geralmente oferecem vantagens como preços mais competitivos, menos carências e possibilidade de incluir sócios e familiares. Para MEI, é possível contratar a partir de 1 titular (o próprio microempreendedor).</p>
-              </div>
-            </div>
-            
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">Qual a vantagem de contratar com um corretor?</div>
-              <div class="faq-answer">
-                <p>Um corretor especializado oferece consultoria imparcial, apresentando as melhores opções de diferentes operadoras que se adequam ao seu perfil e necessidades. Além disso, o corretor auxilia em todo o processo burocrático, desde a contratação até o suporte pós-venda, como orientações sobre carências, coberturas, reembolsos e resolução de problemas com a operadora, sem custo adicional para o cliente.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção CTA -->
-      <section class="cta-section bloco" aria-labelledby="cta-titulo">
-        <div class="container">
-          <div class="cta-container">
-            <h2 id="cta-titulo" class="cta-title">Pronto para garantir mais tranquilidade para você e sua família?</h2>
-            <p class="cta-text">Entre em contato agora mesmo e receba uma cotação personalizada, sem compromisso. Estou à disposição para esclarecer todas as suas dúvidas e encontrar o plano ideal para você.</p>
-            <div class="cta-buttons">
-              <a href="formulario.html" class="botao-primario">Solicitar uma Cotação</a>
-              <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" class="botao-secundario">
-                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-container">
-          <div class="footer-column">
-            <img src="imagens/silasnovaes-logo-branca.webp" alt="Logo Silas Novaes - Corretor de Planos de Saúde" class="footer-logo" width="180" height="50" loading="lazy" />
-            <p class="footer-about">Soluções personalizadas em planos de saúde para você, sua família e sua empresa. Atendimento em todo o Brasil com as melhores operadoras do mercado.</p>
-            <div class="footer-social">
-              <a href="#" class="footer-social-link" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="footer-social-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="footer-social-link" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-          
-          <div class="footer-column">
-            <h3 class="footer-heading">Links Rápidos</h3>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="sobre.html">Sobre</a></li>
-              <li><a href="trabalhe-comigo.html">Trabalhe Comigo</a></li>
-              <li><a href="operadoras.html">Operadoras</a></li>
-              <li><a href="formulario.html">Formulário</a></li>
-              <li><a href="contato.html">Contatos</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-column">
-            <h3 class="footer-heading">Planos</h3>
-            <ul class="footer-links">
-              <li><a href="#">Planos Individuais</a></li>
-              <li><a href="#">Planos Familiares</a></li>
-              <li><a href="#">Planos Empresariais</a></li>
-              <li><a href="#">Planos por Adesão</a></li>
-              <li><a href="#">Planos para MEI</a></li>
-              <li><a href="#">Planos Odontológicos</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-column">
-            <h3 class="footer-heading">Contato</h3>
-            <div class="footer-contact-item">
-              <div class="footer-contact-icon">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div>
-                <p>(83) 99109-2624</p>
-                <p><small>Atendimento de seg. a sex. das 8h às 18h</small></p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="footer-contact-icon">
-                <i class="far fa-envelope"></i>
-              </div>
-              <p>contato@silasnovaes.com.br</p>
-            </div>
-            <div class="footer-contact-item">
-              <div class="footer-contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <p>Atendimento em todo o Brasil</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="footer-bottom">
-          <p>© 2025 Silas Novaes - Corretor de Planos de Saúde. Todos os direitos reservados.</p>
-          <p class="mt-1">Este site não pertence a nenhuma operadora de plano de saúde. Silas Novaes é um corretor independente.</p>
-        </div>
-      </div>
-    </footer>
-  </div> <!-- Fim de .site-wrapper -->
-
-  <!-- Scripts -->
-  <script>
-    // Menu toggle
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      const toggle = document.querySelector(".menu-toggle");
-      menu.classList.toggle("active");
-      toggle.classList.toggle("active");
-      
-      // Atualiza o atributo aria-expanded
-      const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !isExpanded);
-    }
-    
-    // Header scroll effect
-    window.addEventListener("scroll", function() {
-      const header = document.querySelector("header.bloco");
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    });
-    
-    // FAQ toggle
-    function toggleFaq(element) {
-      const item = element.parentElement;
-      const isActive = item.classList.contains("active");
-      
-      // Fecha todos os itens
-      document.querySelectorAll(".faq-item").forEach(faqItem => {
-        faqItem.classList.remove("active");
-      });
-      
-      // Se o item clicado não estava ativo, abre ele
-      if (!isActive) {
-        item.classList.add("active");
-      }
-    }
-    
-    // Depoimentos slider
-    // let slideIndex = 0;
-    // const slider = document.getElementById("depoimentos-slider");
-    // const dots = document.querySelectorAll(".slider-dot");
-    
-    // function currentSlide(index) {
-    //   slideIndex = index;
-    //   updateSlider();
-    // }
-    
-    // function updateSlider() {
-    //   if (!slider) return;
-      
-    //   // Atualiza a posição do slider
-    //   const slideWidth = slider.querySelector(".depoimento").offsetWidth;
-    //   slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-      
-    //   // Atualiza os dots
-    //   dots.forEach((dot, index) => {
-    //     if (index === slideIndex) {
-    //       dot.classList.add("active");
-    //     } else {
-    //       dot.classList.remove("active");
-    //     }
-    //   });
-    // }
-    
-    // // Inicializa o slider
-    // window.addEventListener("load", updateSlider);
-    // window.addEventListener("resize", updateSlider);
-
-    // // Ativa clique nos dots para trocar o slide manualmente
-    // dots.forEach((dot, index) => {
-    //   dot.addEventListener("click", () => {
-    //     currentSlide(index);
-    //   });
-    // });
-    
-    // // Auto-slide a cada 5 segundos
-    // setInterval(() => {
-    //   slideIndex = (slideIndex + 1) % dots.length;
-    //   updateSlider();
-    // }, 5000);
-    
-    // Animação de elementos ao scroll
-    document.addEventListener("DOMContentLoaded", function() {
-      const animatedElements = document.querySelectorAll(".animate-fade-in");
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      animatedElements.forEach(element => {
-        element.style.opacity = "0";
-        element.style.transform = "translateY(20px)";
-        element.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-        observer.observe(element);
-      });
-    });
-  </script>
+        </footer>
+    </div> 
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
 </body>
 </html>
