@@ -1,7 +1,7 @@
 /*
 * Silas Novaes - Planos de Saúde
 * Arquivo CSS principal otimizado para SEO, UX/UI e responsividade
-* Versão: 4.1 - GLOBAL E LIMPO (TODOS os estilos específicos de página foram removidos) + Ajustes no Footer
+* Versão: 4.3 - Ajustes de responsividade global e sintaxe CSS
 */
 
 /* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
@@ -539,106 +539,161 @@ footer {
 /* ===== RESPONSIVIDADE GLOBAL ===== */
 @media (max-width: 1024px) {
   html {
-      font-size: 15px;
+    font-size: 15px;
   }
   
   .heading--primary {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
   
   .heading--secondary {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
   html {
-      font-size: 14px;
+    font-size: 14px;
   }
   
+  /* Faixa Topo */
   .faixa-topo .container {
-      flex-direction: column;
-      gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start; /* Alinha os itens (contato-rapido e social-icons) à esquerda do container */
+    padding: 0 var(--espacamento-medio); /* Garante o padding lateral para o container */
+  }
+  .faixa-topo .contato-rapido{
+    width: 100%; /* Ocupa toda a largura */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    flex-wrap: wrap; /* Permite quebra de linha em telas muito pequenas */
+  }
+  .faixa-topo .social-icons {
+    width: 100%; /* Ocupa toda a largura */
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    flex-wrap: wrap; /* Permite quebra de linha em telas muito pequenas */
+  }
+  .faixa-topo .contato-rapido b {
+      white-space: nowrap; /* Evita que 'Contrate o seu plano de saúde' quebre a linha */
   }
   
+  /* Header e Menu Hambúrguer */
   .menu-toggle {
-      display: flex;
+    display: flex;
+    margin-left: auto; /* Empurra para a direita */
+    align-self: center; /* Garante alinhamento vertical com o logo */
+  }
+
+  header.bloco .container {
+      padding: 0; /* Remove padding lateral para o header-content preencher */
+  }
+  .header-content {
+      padding: 0 var(--espacamento-medio); /* Adiciona o padding diretamente ao header-content */
+  }
+
+  /* Main Content Padding (para evitar sobreposição com header fixo) */
+  /* A altura da faixa topo é fixa (aprox. 1rem de font-size + padding).
+     A altura do header (logo 50px + padding).
+     Vamos considerar uma altura total para o header fixo em mobile. */
+  main {
+      padding-top: 115px; /* Ajuste este valor se ainda houver faixa azul ou sobreposição */
   }
   
   nav ul {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 80%;
-      max-width: 300px;
-      height: 100vh;
-      background-color: var(--cor-secundaria);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      transition: var(--transicao-media);
-      z-index: 1001;
-      box-shadow: var(--sombra-forte);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    background-color: var(--cor-secundaria);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: var(--transicao-media);
+    z-index: 1001;
+    box-shadow: var(--sombra-forte);
   }
   
   nav ul.active {
-      right: 0;
+    right: 0;
   }
   
   nav ul li {
-      margin: 1rem 0;
+    margin: 1rem 0;
   }
   
   .heading--primary {
-      font-size: 2rem;
+    font-size: 2rem;
   }
   
   .heading--secondary {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
   }
   
   .cta-buttons {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   
   .cta-buttons a {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+    text-align: center;
   }
 
   /* Footer Responsividade */
   .footer-column {
-      margin-bottom: var(--espacamento-grande);
+    margin-bottom: var(--espacamento-grande);
+    text-align: center; /* Centraliza o texto das colunas do footer em mobile */
+    align-items: center; /* Centraliza os itens flexíveis na coluna */
   }
   .footer-column:last-child {
-      margin-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  /* Centraliza a linha inferior dos títulos do footer */
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Centraliza os links do footer */
+  .footer-links {
+    text-align: center;
+  }
+  .footer-links li a {
+    padding: 0.2rem 0; /* Ajusta o padding para melhor toque em mobile */
+  }
+
+  /* Ajustes para a lista de contatos do footer */
+  .footer-contact-list .footer-contact-item {
+    justify-content: center; /* Centraliza os ícones e texto de contato */
   }
 }
 
 @media (max-width: 480px) {
   .bloco {
-      padding: var(--espacamento-medio) 0;
+    padding: var(--espacamento-medio) 0;
   }
   
   .container {
-      width: 95%;
+    width: 95%;
   }
   
   .heading--primary {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   
   .heading--secondary {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   
   .heading--tertiary {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
   
   .footer-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
