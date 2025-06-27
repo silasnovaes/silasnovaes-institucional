@@ -7,72 +7,219 @@
     text-align: center;
 }
 
-.pagina-operadoras .filtros-section {
-    background-color: var(--cor-fundo-medio);
+/* REMOVIDO: Antiga seção de filtros (filtros-section) e seus estilos */
+/* .pagina-operadoras .filtros-section { ... } */
+/* .pagina-operadoras .filtros-container { ... } */
+/* .pagina-operadoras .filtro-grupo { ... } */
+/* .pagina-operadoras .filtro-label { ... } */
+/* .pagina-operadoras .filtro-select { ... } */
+/* .pagina-operadoras .filtro-select:focus { ... } */
+/* .pagina-operadoras .filtro-botao { ... } */
+/* .pagina-operadoras .filtro-botao:hover { ... } */
+/* .pagina-operadoras .filtro-botao i { ... } */
+
+/* NOVA SEÇÃO: DESCUBRA SEU PLANO IDEAL (discovery-plan-section) */
+.pagina-operadoras .discover-plan-section {
+    background-color: var(--cor-fundo-claro); /* Fundo claro para a seção de interação */
     padding: var(--espacamento-grande) 0;
     border-bottom: 1px solid var(--cor-borda);
+    text-align: center;
 }
-.pagina-operadoras .filtros-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espacamento-medio);
-    align-items: flex-end;
-}
-.pagina-operadoras .filtro-grupo {
-    flex: 1 1 200px; /* Permite quebra em telas menores */
+
+.pagina-operadoras .discovery-form-container {
+    background-color: var(--cor-terciaria); /* Fundo do container do formulário */
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    padding: var(--espacamento-extra); /* Espaçamento interno generoso */
+    margin-top: var(--espacamento-grande);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.pagina-operadoras .filtro-label {
+
+.pagina-operadoras .discovery-step {
+    display: none; /* Oculta todos os passos por padrão, JS controlará */
+    width: 100%; /* Garante que o passo ocupe a largura disponível */
+    padding: var(--espacamento-medio) 0;
+    margin-bottom: var(--espacamento-grande);
+    animation: fadeIn 0.5s ease-out; /* Animação suave para exibir os passos */
+}
+
+.pagina-operadoras .discovery-step.active {
+    display: block; /* Exibe o passo ativo */
+}
+
+.pagina-operadoras .discovery-step .heading--tertiary {
+    text-align: center;
+    margin-bottom: var(--espacamento-grande);
+}
+
+.pagina-operadoras .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Grid responsivo para as opções */
+    gap: var(--espacamento-medio);
+    justify-content: center;
+    margin-bottom: var(--espacamento-grande);
+}
+
+.pagina-operadoras .option-card {
+    background-color: var(--cor-fundo-claro);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    padding: var(--espacamento-medio);
+    cursor: pointer;
+    transition: var(--transicao-rapida);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    user-select: none; /* Previne seleção de texto */
+}
+
+.pagina-operadoras .option-card:hover {
+    border-color: var(--cor-secundaria);
+    box-shadow: var(--sombra-suave);
+    transform: translateY(-2px);
+}
+
+.pagina-operadoras .option-card input[type="radio"] {
+    display: none; /* Oculta o radio button original */
+}
+
+.pagina-operadoras .option-card input[type="radio"]:checked + span {
+    background-color: var(--cor-primaria); /* Fundo quando selecionado */
+    color: var(--cor-texto-claro); /* Texto quando selecionado */
+    border-radius: var(--borda-radius); /* Arredondamento */
+    padding: 0.6rem 1rem; /* Padding interno */
+    display: block; /* Ocupa todo o espaço do span */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina-operadoras .option-card input[type="radio"]:checked {
+    /* Não há estilo direto para o input, o span é o visual */
+}
+
+.pagina-operadoras .option-card.wide {
+    grid-column: 1 / -1; /* Ocupa toda a largura do grid */
+}
+
+.pagina-operadoras .discovery-actions {
+    margin-top: var(--espacamento-grande);
+    text-align: center;
+}
+
+/* Botão de Reset */
+.pagina-operadoras #reset-filters {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-primaria); /* Cor do texto para contraste */
+    background-color: var(--cor-terciaria); /* Fundo claro para o botão */
+    border: 2px solid var(--cor-primaria); /* Borda primária */
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: var(--transicao-rapida);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+}
+
+.pagina-operadoras #reset-filters:hover {
+    background-color: var(--cor-secundaria); /* Fundo mais escuro no hover */
+    color: var(--cor-texto-claro);
+    border-color: var(--cor-secundaria);
+    box-shadow: var(--sombra-media);
+    transform: translateY(-2px);
+}
+
+/* Estilos para o formulário de contato integrado */
+.pagina-operadoras .discovery-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-medio);
+    width: 100%;
+    max-width: 600px; /* Limita a largura do formulário */
+    margin: var(--espacamento-grande) auto;
+    text-align: left; /* Alinha o texto e campos à esquerda */
+}
+
+.pagina-operadoras .discovery-contact-form .form-group {
+    margin-bottom: var(--espacamento-pequeno);
+}
+
+.pagina-operadoras .discovery-contact-form label {
     display: block;
     margin-bottom: var(--espacamento-pequeno);
     font-weight: 600;
     color: var(--cor-primaria);
-    font-size: 0.9rem;
-}
-.pagina-operadoras .filtro-select {
-    width: 100%;
-    padding: 0.6rem 0.8rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--cor-texto);
-    background-color: #fff;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--borda-radius);
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    appearance: none; /* Remove estilo padrão */
-    background-image: url("data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3e%3cpath fill=\'none\' stroke=\'%23343a40\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M2 5l6 6 6-6\'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 16px 12px;
-}
-.pagina-operadoras .filtro-select:focus {
-    border-color: var(--cor-secundaria);
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5);
-}
-.pagina-operadoras .filtro-botao {
-    padding: 0.65rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--cor-terciaria);
-    background-color: var(--cor-primaria);
-    border: none;
-    border-radius: var(--borda-radius);
-    cursor: pointer;
-    transition: var(--transicao-rapida);
-    height: fit-content; /* Alinha com selects */
-}
-.pagina-operadoras .filtro-botao:hover {
-    background-color: #003366;
-}
-.pagina-operadoras .filtro-botao i {
-    margin-right: var(--espacamento-pequeno);
+    font-size: 0.95rem;
 }
 
+.pagina-operadoras .discovery-contact-form input[type="text"],
+.pagina-operadoras .discovery-contact-form input[type="email"],
+.pagina-operadoras .discovery-contact-form input[type="tel"],
+.pagina-operadoras .discovery-contact-form input[type="number"],
+.pagina-operadoras .discovery-contact-form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background-color: #fff;
+    transition: var(--transicao-rapida);
+}
+
+.pagina-operadoras .discovery-contact-form input[type="text"]:focus,
+.pagina-operadoras .discovery-contact-form input[type="email"]:focus,
+.pagina-operadoras .discovery-contact-form input[type="tel"]:focus,
+.pagina-operadoras .discovery-contact-form input[type="number"]:focus,
+.pagina-operadoras .discovery-contact-form select:focus {
+    border-color: var(--cor-secundaria);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.25);
+}
+
+.pagina-operadoras .discovery-contact-form small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.pagina-operadoras .discovery-contact-form .botao-primario {
+    margin-top: var(--espacamento-medio);
+    width: auto; /* Deixa o botão se ajustar ao conteúdo */
+    align-self: center; /* Centraliza o botão no formulário flex */
+}
+
+/* Animação para fade-in dos passos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para a seção de operadoras sugeridas */
 .pagina-operadoras .operadoras-section {
     background-color: var(--cor-fundo-claro);
+    padding-top: var(--espacamento-medio); /* Ajusta padding para nova seção acima */
 }
+
 .pagina-operadoras .operadoras-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -129,7 +276,7 @@
     background-color: var(--cor-fundo-medio);
     color: var(--cor-texto);
     padding: 0.2em 0.6em;
-    border-radius: var(--borda-radius-pequena);
+    border-radius: var(--borda-radius); /* Usando var padrão para consistência */
     font-size: 0.8rem;
     font-weight: 500;
 }
@@ -137,7 +284,7 @@
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
     padding: 0.2em 0.6em;
-    border-radius: var(--borda-radius-pequena);
+    border-radius: var(--borda-radius); /* Usando var padrão para consistência */
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -177,23 +324,6 @@
     border-radius: 15px;
     font-size: 0.8rem;
 }
-.pagina-operadoras .operadora-cta {
-    display: block;
-    width: 100%;
-    padding: 0.8rem 1rem;
-    background-color: var(--cor-primaria);
-    color: var(--cor-terciaria);
-    text-align: center;
-    border-radius: var(--borda-radius);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transicao-rapida);
-    margin-top: auto; /* Alinha botão no final */
-}
-.pagina-operadoras .operadora-cta:hover {
-    background-color: #003366;
-    transform: translateY(-2px);
-}
 .pagina-operadoras .operadora-card.hidden {
     display: none;
 }
@@ -208,14 +338,25 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .pagina-operadoras .filtros-container {
-        flex-direction: column;
-        align-items: stretch;
+    .pagina-operadoras .discovery-form-container {
+        padding: var(--espacamento-grande); /* Reduz padding em telas menores */
     }
-    .pagina-operadoras .filtro-botao {
-        width: 100%;
+    .pagina-operadoras .options-grid {
+        grid-template-columns: 1fr; /* Uma coluna em mobile para facilitar seleção */
+    }
+    .pagina-operadoras .option-card.wide {
+        grid-column: auto; /* Remove largura total em mobile para seguir o fluxo de coluna */
     }
     .pagina-operadoras .operadoras-grid {
         grid-template-columns: 1fr; /* Uma coluna */
+    }
+    .pagina-operadoras #reset-filters {
+        width: 100%; /* Botão de reset ocupa a largura total */
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-operadoras .discovery-form-container {
+        padding: var(--espacamento-medio);
     }
 }

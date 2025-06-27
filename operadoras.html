@@ -15,11 +15,13 @@
     <meta property="og:url" content="https://www.silasnovaes.com.br/operadoras.html" />
     <meta property="og:title" content="Operadoras Parceiras | Silas Novaes - Corretor de Planos de Saúde" />
     <meta property="og:description" content="Explore as operadoras de planos de saúde parceiras de Silas Novaes. Encontre a melhor opção com cobertura nacional, regional ou estadual." />
-    <meta property="og:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image-operadoras.webp" /> <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image-operadoras.webp" />
+    <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.silasnovaes.com.br/operadoras.html" />
     <meta property="twitter:title" content="Operadoras Parceiras | Silas Novaes - Corretor de Planos de Saúde" />
     <meta property="twitter:description" content="Explore as operadoras de planos de saúde parceiras de Silas Novaes. Encontre a melhor opção com cobertura nacional, regional ou estadual." />
-    <meta property="twitter:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image-operadoras.webp" /> <link rel="icon" href="assets/imagens/favicon.ico" />
+    <meta property="twitter:image" content="https://www.silasnovaes.com.br/assets/imagens/og-image-operadoras.webp" />
+    <link rel="icon" href="assets/imagens/favicon.ico" />
     <link rel="apple-touch-icon" href="assets/imagens/apple-touch-icon.png" />
     
     <title>Operadoras Parceiras | Silas Novaes - Corretor de Planos de Saúde</title>
@@ -28,7 +30,8 @@
     <link rel="preload" href="assets/imagens/silasnovaes-logo-azul.webp" as="image" />
     
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/operadoras.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/operadoras.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <script type="application/ld+json">
       {
@@ -99,6 +102,42 @@
                 "name": "GNDI (Grupo NotreDame Intermédica)",
                 "url": "#gndi"
               }
+            },
+            {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                    "@type": "Organization",
+                    "name": "Select",
+                    "url": "#select"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 8,
+                "item": {
+                    "@type": "Organization",
+                    "name": "SB Saúde",
+                    "url": "#sbsaude"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 9,
+                "item": {
+                    "@type": "Organization",
+                    "name": "Ampla",
+                    "url": "#ampla"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 10,
+                "item": {
+                    "@type": "Organization",
+                    "name": "Blue",
+                    "url": "#blue"
+                }
             }
             // Adicionar mais conforme necessário
           ]
@@ -107,7 +146,8 @@
     </script>
 </head>
 
-<body class="pagina-operadoras"> <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+<body class="pagina-operadoras">
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
     <div class="faixa-topo">
         <div class="container">
             <div class="contato-rapido">
@@ -149,7 +189,8 @@
                             <li><a href="index.html">HOME</a></li>
                             <li><a href="sobre.html">SOBRE</a></li>
                             <li><a href="trabalhe-comigo.html">TRABALHE COMIGO</a></li>
-                            <li><a href="operadoras.html" class="active">OPERADORAS</a></li> <li><a href="formulario.html">FORMULÁRIO</a></li>
+                            <li><a href="operadoras.html" class="active">OPERADORAS</a></li>
+                            <li><a href="formulario.html">FORMULÁRIO</a></li>
                             <li><a href="contato.html">CONTATOS</a></li>
                         </ul>
                     </nav>
@@ -165,60 +206,162 @@
                 </div>
             </section>
 
-            <section class="filtros-section" aria-labelledby="filtros-titulo">
+            <section class="discover-plan-section" aria-labelledby="discover-plan-title">
                 <div class="container">
-                    <h2 id="filtros-titulo" class="heading heading--secondary" style="color: var(--cor-primaria);">Encontre a Operadora Ideal</h2>
-                    <p class="subtitulo" style="color: var(--cor-primaria);">Utilize os filtros abaixo para refinar sua busca</p>
-                    
-                    <div class="filtros-container">
-                        <div class="filtro-grupo">
-                            <label for="filtro-tipo" class="filtro-label">Tipo de Plano</label>
-                            <select id="filtro-tipo" name="filtro-tipo" class="filtro-select" aria-label="Filtrar por tipo de plano">
-                                <option value="todos">Todos os tipos</option>
-                                <option value="individual">Individual</option>
-                                <option value="familiar">Familiar</option>
-                                <option value="empresarial">Empresarial</option>
-                                <option value="adesao">Coletivo por Adesão</option>
-                            </select>
+                    <h2 id="discover-plan-title" class="heading heading--secondary" style="color: var(--cor-primaria);">Descubra qual o plano de saúde é ideal para você</h2>
+                    <p class="subtitulo" style="color: var(--cor-primaria);">Responda algumas perguntas rápidas e encontre as operadoras que melhor se encaixam no seu perfil.</p>
+
+                    <div class="discovery-form-container">
+                        <div class="discovery-step active" id="step-regiao">
+                            <h3 class="heading heading--tertiary">1. Qual a região que você reside ou deseja cobertura?</h3>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="regiao" value="norte" data-next-step="step-profissao">
+                                    <span>Norte</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="regiao" value="nordeste" data-next-step="step-profissao">
+                                    <span>Nordeste</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="regiao" value="sudeste" data-next-step="step-profissao">
+                                    <span>Sudeste</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="regiao" value="sul" data-next-step="step-profissao">
+                                    <span>Sul</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="regiao" value="centro-oeste" data-next-step="step-profissao">
+                                    <span>Centro-Oeste</span>
+                                </label>
+                                <label class="option-card wide">
+                                    <input type="radio" name="regiao" value="nacional" data-next-step="step-profissao">
+                                    <span>Nacional (Cobertura em todo o Brasil)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="discovery-step" id="step-profissao">
+                            <h3 class="heading heading--tertiary">2. Qual a sua categoria profissional?</h3>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="profissao" value="cnpj" data-next-step="step-vidas">
+                                    <span>Empresário com CNPJ</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="profissao" value="estudante" data-next-step="step-vidas">
+                                    <span>Estudante</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="profissao" value="servidor" data-next-step="step-vidas">
+                                    <span>Servidor Público</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="autonomo" value="autonomo" data-next-step="step-vidas">
+                                    <span>Autônomo / Profissional Liberal</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="profissao" value="superior" data-next-step="step-vidas">
+                                    <span>Pessoa com Diploma Superior</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="profissao" value="clt" data-next-step="step-vidas">
+                                    <span>Regime CLT</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="discovery-step" id="step-vidas">
+                            <h3 class="heading heading--tertiary">3. Para quantas pessoas será o plano?</h3>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="vidas" value="1" data-next-step="step-contato">
+                                    <span>1 pessoa</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="vidas" value="2" data-next-step="step-contato">
+                                    <span>2 pessoas</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="vidas" value="3+" data-next-step="step-contato">
+                                    <span>3 ou + pessoas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="discovery-step contact-form-step" id="step-contato">
+                            <h3 class="heading heading--tertiary">Para receber uma cotação personalizada, preencha seus dados:</h3>
+                            <form id="contact-form" class="discovery-contact-form">
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo:</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone (WhatsApp):</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tem-plano">Você já possui plano de saúde atualmente?</label>
+                                    <select id="tem-plano" name="tem-plano">
+                                        <option value="">Selecione</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="grupo-plano-atual" style="display: none;">
+                                    <label for="plano-atual">Qual o nome da operadora e plano atual?</label>
+                                    <input type="text" id="plano-atual" name="plano-atual" placeholder="Ex: Unimed Nacional Delta" aria-describedby="info-plano-atual">
+                                    <small id="info-plano-atual">Ex: Bradesco Saúde Efetivo, Amil Fácil S75</small>
+                                </div>
+                                <div class="form-group" id="grupo-valor-atual" style="display: none;">
+                                    <label for="valor-atual">Qual o valor mensal que você paga atualmente?</label>
+                                    <input type="number" id="valor-atual" name="valor-atual" placeholder="R$" step="0.01" aria-describedby="info-valor-atual">
+                                    <small id="info-valor-atual">Apenas números. Ex: 500.25</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formacao-area">Se você tem diploma de curso superior, em qual área?</label>
+                                    <input type="text" id="formacao-area" name="formacao-area" placeholder="Ex: Medicina, Engenharia, Direito" aria-describedby="info-formacao">
+                                    <small id="info-formacao">Campo opcional, apenas se aplicável.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="idades">Idade(s) dos beneficiários (separadas por vírgula):</label>
+                                    <input type="text" id="idades" name="idades" placeholder="Ex: 30, 28, 5" required aria-required="true" aria-describedby="info-idades">
+                                    <small id="info-idades">Informe as idades de todas as pessoas que farão parte do plano.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="doenca-preexistente">Alguém possui doença ou lesão preexistente?</label>
+                                    <select id="doenca-preexistente" name="doenca-preexistente" required aria-required="true">
+                                        <option value="">Selecione</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="botao-primario">Enviar Solicitação de Cotação</button>
+                            </form>
                         </div>
                         
-                        <div class="filtro-grupo">
-                            <label for="filtro-regiao" class="filtro-label">Região de Atendimento</label>
-                            <select id="filtro-regiao" name="filtro-regiao" class="filtro-select" aria-label="Filtrar por região de atendimento principal">
-                                <option value="todos">Todas as Regiões</option>
-                                <option value="nacional">Nacional</option> <option value="nordeste">Nordeste</option>
-                                <option value="sudeste">Sudeste</option>
-                                <option value="sul">Sul</option>
-                                <option value="centro-oeste">Centro-Oeste</option>
-                                <option value="norte">Norte</option>
-                            </select>
+                        <div class="discovery-actions">
+                            <button id="reset-filters" class="botao-secundario"><i class="fas fa-undo"></i> Limpar Filtros e Recomeçar</button>
                         </div>
-                        
-                        <div class="filtro-grupo">
-                            <label for="filtro-abrangencia" class="filtro-label">Abrangência Geográfica</label>
-                            <select id="filtro-abrangencia" name="filtro-abrangencia" class="filtro-select" aria-label="Filtrar por abrangência geográfica">
-                                <option value="todos">Todas</option>
-                                <option value="nacional">Nacional</option>
-                                <option value="estadual">Estadual</option>
-                                <option value="regional">Regional</option>
-                                <option value="municipal">Municipal</option>
-                            </select>
-                        </div>
-                        
-                        <button id="filtro-aplicar" class="filtro-botao" type="button">
-                            <i class="fas fa-filter"></i> Filtrar Operadoras
-                        </button>
                     </div>
                 </div>
             </section>
 
             <section class="bloco operadoras-section" aria-labelledby="lista-operadoras-titulo">
                 <div class="container">
-                    <h2 id="lista-operadoras-titulo" class="heading heading--secondary" style="color: var(--cor-primaria);">Principais Operadoras</h2>
-                    <p class="subtitulo" style="color: var(--cor-primaria);">Conheça algumas das operadoras com as quais trabalho</p>
+                    <h2 id="lista-operadoras-titulo" class="heading heading--secondary" style="color: var(--cor-primaria);">Operadoras Sugeridas</h2>
+                    <p class="subtitulo" style="color: var(--cor-primaria);">Com base nas suas respostas, estas são as operadoras que melhor se encaixam no seu perfil:</p>
                     
                     <div class="operadoras-grid" id="operadoras-grid">
-                        <div class="operadora-card" id="unimed" data-tipo="individual familiar empresarial adesao" data-regiao="nacional nordeste sudeste sul centro-oeste norte" data-abrangencia="nacional regional estadual municipal">
+                        <div class="operadora-card" id="unimed" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
                             <div class="operadora-logo">
                                 <img src="assets/imagens/logo-unimed.webp" alt="Logo Unimed" loading="lazy">
                             </div>
@@ -228,7 +371,7 @@
                                     <span class="badge">Cooperativa</span>
                                     <span class="badge-destaque">Ampla Rede</span>
                                 </div>
-                                <p class="operadora-desc">Maior sistema cooperativista de trabalho médico do mundo, com forte presença regional e planos variados.</p>
+                                <p class="operadora-desc">Maior sistema cooperativista de trabalho médico do mundo, com forte presença regional e planos variados. Oferece planos individuais, familiares, empresariais e por adesão.</p>
                                 <div class="operadora-detalhes">
                                     <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional/Regional</div>
                                     <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Extensa</div>
@@ -243,7 +386,10 @@
                             </div>
                         </div>
                         
-                        <div class="operadora-card" id="bradesco" data-tipo="empresarial adesao" data-regiao="nacional" data-abrangencia="nacional">
+                        <div class="operadora-card" id="bradesco" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj" 
+                             data-vidas="3+">
                             <div class="operadora-logo">
                                 <img src="assets/imagens/logo-bradesco-saude.webp" alt="Logo Bradesco Saúde" loading="lazy">
                             </div>
@@ -253,20 +399,23 @@
                                     <span class="badge">Seguradora</span>
                                     <span class="badge-destaque">Reembolso</span>
                                 </div>
-                                <p class="operadora-desc">Referência em planos empresariais, conhecida pela qualidade da rede e opções de reembolso.</p>
+                                <p class="operadora-desc">Referência em planos empresariais de alto padrão, conhecida pela qualidade da rede credenciada e excelentes opções de reembolso. Ideal para CNPJs com 3 ou mais vidas.</p>
                                 <div class="operadora-detalhes">
                                     <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
                                     <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Qualificada</div>
                                 </div>
                                 <div class="operadora-tipos">
                                     <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
+                                    <span class="tipo-plano">Adesão (para grupos específicos)</span>
                                 </div>
                                 <a href="formulario.html?operadora=bradesco" class="operadora-cta">Solicitar Cotação Bradesco</a>
                             </div>
                         </div>
                         
-                        <div class="operadora-card" id="amil" data-tipo="individual familiar empresarial adesao" data-regiao="nacional sudeste sul" data-abrangencia="nacional regional">
+                        <div class="operadora-card" id="amil" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
                             <div class="operadora-logo">
                                 <img src="assets/imagens/logo-amil.webp" alt="Logo Amil" loading="lazy">
                             </div>
@@ -276,13 +425,13 @@
                                     <span class="badge">Medicina de Grupo</span>
                                     <span class="badge-destaque">Programas de Saúde</span>
                                 </div>
-                                <p class="operadora-desc">Oferece ampla variedade de planos, com foco em gestão de saúde e programas de prevenção.</p>
+                                <p class="operadora-desc">Oferece ampla variedade de planos, com foco em gestão de saúde e programas de prevenção. Disponível para 1+ vidas (adesão/empresarial).</p>
                                 <div class="operadora-detalhes">
                                     <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional/Regional</div>
                                     <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Ampla</div>
                                 </div>
                                 <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Individual (Adesão)</span>
                                     <span class="tipo-plano">Familiar</span>
                                     <span class="tipo-plano">Empresarial</span>
                                     <span class="tipo-plano">Adesão</span>
@@ -291,7 +440,10 @@
                             </div>
                         </div>
                         
-                        <div class="operadora-card" id="sulamerica" data-tipo="empresarial adesao" data-regiao="nacional" data-abrangencia="nacional">
+                        <div class="operadora-card" id="sulamerica" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
                             <div class="operadora-logo">
                                 <img src="assets/imagens/logo-sulamerica.webp" alt="Logo SulAmérica Saúde" loading="lazy">
                             </div>
@@ -301,7 +453,7 @@
                                     <span class="badge">Seguradora</span>
                                     <span class="badge-destaque">Tradição</span>
                                 </div>
-                                <p class="operadora-desc">Uma das maiores seguradoras do país, com planos robustos e rede credenciada de excelência.</p>
+                                <p class="operadora-desc">Uma das maiores seguradoras do país, com planos robustos e rede credenciada de excelência. Planos a partir de 1 vida (adesão) e 3+ vidas (empresarial).</p>
                                 <div class="operadora-detalhes">
                                     <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
                                     <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Qualificada</div>
@@ -314,7 +466,10 @@
                             </div>
                         </div>
 
-                        <div class="operadora-card" id="hapvida" data-tipo="individual familiar empresarial" data-regiao="norte nordeste" data-abrangencia="regional estadual municipal">
+                        <div class="operadora-card" id="hapvida" 
+                             data-regiao="norte nordeste" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
                             <div class="operadora-logo">
                                 <img src="assets/imagens/logo-hapvida.webp" alt="Logo Hapvida" loading="lazy">
                             </div>
@@ -324,9 +479,9 @@
                                     <span class="badge">Medicina de Grupo</span>
                                     <span class="badge-destaque">Rede Própria</span>
                                 </div>
-                                <p class="operadora-desc">Grande presença no Norte e Nordeste, com forte investimento em rede própria de atendimento.</p>
+                                <p class="operadora-desc">Grande presença no Norte e Nordeste, com forte investimento em rede própria de atendimento. Opções de planos para 1+ vidas.</p>
                                 <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Regional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Regional/Estadual</div>
                                     <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Ampla (foco na própria)</div>
                                 </div>
                                 <div class="operadora-tipos">
@@ -338,7 +493,10 @@
                             </div>
                         </div>
 
-                        <div class="operadora-card" id="gndi" data-tipo="individual familiar empresarial adesao" data-regiao="sudeste sul" data-abrangencia="nacional regional">
+                        <div class="operadora-card" id="gndi" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
                             <div class="operadora-logo">
                                 <img src="assets/imagens/logo-gndi.webp" alt="Logo GNDI" loading="lazy">
                             </div>
@@ -348,7 +506,7 @@
                                     <span class="badge">Medicina de Grupo</span>
                                     <span class="badge-destaque">Custo-Benefício</span>
                                 </div>
-                                <p class="operadora-desc">Grupo NotreDame Intermédica, com forte atuação em São Paulo e outras regiões, oferecendo planos com bom custo-benefício.</p>
+                                <p class="operadora-desc">Grupo NotreDame Intermédica, com forte atuação em São Paulo e outras regiões, oferecendo planos com bom custo-benefício para 1+ vidas.</p>
                                 <div class="operadora-detalhes">
                                     <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional/Regional</div>
                                     <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Ampla (inclui própria)</div>
@@ -363,74 +521,896 @@
                             </div>
                         </div>
 
-                        <div class="operadora-card placeholder" data-tipo="empresarial" data-regiao="sudeste" data-abrangencia="regional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 7</h3><p class="operadora-desc">Breve descrição da operadora 7...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
+                        <div class="operadora-card" id="select" 
+                             data-regiao="norte nordeste" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1">
+                            <div class="operadora-logo">
+                                <img src="assets/imagens/logo-placeholder.webp" alt="Logo Select Saúde" loading="lazy"> </div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Select Saúde</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Especializada</span>
+                                    <span class="badge-destaque">Regiões Norte/Nordeste</span>
+                                </div>
+                                <p class="operadora-desc">Opções de plano para a região Norte e Nordeste, com foco em atendimento personalizado para indivíduos.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Regional/Estadual</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Definida</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                </div>
+                                <a href="formulario.html?operadora=select" class="operadora-cta">Solicitar Cotação Select Saúde</a>
+                            </div>
                         </div>
-                        <div class="operadora-card placeholder" data-tipo="individual familiar" data-regiao="sul" data-abrangencia="estadual">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 8</h3><p class="operadora-desc">Breve descrição da operadora 8...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="adesao" data-regiao="nacional" data-abrangencia="nacional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 9</h3><p class="operadora-desc">Breve descrição da operadora 9...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="empresarial" data-regiao="centro-oeste" data-abrangencia="regional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 10</h3><p class="operadora-desc">Breve descrição da operadora 10...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="individual" data-regiao="nordeste" data-abrangencia="municipal">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 11</h3><p class="operadora-desc">Breve descrição da operadora 11...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="familiar empresarial" data-regiao="sudeste" data-abrangencia="estadual">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 12</h3><p class="operadora-desc">Breve descrição da operadora 12...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="adesao empresarial" data-regiao="nacional" data-abrangencia="nacional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 13</h3><p class="operadora-desc">Breve descrição da operadora 13...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="individual familiar" data-regiao="sul" data-abrangencia="regional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 14</h3><p class="operadora-desc">Breve descrição da operadora 14...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="empresarial" data-regiao="norte" data-abrangencia="estadual">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 15</h3><p class="operadora-desc">Breve descrição da operadora 15...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="individual adesao" data-regiao="centro-oeste" data-abrangencia="regional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 16</h3><p class="operadora-desc">Breve descrição da operadora 16...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="familiar" data-regiao="nordeste" data-abrangencia="estadual">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 17</h3><p class="operadora-desc">Breve descrição da operadora 17...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="empresarial adesao" data-regiao="sudeste" data-abrangencia="nacional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 18</h3><p class="operadora-desc">Breve descrição da operadora 18...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="individual" data-regiao="sul" data-abrangencia="municipal">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 19</h3><p class="operadora-desc">Breve descrição da operadora 19...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
-                        </div>
-                        <div class="operadora-card placeholder" data-tipo="empresarial" data-regiao="nacional" data-abrangencia="nacional">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora" loading="lazy"></div>
-                            <div class="operadora-content"><h3 class="operadora-nome">Operadora 20</h3><p class="operadora-desc">Breve descrição da operadora 20...</p><a href="#" class="operadora-cta">Ver Detalhes</a></div>
+
+                        <div class="operadora-card" id="sbsaude" 
+                             data-regiao="norte nordeste" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1">
+                            <div class="operadora-logo">
+                                <img src="assets/imagens/logo-placeholder.webp" alt="Logo SB Saúde" loading="lazy"> </div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">SB Saúde</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Variedade</span>
+                                    <span class="badge-destaque">Atendimento Amplo</span>
+                                </div>
+                                <p class="operadora-desc">Forte atuação nas regiões Norte e Nordeste, com planos para diversas categorias profissionais e indivíduos.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Regional/Estadual</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Abrangente</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                </div>
+                                <a href="formulario.html?operadora=sbsaude" class="operadora-cta">Solicitar Cotação SB Saúde</a>
+                            </div>
                         </div>
                         
+                        <div class="operadora-card" id="ampla" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo">
+                                <img src="assets/imagens/logo-placeholder.webp" alt="Logo Ampla Saúde" loading="lazy"> </div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Ampla Saúde</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Flexibilidade</span>
+                                    <span class="badge-destaque">Amplo Acesso</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos de saúde com cobertura nacional e regional, com opções para diversos perfis de clientes, a partir de 1 vida (adesão) e 3+ vidas (empresarial).</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional/Regional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Variada</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual (Adesão)</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html?operadora=ampla" class="operadora-cta">Solicitar Cotação Ampla Saúde</a>
+                            </div>
+                        </div>
+
+                        <div class="operadora-card" id="blue" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo">
+                                <img src="assets/imagens/logo-placeholder.webp" alt="Logo Blue Saúde" loading="lazy"> </div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Blue Saúde</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Inovação</span>
+                                    <span class="badge-destaque">Tecnologia</span>
+                                </div>
+                                <p class="operadora-desc">Focada em tecnologia e soluções digitais para a saúde, com planos para diversas categorias e número de vidas, a partir de 1 vida (adesão) e 3+ vidas (empresarial).</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional/Regional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Moderna</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual (Adesão)</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html?operadora=blue" class="operadora-cta">Solicitar Cotação Blue Saúde</a>
+                            </div>
+                        </div>
+                        
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Alfa</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Beta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Gama</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Delta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Épsilon</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Zeta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Eta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Teta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Iota</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Capa</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Lambda</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Mi</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Ni</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Xi</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Ômicron</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Pi</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Rho</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Sigma</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Tau</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Upsilon</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Phi</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Chi</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Psi</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Ômega</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Ypsilon</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Zetta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Waga</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Hipo</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Kapa</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Rota</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+                        <div class="operadora-card placeholder" 
+                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
+                             data-profissao="cnpj estudante servidor autonomo superior clt" 
+                             data-vidas="1 2 3+">
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-content">
+                                <h3 class="operadora-nome">Operadora Veta</h3>
+                                <div class="operadora-badges">
+                                    <span class="badge">Geral</span>
+                                    <span class="badge-destaque">Qualquer Perfil</span>
+                                </div>
+                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
+                                <div class="operadora-detalhes">
+                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
+                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
+                                </div>
+                                <div class="operadora-tipos">
+                                    <span class="tipo-plano">Individual</span>
+                                    <span class="tipo-plano">Familiar</span>
+                                    <span class="tipo-plano">Empresarial</span>
+                                    <span class="tipo-plano">Adesão</span>
+                                </div>
+                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
+                            </div>
+                        </div>
+
                         <div id="nenhuma-operadora">
-                            <p>Nenhuma operadora encontrada com os filtros selecionados.</p>
+                            <p>Nenhuma operadora encontrada com os filtros selecionados. Por favor, ajuste suas opções ou <a href="contato.html">entre em contato</a> para uma cotação personalizada.</p>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section class="cta-section bloco animate-fade-in" aria-labelledby="cta-titulo">
                 <div class="container">
                     <div class="cta-container">
                         <h2 id="cta-titulo" class="cta-title">Pronto para garantir mais tranquilidade para você e sua família?</h2>
-                        <p class="cta-text">Entre em contato agora mesmo e receba uma cotação personalizada, sem compromisso. Estou à disposição para esclarecer todas as suas dúvidas e encontrar o plano ideal para você.</p>
+                        <p class="cta-text">Após encontrar as melhores opções, entre em contato agora mesmo e receba uma cotação personalizada, sem compromisso. Estou à disposição para esclarecer todas as suas dúvidas e encontrar o plano ideal para você.</p>
                         <div class="cta-buttons">
                             <a href="formulario.html" class="botao-primario">Solicitar uma Cotação</a>
                             <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" class="botao-secundario">
@@ -528,5 +1508,6 @@
         </footer>
     </div> 
     <script src="assets/js/scripts.js" defer></script>
-    <script src="assets/js/operadoras.js" defer></script> </body>
+    <script src="assets/js/operadoras.js" defer></script>
+</body>
 </html>
