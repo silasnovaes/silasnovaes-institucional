@@ -258,7 +258,7 @@
                                     <span>Servidor Público</span>
                                 </label>
                                 <label class="option-card">
-                                    <input type="radio" name="autonomo" value="autonomo" data-next-step="step-vidas">
+                                    <input type="radio" name="profissao" value="autonomo" data-next-step="step-vidas">
                                     <span>Autônomo / Profissional Liberal</span>
                                 </label>
                                 <label class="option-card">
@@ -276,73 +276,18 @@
                             <h3 class="heading heading--tertiary">3. Para quantas pessoas será o plano?</h3>
                             <div class="options-grid">
                                 <label class="option-card">
-                                    <input type="radio" name="vidas" value="1" data-next-step="step-contato">
+                                    <input type="radio" name="vidas" value="1" data-next-step="step-results">
                                     <span>1 pessoa</span>
                                 </label>
                                 <label class="option-card">
-                                    <input type="radio" name="vidas" value="2" data-next-step="step-contato">
+                                    <input type="radio" name="vidas" value="2" data-next-step="step-results">
                                     <span>2 pessoas</span>
                                 </label>
                                 <label class="option-card">
-                                    <input type="radio" name="vidas" value="3+" data-next-step="step-contato">
+                                    <input type="radio" name="vidas" value="3+" data-next-step="step-results">
                                     <span>3 ou + pessoas</span>
                                 </label>
                             </div>
-                        </div>
-
-                        <div class="discovery-step contact-form-step" id="step-contato">
-                            <h3 class="heading heading--tertiary">Para receber uma cotação personalizada, preencha seus dados:</h3>
-                            <form id="contact-form" class="discovery-contact-form">
-                                <div class="form-group">
-                                    <label for="nome">Nome Completo:</label>
-                                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-mail:</label>
-                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="telefone">Telefone (WhatsApp):</label>
-                                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required aria-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="tem-plano">Você já possui plano de saúde atualmente?</label>
-                                    <select id="tem-plano" name="tem-plano">
-                                        <option value="">Selecione</option>
-                                        <option value="sim">Sim</option>
-                                        <option value="nao">Não</option>
-                                    </select>
-                                </div>
-                                <div class="form-group" id="grupo-plano-atual" style="display: none;">
-                                    <label for="plano-atual">Qual o nome da operadora e plano atual?</label>
-                                    <input type="text" id="plano-atual" name="plano-atual" placeholder="Ex: Unimed Nacional Delta" aria-describedby="info-plano-atual">
-                                    <small id="info-plano-atual">Ex: Bradesco Saúde Efetivo, Amil Fácil S75</small>
-                                </div>
-                                <div class="form-group" id="grupo-valor-atual" style="display: none;">
-                                    <label for="valor-atual">Qual o valor mensal que você paga atualmente?</label>
-                                    <input type="number" id="valor-atual" name="valor-atual" placeholder="R$" step="0.01" aria-describedby="info-valor-atual">
-                                    <small id="info-valor-atual">Apenas números. Ex: 500.25</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="formacao-area">Se você tem diploma de curso superior, em qual área?</label>
-                                    <input type="text" id="formacao-area" name="formacao-area" placeholder="Ex: Medicina, Engenharia, Direito" aria-describedby="info-formacao">
-                                    <small id="info-formacao">Campo opcional, apenas se aplicável.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="idades">Idade(s) dos beneficiários (separadas por vírgula):</label>
-                                    <input type="text" id="idades" name="idades" placeholder="Ex: 30, 28, 5" required aria-required="true" aria-describedby="info-idades">
-                                    <small id="info-idades">Informe as idades de todas as pessoas que farão parte do plano.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="doenca-preexistente">Alguém possui doença ou lesão preexistente?</label>
-                                    <select id="doenca-preexistente" name="doenca-preexistente" required aria-required="true">
-                                        <option value="">Selecione</option>
-                                        <option value="sim">Sim</option>
-                                        <option value="nao">Não</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="botao-primario">Enviar Solicitação de Cotação</button>
-                            </form>
                         </div>
                         
                         <div class="discovery-actions">
@@ -627,7 +572,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 1" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Alfa</h3>
                                 <div class="operadora-badges">
@@ -652,7 +597,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 2" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Beta</h3>
                                 <div class="operadora-badges">
@@ -677,7 +622,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 3" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Gama</h3>
                                 <div class="operadora-badges">
@@ -702,7 +647,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 4" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Delta</h3>
                                 <div class="operadora-badges">
@@ -727,7 +672,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 5" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Épsilon</h3>
                                 <div class="operadora-badges">
@@ -752,7 +697,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 6" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Zeta</h3>
                                 <div class="operadora-badges">
@@ -777,7 +722,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 7" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Eta</h3>
                                 <div class="operadora-badges">
@@ -802,7 +747,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 8" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Teta</h3>
                                 <div class="operadora-badges">
@@ -827,7 +772,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 9" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Iota</h3>
                                 <div class="operadora-badges">
@@ -852,7 +797,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 10" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Capa</h3>
                                 <div class="operadora-badges">
@@ -877,7 +822,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 11" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Lambda</h3>
                                 <div class="operadora-badges">
@@ -902,7 +847,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 12" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Mi</h3>
                                 <div class="operadora-badges">
@@ -927,7 +872,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 13" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Ni</h3>
                                 <div class="operadora-badges">
@@ -952,7 +897,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 14" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Xi</h3>
                                 <div class="operadora-badges">
@@ -977,7 +922,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 15" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Ômicron</h3>
                                 <div class="operadora-badges">
@@ -1002,7 +947,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 16" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Pi</h3>
                                 <div class="operadora-badges">
@@ -1027,7 +972,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 17" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Rho</h3>
                                 <div class="operadora-badges">
@@ -1052,7 +997,7 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 18" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Sigma</h3>
                                 <div class="operadora-badges">
@@ -1077,309 +1022,9 @@
                              data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
                              data-profissao="cnpj estudante servidor autonomo superior clt" 
                              data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
+                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica 19" loading="lazy"></div>
                             <div class="operadora-content">
                                 <h3 class="operadora-nome">Operadora Tau</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Upsilon</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Phi</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Chi</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Psi</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Ômega</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Ypsilon</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Zetta</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Waga</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Hipo</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Kapa</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Rota</h3>
-                                <div class="operadora-badges">
-                                    <span class="badge">Geral</span>
-                                    <span class="badge-destaque">Qualquer Perfil</span>
-                                </div>
-                                <p class="operadora-desc">Oferece planos versáteis para diversas necessidades, com cobertura ampla e flexibilidade.</p>
-                                <div class="operadora-detalhes">
-                                    <div class="operadora-detalhe"><i class="fas fa-map-marker-alt"></i> Abrangência: Nacional</div>
-                                    <div class="operadora-detalhe"><i class="fas fa-hospital"></i> Rede Credenciada: Boa</div>
-                                </div>
-                                <div class="operadora-tipos">
-                                    <span class="tipo-plano">Individual</span>
-                                    <span class="tipo-plano">Familiar</span>
-                                    <span class="tipo-plano">Empresarial</span>
-                                    <span class="tipo-plano">Adesão</span>
-                                </div>
-                                <a href="formulario.html" class="operadora-cta">Solicitar Cotação</a>
-                            </div>
-                        </div>
-                        <div class="operadora-card placeholder" 
-                             data-regiao="norte nordeste sudeste sul centro-oeste nacional" 
-                             data-profissao="cnpj estudante servidor autonomo superior clt" 
-                             data-vidas="1 2 3+">
-                            <div class="operadora-logo"><img src="assets/imagens/logo-placeholder.webp" alt="Logo Operadora Genérica" loading="lazy"></div>
-                            <div class="operadora-content">
-                                <h3 class="operadora-nome">Operadora Veta</h3>
                                 <div class="operadora-badges">
                                     <span class="badge">Geral</span>
                                     <span class="badge-destaque">Qualquer Perfil</span>
@@ -1507,6 +1152,87 @@
             </div>
         </footer>
     </div> 
+
+    <div id="contact-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup-btn" aria-label="Fechar formulário de contato"><i class="fas fa-times"></i></button>
+            <h3 class="heading heading--tertiary">Obtenha uma Cotação Grátis e Personalizada!</h3>
+            <p class="popup-subtext">Preencha seus dados e receba uma consultoria exclusiva com as operadoras ideais para você.</p>
+            <form id="popup-contact-form" class="discovery-contact-form">
+                <div class="form-group">
+                    <label for="popup-nome">Nome Completo:</label>
+                    <input type="text" id="popup-nome" name="nome" placeholder="Seu nome" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="popup-email">E-mail:</label>
+                    <input type="email" id="popup-email" name="email" placeholder="seu@email.com" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="popup-telefone">Telefone (WhatsApp):</label>
+                    <input type="tel" id="popup-telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="popup-tem-plano">Você já possui plano de saúde atualmente?</label>
+                    <select id="popup-tem-plano" name="tem-plano">
+                        <option value="">Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+                <div class="form-group" id="popup-grupo-plano-atual" style="display: none;">
+                    <label for="popup-plano-atual">Qual o nome da operadora e plano atual?</label>
+                    <input type="text" id="popup-plano-atual" name="plano-atual" placeholder="Ex: Unimed Nacional Delta" aria-describedby="info-popup-plano-atual">
+                    <small id="info-popup-plano-atual">Ex: Bradesco Saúde Efetivo, Amil Fácil S75</small>
+                </div>
+                <div class="form-group" id="popup-grupo-valor-atual" style="display: none;">
+                    <label for="popup-valor-atual">Qual o valor mensal que você paga atualmente?</label>
+                    <input type="number" id="popup-valor-atual" name="valor-atual" placeholder="R$" step="0.01" aria-describedby="info-popup-valor-atual">
+                    <small id="info-popup-valor-atual">Apenas números. Ex: 500.25</small>
+                </div>
+                <div class="form-group">
+                    <label for="popup-formacao-area">Se você tem diploma de curso superior, em qual área?</label>
+                    <input type="text" id="popup-formacao-area" name="formacao-area" placeholder="Ex: Medicina, Engenharia, Direito" aria-describedby="info-popup-formacao">
+                    <small id="info-popup-formacao">Campo opcional, apenas se aplicável.</small>
+                </div>
+                <div class="form-group">
+                    <label for="popup-idades">Idade(s) dos beneficiários (separadas por vírgula):</label>
+                    <input type="text" id="popup-idades" name="idades" placeholder="Ex: 30, 28, 5" required aria-required="true" aria-describedby="info-popup-idades">
+                    <small id="info-popup-idades">Informe as idades de todas as pessoas que farão parte do plano.</small>
+                </div>
+                <div class="form-group">
+                    <label for="popup-doenca-preexistente">Alguém possui doença ou lesão preexistente?</label>
+                    <select id="popup-doenca-preexistente" name="doenca-preexistente" required aria-required="true">
+                        <option value="">Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+                <button type="submit" class="botao-primario">Receber Minha Cotação</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="exit-intent-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup-btn" aria-label="Fechar mensagem importante"><i class="fas fa-times"></i></button>
+            <h3 class="heading heading--tertiary" id="exit-popup-title">Não vá ainda!</h3>
+            <p class="popup-subtext" id="exit-popup-text">
+                Não encontrou o que procurava? Deixe seus dados e um especialista te ajuda a encontrar o plano ideal para **[sua profissão/região]**!
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact-popup" class="botao-primario popup-trigger-button">Quero uma Cotação Personalizada</a>
+                <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" class="botao-secundario">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="floating-message" class="floating-message-container">
+        <p id="floating-message-text"></p>
+        <button class="close-floating-message-btn" aria-label="Fechar mensagem flutuante"><i class="fas fa-times"></i></button>
+    </div>
+
     <script src="assets/js/scripts.js" defer></script>
     <script src="assets/js/operadoras.js" defer></script>
 </body>

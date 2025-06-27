@@ -7,17 +7,6 @@
     text-align: center;
 }
 
-/* REMOVIDO: Antiga seção de filtros (filtros-section) e seus estilos */
-/* .pagina-operadoras .filtros-section { ... } */
-/* .pagina-operadoras .filtros-container { ... } */
-/* .pagina-operadoras .filtro-grupo { ... } */
-/* .pagina-operadoras .filtro-label { ... } */
-/* .pagina-operadoras .filtro-select { ... } */
-/* .pagina-operadoras .filtro-select:focus { ... } */
-/* .pagina-operadoras .filtro-botao { ... } */
-/* .pagina-operadoras .filtro-botao:hover { ... } */
-/* .pagina-operadoras .filtro-botao i { ... } */
-
 /* NOVA SEÇÃO: DESCUBRA SEU PLANO IDEAL (discovery-plan-section) */
 .pagina-operadoras .discover-plan-section {
     background-color: var(--cor-fundo-claro); /* Fundo claro para a seção de interação */
@@ -141,67 +130,6 @@
     transform: translateY(-2px);
 }
 
-/* Estilos para o formulário de contato integrado */
-.pagina-operadoras .discovery-contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacamento-medio);
-    width: 100%;
-    max-width: 600px; /* Limita a largura do formulário */
-    margin: var(--espacamento-grande) auto;
-    text-align: left; /* Alinha o texto e campos à esquerda */
-}
-
-.pagina-operadoras .discovery-contact-form .form-group {
-    margin-bottom: var(--espacamento-pequeno);
-}
-
-.pagina-operadoras .discovery-contact-form label {
-    display: block;
-    margin-bottom: var(--espacamento-pequeno);
-    font-weight: 600;
-    color: var(--cor-primaria);
-    font-size: 0.95rem;
-}
-
-.pagina-operadoras .discovery-contact-form input[type="text"],
-.pagina-operadoras .discovery-contact-form input[type="email"],
-.pagina-operadoras .discovery-contact-form input[type="tel"],
-.pagina-operadoras .discovery-contact-form input[type="number"],
-.pagina-operadoras .discovery-contact-form select {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--borda-radius);
-    font-size: 1rem;
-    color: var(--cor-texto);
-    background-color: #fff;
-    transition: var(--transicao-rapida);
-}
-
-.pagina-operadoras .discovery-contact-form input[type="text"]:focus,
-.pagina-operadoras .discovery-contact-form input[type="email"]:focus,
-.pagina-operadoras .discovery-contact-form input[type="tel"]:focus,
-.pagina-operadoras .discovery-contact-form input[type="number"]:focus,
-.pagina-operadoras .discovery-contact-form select:focus {
-    border-color: var(--cor-secundaria);
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.25);
-}
-
-.pagina-operadoras .discovery-contact-form small {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.85rem;
-    color: #6c757d;
-}
-
-.pagina-operadoras .discovery-contact-form .botao-primario {
-    margin-top: var(--espacamento-medio);
-    width: auto; /* Deixa o botão se ajustar ao conteúdo */
-    align-self: center; /* Centraliza o botão no formulário flex */
-}
-
 /* Animação para fade-in dos passos */
 @keyframes fadeIn {
     from {
@@ -235,11 +163,45 @@
     flex-direction: column;
     transition: var(--transicao-media);
     border: 1px solid var(--cor-borda);
+    position: relative; /* Necessário para posicionar o badge de recomendação */
 }
 .pagina-operadoras .operadora-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--sombra-media);
 }
+
+/* Estilo para a operadora mais recomendada (Nº 1) */
+.pagina-operadoras .operadora-card.recommended {
+    border: 3px solid var(--cor-secundaria); /* Contorno azul */
+    box-shadow: 0 0 15px rgba(137, 176, 211, 0.6); /* Sombra mais destacada */
+    transform: scale(1.02); /* Leve aumento para destaque */
+    order: -1; /* Move para o início do grid */
+}
+
+.pagina-operadoras .operadora-card .recommendation-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-primaria); /* Fundo azul escuro */
+    color: var(--cor-terciaria); /* Texto claro */
+    padding: 0.4rem 0.8rem;
+    border-top-left-radius: var(--borda-radius);
+    border-bottom-right-radius: var(--borda-radius);
+    font-size: 0.85rem;
+    font-weight: 700;
+    z-index: 10; /* Garante que fique acima do conteúdo */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 1.5s infinite; /* Animação sutil de pulso */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+
 .pagina-operadoras .operadora-logo {
     background-color: #f8f9fa; /* Fundo claro para logos */
     padding: var(--espacamento-medio);
@@ -336,8 +298,143 @@
     grid-column: 1 / -1; /* Ocupa toda a largura do grid */
 }
 
-/* Responsividade */
+/* Estilos para Pop-ups (Nº 2 e Nº 4) */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Acima de todo o conteúdo do site */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-extra);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-forte);
+    position: relative;
+    max-width: 550px; /* Largura máxima para o conteúdo do pop-up */
+    width: 90%; /* Responsividade */
+    transform: translateY(20px); /* Começa um pouco abaixo */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0); /* Sobe para a posição final */
+    opacity: 1;
+}
+
+.popup-content .close-popup-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    padding: 5px;
+    transition: var(--transicao-rapida);
+    line-height: 1;
+}
+
+.popup-content .close-popup-btn:hover {
+    color: var(--cor-erro);
+    transform: rotate(90deg);
+}
+
+.popup-content .heading--tertiary {
+    margin-top: 0;
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+.popup-content .popup-subtext {
+    text-align: center;
+    margin-bottom: var(--espacamento-grande);
+    color: var(--cor-texto);
+    font-size: 1rem;
+}
+
+/* Estilos específicos para o formulário dentro do pop-up */
+.popup-content .discovery-contact-form {
+    gap: var(--espacamento-medio);
+    margin: var(--espacamento-medio) auto 0; /* Ajusta margem para centralizar */
+    width: 100%;
+    max-width: none; /* Remove max-width para preencher o pop-up */
+}
+
+/* Estilos para Mensagem Flutuante (Nº 5) */
+.floating-message-container {
+    position: fixed;
+    bottom: var(--espacamento-grande);
+    right: var(--espacamento-grande);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: var(--espacamento-medio) var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-medio);
+    max-width: 350px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%); /* Começa fora da tela */
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    z-index: 1500;
+}
+
+.floating-message-container.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.floating-message-container p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.floating-message-container .close-floating-message-btn {
+    background: none;
+    border: none;
+    color: var(--cor-texto-claro);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transicao-rapida);
+    padding: 5px; /* Aumenta a área clicável */
+    opacity: 0.8;
+}
+
+.floating-message-container .close-floating-message-btn:hover {
+    opacity: 1;
+    color: var(--cor-destaque);
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    /* Ajustes existentes */
+}
+
 @media (max-width: 768px) {
+    /* Ajustes existentes */
     .pagina-operadoras .discovery-form-container {
         padding: var(--espacamento-grande); /* Reduz padding em telas menores */
     }
@@ -353,10 +450,37 @@
     .pagina-operadoras #reset-filters {
         width: 100%; /* Botão de reset ocupa a largura total */
     }
+
+    /* Pop-ups em Mobile */
+    .popup-content {
+        padding: var(--espacamento-grande);
+        width: 95%; /* Maior em mobile para preencher melhor a tela */
+    }
+    .floating-message-container {
+        bottom: var(--espacamento-medio);
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza em mobile */
+        right: auto; /* Desativa o right fixo */
+        max-width: 90%;
+        padding: var(--espacamento-medio) var(--espacamento-medio);
+        flex-wrap: wrap; /* Permite quebrar linha se o conteúdo for longo */
+        justify-content: center;
+    }
+    .floating-message-container p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     .pagina-operadoras .discovery-form-container {
         padding: var(--espacamento-medio);
+    }
+    .popup-content {
+        padding: var(--espacamento-medio);
+    }
+    .popup-content .close-popup-btn {
+        font-size: 1.5rem;
+        top: 10px;
+        right: 10px;
     }
 }
