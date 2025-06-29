@@ -1,22 +1,22 @@
 /* Estilos específicos para a página Operadoras */
 .pagina-operadoras .hero-operadoras {
-    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url("../imagens/hero-operadoras-bg.webp") no-repeat center center; /* Sugestão: hero-operadoras-bg.webp */
-    background-size: cover;
-    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria); /* Fundo azul chapado usando sua cor primária */
+    color: var(--cor-terciaria); /* Texto claro para contraste no azul escuro */
     padding: var(--espacamento-grande) 0;
     text-align: center;
 }
 
-/* NOVA SEÇÃO: DESCUBRA SEU PLANO IDEAL (discovery-plan-section) */
+/* NOVA SEÇÃO: DESCUBRA SEU PLANO IDEAL (discover-plan-section) */
 .pagina-operadoras .discover-plan-section {
-    background-color: var(--cor-fundo-claro); /* Fundo claro para a seção de interação */
+    background-color: var(--cor-terciaria); /* Fundo da seção para bege */
     padding: var(--espacamento-grande) 0;
     border-bottom: 1px solid var(--cor-borda);
     text-align: center;
 }
 
 .pagina-operadoras .discovery-form-container {
-    background-color: var(--cor-terciaria); /* Fundo do container do formulário */
+    /* ALTERADO: Fundo do container dos filtros para AZUL CLARO (cor-secundaria) */
+    background-color: var(--cor-secundaria); 
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-suave);
     padding: var(--espacamento-extra); /* Espaçamento interno generoso */
@@ -27,14 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Primeiro Ajuste: Remove a transição de ocultação/exibição para o container principal,
-       pois ele agora deve permanecer visível. Os passos internos serão ocultos. */
-    /* transition: all 0.5s ease-out; */ 
 }
-/* Primeiro Ajuste: A classe hidden-step será aplicada APENAS aos discovery-steps individuais.
-   Este seletor foi removido porque o container não vai mais sumir. */
-/* .pagina-operadoras .discovery-form-container.hidden-step { ... } */
-
 
 .pagina-operadoras .discovery-step {
     display: none; /* Oculta todos os passos por padrão, JS controlará */
@@ -43,7 +36,8 @@
     margin-bottom: var(--espacamento-grande);
     animation: fadeIn 0.5s ease-out; /* Animação suave para exibir os passos */
 }
-/* Terceiro Ajuste: Estilo para ocultar os passos de filtro após a conclusão */
+
+/* Estilo para ocultar os passos de filtro após a conclusão */
 .pagina-operadoras .discovery-step.hidden-step {
     opacity: 0;
     height: 0;
@@ -64,30 +58,46 @@
 
 .pagina-operadoras .options-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Grid responsivo para as opções */
+    /* Ajuste para melhor controle da largura mínima dos itens no grid */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Mantido em 180px para espaço */
     gap: var(--espacamento-medio);
     justify-content: center;
     margin-bottom: var(--espacamento-grande);
 }
 
 .pagina-operadoras .option-card {
-    background-color: var(--cor-fundo-claro);
-    border: 2px solid var(--cor-borda);
+    /* Fundo do card da opção será azul escuro */
+    background-color: var(--cor-primaria); 
+    border: 2px solid var(--cor-borda); 
     border-radius: var(--borda-radius);
-    padding: var(--espacamento-medio);
+    padding: var(--espacamento-medio); /* Padding padrão */
     cursor: pointer;
     transition: var(--transicao-rapida);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    
+    /* CORREÇÃO FINAL: Transforma o option-card em um flex container para seu span */
+    display: flex; 
+    flex-direction: column; /* Alinha o conteúdo em coluna para que o span use 100% da largura */
+    align-items: center; /* Centraliza o span horizontalmente */
+    justify-content: center; /* Centraliza o span verticalmente */
+    
     font-weight: 600;
-    color: var(--cor-primaria);
+    color: var(--cor-terciaria); 
     user-select: none; /* Previne seleção de texto */
 }
 
+/* CORREÇÃO FINAL: Estilo para o span DENTRO do option-card */
+.pagina-operadoras .option-card span {
+    display: block; /* Garante que o span ocupe seu próprio bloco */
+    white-space: normal; /* Permite que o texto quebre normalmente */
+    word-break: break-word; /* Garante que palavras muito longas quebrem */
+    line-height: 1.3; /* Ajusta a altura da linha para melhor leitura em múltiplas linhas */
+    text-align: center; /* CENTRALIZA o texto dentro do span */
+    /* REMOVIDO: width: 100%; - o flex-direction: column no pai já faz ele ocupar o espaço */
+}
+
+
 .pagina-operadoras .option-card:hover {
-    border-color: var(--cor-secundaria);
+    border-color: var(--cor-destaque); /* Hover na borda para destaque verde */
     box-shadow: var(--sombra-suave);
     transform: translateY(-2px);
 }
@@ -97,17 +107,20 @@
 }
 
 .pagina-operadoras .option-card input[type="radio"]:checked + span {
-    background-color: var(--cor-primaria); /* Fundo quando selecionado */
-    color: var(--cor-texto-claro); /* Texto quando selecionado */
+    /* Fundo quando selecionado será azul escuro (cor-primaria) */
+    background-color: var(--cor-primaria); 
+    /* Texto quando selecionado será branco (cor-texto-claro). Já estava assim, perfeito. */
+    color: var(--cor-texto-claro); 
     border-radius: var(--borda-radius); /* Arredondamento */
     padding: 0.6rem 1rem; /* Padding interno */
-    display: block; /* Ocupa todo o espaço do span */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    /* CORREÇÃO FINAL: Também para o span selecionado, use display: block para text-align */
+    display: block; 
+    height: 100%; /* Garante que o span preenche a altura */
+    text-align: center; /* Centraliza o texto no span selecionado */
+    /* REMOVIDO: justify-content/align-items, pois block não precisa para text-align */
 }
+
 
 .pagina-operadoras .option-card input[type="radio"]:checked {
     /* Não há estilo direto para o input, o span é o visual */
@@ -115,6 +128,8 @@
 
 .pagina-operadoras .option-card.wide {
     grid-column: 1 / -1; /* Ocupa toda a largura do grid */
+    /* ALTERADO: Ajusta o padding para o card wide para dar mais espaço ao texto */
+    padding: var(--espacamento-medio) var(--espacamento-grande); /* Mais padding horizontal */
 }
 
 .pagina-operadoras .discovery-actions {
@@ -123,7 +138,7 @@
     width: 100%; /* Garante que ocupa a largura para centralizar o conteúdo */
 }
 
-/* Quarto Ajuste: Estilo para a mensagem acima do botão de reset */
+/* Estilo para a mensagem acima do botão de reset */
 .pagina-operadoras .message-above-reset {
     margin-bottom: var(--espacamento-medio); /* Espaço entre a mensagem e o botão */
     display: none; /* Oculto por padrão, JS controla */
@@ -133,15 +148,14 @@
     animation: fadeIn 0.5s ease-out;
 }
 
-
 /* Botão de Reset */
 .pagina-operadoras #reset-filters {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--cor-primaria); /* Cor do texto para contraste */
-    background-color: var(--cor-terciaria); /* Fundo claro para o botão */
-    border: 2px solid var(--cor-primaria); /* Borda primária */
+    color: var(--cor-primaria); 
+    background-color: var(--cor-terciaria); 
+    border: 2px solid var(--cor-primaria); 
     border-radius: var(--borda-radius);
     cursor: pointer;
     transition: var(--transicao-rapida);
@@ -151,7 +165,7 @@
 }
 
 .pagina-operadoras #reset-filters:hover {
-    background-color: var(--cor-secundaria); /* Fundo mais escuro no hover */
+    background-color: var(--cor-primaria); 
     color: var(--cor-texto-claro);
     border-color: var(--cor-secundaria);
     box-shadow: var(--sombra-media);
@@ -173,7 +187,7 @@
 /* Estilos para a seção de operadoras sugeridas */
 .pagina-operadoras .operadoras-section {
     background-color: var(--cor-fundo-claro);
-    padding-top: var(--espacamento-medio); /* Ajusta padding para nova seção acima */
+    padding-top: var(--espacamento-medio);
 }
 
 .pagina-operadoras .operadoras-grid {
@@ -191,7 +205,7 @@
     flex-direction: column;
     transition: var(--transicao-media);
     border: 1px solid var(--cor-borda);
-    position: relative; /* Necessário para posicionar o badge de recomendação */
+    position: relative;
 }
 .pagina-operadoras .operadora-card:hover {
     transform: translateY(-5px);
@@ -200,27 +214,27 @@
 
 /* Estilo para a operadora mais recomendada */
 .pagina-operadoras .operadora-card.recommended {
-    border: 3px solid var(--cor-secundaria); /* Contorno azul */
-    box-shadow: 0 0 15px rgba(137, 176, 211, 0.6); /* Sombra mais destacada */
-    transform: scale(1.02); /* Leve aumento para destaque */
-    order: -1; /* Move para o início do grid */
+    border: 3px solid var(--cor-secundaria); 
+    box-shadow: 0 0 15px rgba(137, 176, 211, 0.6); 
+    transform: scale(1.02); 
+    order: -1; 
 }
 
 .pagina-operadoras .operadora-card .recommendation-badge {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--cor-primaria); /* Fundo azul escuro */
-    color: var(--cor-terciaria); /* Texto claro */
+    background-color: var(--cor-primaria); 
+    color: var(--cor-terciaria); 
     padding: 0.4rem 0.8rem;
     border-top-left-radius: var(--borda-radius);
     border-bottom-right-radius: var(--borda-radius);
     font-size: 0.85rem;
     font-weight: 700;
-    z-index: 10; /* Garante que fique acima do conteúdo */
+    z-index: 10; 
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: pulse 1.5s infinite; /* Animação sutil de pulso */
+    animation: pulse 1.5s infinite; 
 }
 
 @keyframes pulse {
@@ -231,11 +245,11 @@
 
 
 .pagina-operadoras .operadora-logo {
-    background-color: #f8f9fa; /* Fundo claro para logos */
+    background-color: #f8f9fa; 
     padding: var(--espacamento-medio);
     text-align: center;
     border-bottom: 1px solid var(--cor-borda);
-    min-height: 100px; /* Altura mínima para alinhar */
+    min-height: 100px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,7 +263,7 @@
     padding: var(--espacamento-grande);
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Faz o conteúdo crescer */
+    flex-grow: 1; 
 }
 .pagina-operadoras .operadora-nome {
     color: var(--cor-primaria);
@@ -266,7 +280,7 @@
     background-color: var(--cor-fundo-medio);
     color: var(--cor-texto);
     padding: 0.2em 0.6em;
-    border-radius: var(--borda-radius); /* Usando var padrão para consistência */
+    border-radius: var(--borda-radius); 
     font-size: 0.8rem;
     font-weight: 500;
 }
@@ -274,7 +288,7 @@
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
     padding: 0.2em 0.6em;
-    border-radius: var(--borda-radius); /* Usando var padrão para consistência */
+    border-radius: var(--borda-radius); 
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -283,7 +297,7 @@
     margin-bottom: var(--espacamento-medio);
     font-size: 0.95rem;
     line-height: 1.5;
-    flex-grow: 1; /* Empurra detalhes e botão para baixo */
+    flex-grow: 1; 
 }
 .pagina-operadoras .operadora-detalhes {
     margin-bottom: var(--espacamento-medio);
@@ -318,12 +332,12 @@
     display: none;
 }
 .pagina-operadoras #nenhuma-operadora {
-    display: none; /* Inicialmente oculto */
+    display: none; 
     text-align: center;
     padding: var(--espacamento-grande);
     color: var(--cor-texto);
     font-size: 1.1rem;
-    grid-column: 1 / -1; /* Ocupa toda a largura do grid */
+    grid-column: 1 / -1; 
 }
 
 /* Segundo Ajuste: Estilo para os botões de cotação nos cards */
@@ -338,9 +352,9 @@
     text-decoration: none;
     font-weight: 600;
     transition: var(--transicao-rapida);
-    margin-top: auto; /* Alinha botão no final */
-    cursor: pointer; /* Indica que é clicável */
-    border: none; /* Remove borda padrão de button */
+    margin-top: auto; 
+    cursor: pointer; 
+    border: none; 
 }
 .pagina-operadoras .operadora-cta:hover {
     background-color: #003366;
@@ -355,11 +369,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2000; /* Acima de todo o conteúdo do site */
+    z-index: 2000; 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -373,25 +387,22 @@
 .popup-content {
     background-color: var(--cor-terciaria);
     padding: var(--espacamento-extra);
-    border-radius: var(--borda-radius); /* Primeiro Ajuste: Aplica o border-radius em todas as bordas */
+    border-radius: var(--borda-radius); 
     box-shadow: var(--sombra-forte);
     position: relative;
-    max-width: 550px; /* Largura máxima para o conteúdo do pop-up */
-    width: 90%; /* Responsividade */
-    transform: translateY(20px); /* Começa um pouco abaixo */
+    max-width: 550px; 
+    width: 90%; 
+    transform: translateY(20px); 
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 
-    /* Estilos para altura e rolagem do pop-up do formulário */
-    max-height: 90vh; /* Altura máxima da viewport */
-    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que max-height */
-    -webkit-overflow-scrolling: touch; /* Suaviza scroll em iOS */
+    max-height: 90vh; 
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
     
-    /* Primeiro Ajuste: Para garantir que as bordas do conteúdo interno não 'cortem' o border-radius */
-    display: flex; /* Transforma em flex container */
-    flex-direction: column; /* Conteúdo em coluna */
+    display: flex; 
+    flex-direction: column; 
 }
-/* Primeiro Ajuste: Estiliza a barra de scroll para ficar mais discreta */
 .popup-content::-webkit-scrollbar {
     width: 8px;
     background-color: var(--cor-fundo-claro);
@@ -410,7 +421,7 @@
 
 
 .popup-overlay.active .popup-content {
-    transform: translateY(0); /* Sobe para a posição final */
+    transform: translateY(0); 
     opacity: 1;
 }
 
@@ -446,21 +457,20 @@
     font-size: 1rem;
 }
 
-/* Estilos específicos para o formulário dentro do pop-up */
 .popup-content.exit-popup-content .popup-subtext strong {
-    color: var(--cor-primaria); /* Cor do negrito para o primeiro pop-up */
+    color: var(--cor-primaria); 
 }
 
-.popup-form { /* Antigo .discovery-contact-form dentro do pop-up */
+.popup-form { 
     display: flex;
     flex-direction: column;
     gap: var(--espacamento-medio);
     width: 100%;
-    max-width: none; /* Remove max-width para preencher o pop-up */
+    max-width: none; 
     margin: var(--espacamento-grande) auto 0;
-    text-align: left; /* Alinha o texto e campos à esquerda */
-    background-color: var(--cor-terciaria); /* Garante fundo claro no formulário */
-    padding: 0; /* Remove padding duplicado se já houver no popup-content */
+    text-align: left; 
+    background-color: var(--cor-terciaria); 
+    padding: 0; 
 }
 
 .popup-form .form-group {
@@ -509,8 +519,8 @@
 
 .popup-form .botao-primario {
     margin-top: var(--espacamento-medio);
-    width: auto; /* Deixa o botão se ajustar ao conteúdo */
-    align-self: center; /* Centraliza o botão no formulário flex */
+    width: auto; 
+    align-self: center; 
 }
 
 
@@ -525,13 +535,13 @@
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-media);
     display: flex;
-    flex-direction: column; /* Empilha texto e botão */
-    align-items: flex-start; /* Alinha o conteúdo à esquerda */
-    gap: var(--espacamento-pequeno); /* Pequeno espaço entre texto e botão */
-    max-width: 250px; /* Tamanho adequado */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: var(--espacamento-pequeno); 
+    max-width: 250px; 
     opacity: 0;
     visibility: hidden;
-    transform: translateX(100%); /* Começa fora da tela */
+    transform: translateX(100%); 
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
     z-index: 1500;
 }
@@ -546,11 +556,10 @@
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.4;
-    white-space: normal; /* Permite que o texto quebre linha naturalmente */
-    text-align: left; /* Alinha texto à esquerda */
+    white-space: normal; 
+    text-align: left; 
 }
 
-/* Estilo do botão na mensagem flutuante */
 .floating-message-container .botao-flutuante {
     display: inline-flex;
     align-items: center;
@@ -562,9 +571,9 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 0.85rem;
-    white-space: nowrap; /* Evita que o texto do botão quebre */
+    white-space: nowrap; 
     transition: var(--transicao-rapida);
-    align-self: flex-end; /* Alinha o botão à direita na coluna */
+    align-self: flex-end; 
 }
 
 .floating-message-container .botao-flutuante:hover {
@@ -574,13 +583,13 @@
 }
 
 .floating-message-container .close-floating-message-btn {
-    position: absolute; /* Posição absoluta para o X */
-    top: 5px; /* Mais próximo do canto superior */
-    right: 5px; /* Mais próximo do canto direito */
+    position: absolute; 
+    top: 5px; 
+    right: 5px; 
     background: none;
     border: none;
     color: var(--cor-texto-claro);
-    font-size: 1rem; /* Um pouco menor para ser discreto */
+    font-size: 1rem; 
     cursor: pointer;
     transition: var(--transicao-rapida);
     padding: 5px;
@@ -601,56 +610,55 @@
 @media (max-width: 768px) {
     /* Ajustes existentes */
     .pagina-operadoras .discovery-form-container {
-        padding: var(--espacamento-grande); /* Reduz padding em telas menores */
+        padding: var(--espacamento-grande); 
     }
     .pagina-operadoras .options-grid {
-        grid-template-columns: 1fr; /* Uma coluna em mobile para facilitar seleção */
+        grid-template-columns: 1fr; 
     }
     .pagina-operadoras .option-card.wide {
-        grid-column: auto; /* Remove largura total em mobile para seguir o fluxo de coluna */
+        grid-column: 1 / -1; 
+        padding: var(--espacamento-medio); 
     }
     .pagina-operadoras .operadoras-grid {
-        grid-template-columns: 1fr; /* Uma coluna */
+        grid-template-columns: 1fr; 
     }
     .pagina-operadoras #reset-filters {
-        width: 100%; /* Botão de reset ocupa a largura total */
+        width: 100%; 
     }
-    /* Quarto Ajuste: Centraliza a mensagem acima do botão de reset em mobile */
     .pagina-operadoras .message-above-reset p {
-        font-size: 1rem; /* Um pouco menor em mobile */
+        font-size: 1rem; 
     }
 
-    /* Pop-ups em Mobile */
     .popup-content {
         padding: var(--espacamento-grande);
-        width: 95%; /* Maior em mobile para preencher melhor a tela */
-        max-height: 90vh; /* Ajusta max-height para caber na tela do celular */
+        width: 95%; 
+        max-height: 90vh; 
     }
     .popup-content .cta-buttons {
-        flex-direction: column; /* Botões de CTA empilhados em mobile */
+        flex-direction: column; 
     }
     .popup-content .cta-buttons .botao-primario,
     .popup-content .cta-buttons .botao-secundario {
-        width: 100%; /* Ocupam largura total */
+        width: 100%; 
     }
 
     .floating-message-container {
         bottom: var(--espacamento-medio);
         left: 50%;
-        transform: translateX(-50%); /* Centraliza em mobile */
-        right: auto; /* Desativa o right fixo */
-        max-width: 90%; /* Ocupa mais largura em mobile */
+        transform: translateX(-50%); 
+        right: auto; 
+        max-width: 90%; 
         padding: var(--espacamento-medio) var(--espacamento-medio);
-        align-items: center; /* Alinha itens na coluna em mobile */
+        align-items: center; 
     }
     .floating-message-container p {
-        text-align: center; /* Centraliza texto em mobile */
+        text-align: center; 
     }
     .floating-message-container .botao-flutuante {
-        align-self: center; /* Centraliza o botão também */
+        align-self: center; 
     }
     .floating-message-container .close-floating-message-btn {
-        top: 5px; /* Mantém a posição do X no canto */
+        top: 5px; 
         right: 5px;
     }
 }
@@ -672,6 +680,6 @@
         font-size: 0.8rem;
     }
     .floating-message-container {
-        max-width: 200px; /* Ainda menor em telas muito pequenas */
+        max-width: 200px; 
     }
 }
