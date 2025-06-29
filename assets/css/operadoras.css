@@ -27,7 +27,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* Primeiro Ajuste: Remove a transição de ocultação/exibição para o container principal,
+       pois ele agora deve permanecer visível. Os passos internos serão ocultos. */
+    /* transition: all 0.5s ease-out; */ 
 }
+/* Primeiro Ajuste: A classe hidden-step será aplicada APENAS aos discovery-steps individuais.
+   Este seletor foi removido porque o container não vai mais sumir. */
+/* .pagina-operadoras .discovery-form-container.hidden-step { ... } */
+
 
 .pagina-operadoras .discovery-step {
     display: none; /* Oculta todos os passos por padrão, JS controlará */
@@ -35,6 +42,15 @@
     padding: var(--espacamento-medio) 0;
     margin-bottom: var(--espacamento-grande);
     animation: fadeIn 0.5s ease-out; /* Animação suave para exibir os passos */
+}
+/* Terceiro Ajuste: Estilo para ocultar os passos de filtro após a conclusão */
+.pagina-operadoras .discovery-step.hidden-step {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
 }
 
 .pagina-operadoras .discovery-step.active {
@@ -104,7 +120,19 @@
 .pagina-operadoras .discovery-actions {
     margin-top: var(--espacamento-grande);
     text-align: center;
+    width: 100%; /* Garante que ocupa a largura para centralizar o conteúdo */
 }
+
+/* Quarto Ajuste: Estilo para a mensagem acima do botão de reset */
+.pagina-operadoras .message-above-reset {
+    margin-bottom: var(--espacamento-medio); /* Espaço entre a mensagem e o botão */
+    display: none; /* Oculto por padrão, JS controla */
+}
+.pagina-operadoras .message-above-reset.active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
 
 /* Botão de Reset */
 .pagina-operadoras #reset-filters {
@@ -170,7 +198,7 @@
     box-shadow: var(--sombra-media);
 }
 
-/* Estilo para a operadora mais recomendada (Nº 1) */
+/* Estilo para a operadora mais recomendada */
 .pagina-operadoras .operadora-card.recommended {
     border: 3px solid var(--cor-secundaria); /* Contorno azul */
     box-shadow: 0 0 15px rgba(137, 176, 211, 0.6); /* Sombra mais destacada */
@@ -298,7 +326,29 @@
     grid-column: 1 / -1; /* Ocupa toda a largura do grid */
 }
 
-/* Estilos para Pop-ups (Nº 2 e Nº 4) */
+/* Segundo Ajuste: Estilo para os botões de cotação nos cards */
+.pagina-operadoras .operadora-cta {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    text-align: center;
+    border-radius: var(--borda-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao-rapida);
+    margin-top: auto; /* Alinha botão no final */
+    cursor: pointer; /* Indica que é clicável */
+    border: none; /* Remove borda padrão de button */
+}
+.pagina-operadoras .operadora-cta:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+
+
+/* Estilos para Pop-ups */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -323,7 +373,7 @@
 .popup-content {
     background-color: var(--cor-terciaria);
     padding: var(--espacamento-extra);
-    border-radius: var(--borda-radius);
+    border-radius: var(--borda-radius); /* Primeiro Ajuste: Aplica o border-radius em todas as bordas */
     box-shadow: var(--sombra-forte);
     position: relative;
     max-width: 550px; /* Largura máxima para o conteúdo do pop-up */
@@ -331,7 +381,33 @@
     transform: translateY(20px); /* Começa um pouco abaixo */
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
+
+    /* Estilos para altura e rolagem do pop-up do formulário */
+    max-height: 90vh; /* Altura máxima da viewport */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que max-height */
+    -webkit-overflow-scrolling: touch; /* Suaviza scroll em iOS */
+    
+    /* Primeiro Ajuste: Para garantir que as bordas do conteúdo interno não 'cortem' o border-radius */
+    display: flex; /* Transforma em flex container */
+    flex-direction: column; /* Conteúdo em coluna */
 }
+/* Primeiro Ajuste: Estiliza a barra de scroll para ficar mais discreta */
+.popup-content::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--cor-fundo-claro);
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background-color: var(--cor-secundaria);
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background-color: var(--cor-fundo-claro);
+    border-radius: 4px;
+}
+
 
 .popup-overlay.active .popup-content {
     transform: translateY(0); /* Sobe para a posição final */
@@ -371,14 +447,74 @@
 }
 
 /* Estilos específicos para o formulário dentro do pop-up */
-.popup-content .discovery-contact-form {
-    gap: var(--espacamento-medio);
-    margin: var(--espacamento-medio) auto 0; /* Ajusta margem para centralizar */
-    width: 100%;
-    max-width: none; /* Remove max-width para preencher o pop-up */
+.popup-content.exit-popup-content .popup-subtext strong {
+    color: var(--cor-primaria); /* Cor do negrito para o primeiro pop-up */
 }
 
-/* Estilos para Mensagem Flutuante (Nº 5) */
+.popup-form { /* Antigo .discovery-contact-form dentro do pop-up */
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-medio);
+    width: 100%;
+    max-width: none; /* Remove max-width para preencher o pop-up */
+    margin: var(--espacamento-grande) auto 0;
+    text-align: left; /* Alinha o texto e campos à esquerda */
+    background-color: var(--cor-terciaria); /* Garante fundo claro no formulário */
+    padding: 0; /* Remove padding duplicado se já houver no popup-content */
+}
+
+.popup-form .form-group {
+    margin-bottom: var(--espacamento-pequeno);
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: var(--espacamento-pequeno);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    font-size: 0.95rem;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form input[type="tel"],
+.popup-form input[type="number"],
+.popup-form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background-color: #fff;
+    transition: var(--transicao-rapida);
+}
+
+.popup-form input[type="text"]:focus,
+.popup-form input[type="email"]:focus,
+.popup-form input[type="tel"]:focus,
+.popup-form input[type="number"]:focus,
+.popup-form select:focus {
+    border-color: var(--cor-secundaria);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.25);
+}
+
+.popup-form small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.popup-form .botao-primario {
+    margin-top: var(--espacamento-medio);
+    width: auto; /* Deixa o botão se ajustar ao conteúdo */
+    align-self: center; /* Centraliza o botão no formulário flex */
+}
+
+
+/* Estilos para Mensagem Flutuante */
 .floating-message-container {
     position: fixed;
     bottom: var(--espacamento-grande);
@@ -389,9 +525,10 @@
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-media);
     display: flex;
-    align-items: center;
-    gap: var(--espacamento-medio);
-    max-width: 350px;
+    flex-direction: column; /* Empilha texto e botão */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    gap: var(--espacamento-pequeno); /* Pequeno espaço entre texto e botão */
+    max-width: 250px; /* Tamanho adequado */
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%); /* Começa fora da tela */
@@ -409,16 +546,44 @@
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.4;
+    white-space: normal; /* Permite que o texto quebre linha naturalmente */
+    text-align: left; /* Alinha texto à esquerda */
+}
+
+/* Estilo do botão na mensagem flutuante */
+.floating-message-container .botao-flutuante {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--borda-radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap; /* Evita que o texto do botão quebre */
+    transition: var(--transicao-rapida);
+    align-self: flex-end; /* Alinha o botão à direita na coluna */
+}
+
+.floating-message-container .botao-flutuante:hover {
+    background-color: #1ad01a;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .floating-message-container .close-floating-message-btn {
+    position: absolute; /* Posição absoluta para o X */
+    top: 5px; /* Mais próximo do canto superior */
+    right: 5px; /* Mais próximo do canto direito */
     background: none;
     border: none;
     color: var(--cor-texto-claro);
-    font-size: 1.2rem;
+    font-size: 1rem; /* Um pouco menor para ser discreto */
     cursor: pointer;
     transition: var(--transicao-rapida);
-    padding: 5px; /* Aumenta a área clicável */
+    padding: 5px;
     opacity: 0.8;
 }
 
@@ -450,24 +615,43 @@
     .pagina-operadoras #reset-filters {
         width: 100%; /* Botão de reset ocupa a largura total */
     }
+    /* Quarto Ajuste: Centraliza a mensagem acima do botão de reset em mobile */
+    .pagina-operadoras .message-above-reset p {
+        font-size: 1rem; /* Um pouco menor em mobile */
+    }
 
     /* Pop-ups em Mobile */
     .popup-content {
         padding: var(--espacamento-grande);
         width: 95%; /* Maior em mobile para preencher melhor a tela */
+        max-height: 90vh; /* Ajusta max-height para caber na tela do celular */
     }
+    .popup-content .cta-buttons {
+        flex-direction: column; /* Botões de CTA empilhados em mobile */
+    }
+    .popup-content .cta-buttons .botao-primario,
+    .popup-content .cta-buttons .botao-secundario {
+        width: 100%; /* Ocupam largura total */
+    }
+
     .floating-message-container {
         bottom: var(--espacamento-medio);
         left: 50%;
         transform: translateX(-50%); /* Centraliza em mobile */
         right: auto; /* Desativa o right fixo */
-        max-width: 90%;
+        max-width: 90%; /* Ocupa mais largura em mobile */
         padding: var(--espacamento-medio) var(--espacamento-medio);
-        flex-wrap: wrap; /* Permite quebrar linha se o conteúdo for longo */
-        justify-content: center;
+        align-items: center; /* Alinha itens na coluna em mobile */
     }
     .floating-message-container p {
-        text-align: center;
+        text-align: center; /* Centraliza texto em mobile */
+    }
+    .floating-message-container .botao-flutuante {
+        align-self: center; /* Centraliza o botão também */
+    }
+    .floating-message-container .close-floating-message-btn {
+        top: 5px; /* Mantém a posição do X no canto */
+        right: 5px;
     }
 }
 
@@ -482,5 +666,12 @@
         font-size: 1.5rem;
         top: 10px;
         right: 10px;
+    }
+    .floating-message-container .botao-flutuante {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    .floating-message-container {
+        max-width: 200px; /* Ainda menor em telas muito pequenas */
     }
 }
