@@ -1,7 +1,7 @@
 /*
 * Silas Novaes - Planos de Saúde
 * Arquivo CSS principal otimizado para SEO, UX/UI e responsividade
-* Versão: 4.3 - Ajustes de responsividade global e sintaxe CSS
+* Versão: 4.7 - Ajustes de responsividade global, foco de acessibilidade e refinamento de espaçamentos
 */
 
 /* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
@@ -9,30 +9,32 @@
   /* Paleta de cores principal */
   --cor-primaria: #002043;
   --cor-secundaria: #89b0d3;
-  --cor-terciaria: #fefcea;
-  --cor-destaque: #23f023;
-  --cor-texto: #002043;
-  --cor-texto-claro: #ffffff;
-  --cor-fundo-claro: #f5f7fa;
-  --cor-fundo-medio: #89b0d3;
-  --cor-fundo-escuro: #002043;
+  --cor-terciaria: #fefcea; /* Bege claro */
+  --cor-destaque: #23f023; /* Verde vibrante */
+  --cor-texto: #002043; /* Azul escuro para texto padrão */
+  --cor-texto-claro: #ffffff; /* Branco para texto em fundos escuros */
+  --cor-fundo-claro: #f5f7fa; /* Fundo muito claro */
+  --cor-fundo-medio: #89b0d3; /* Azul claro (secundária) */
+  --cor-fundo-escuro: #002043; /* Azul escuro (primária) */
   --cor-borda: #dddddd;
   --cor-erro: #dc3545;
   --cor-sucesso: #28a745;
-  
+
   /* Espaçamentos */
+  --espacamento-quase-nenhum: 0.25rem;
   --espacamento-pequeno: 0.5rem;
   --espacamento-medio: 1rem;
   --espacamento-grande: 2rem;
   --espacamento-extra: 4rem;
-  
+  --espacamento-gigante: 6rem;
+
   /* Bordas e sombras */
   --borda-padrao: 1px solid var(--cor-borda);
   --borda-radius: 8px;
   --sombra-suave: 0 2px 10px rgba(0, 0, 0, 0.1);
   --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.15);
   --sombra-forte: 0 8px 24px rgba(0, 0, 0, 0.2);
-  
+
   /* Transições */
   --transicao-rapida: all 0.2s ease;
   --transicao-media: all 0.3s ease;
@@ -49,7 +51,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 16px; /* Base rem unit */
   scroll-behavior: smooth;
 }
 
@@ -59,21 +61,39 @@ body {
   color: var(--cor-texto);
   background-color: var(--cor-fundo-claro);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Previne scroll horizontal acidental */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Nova classe para controlar o scroll do body quando o menu/pop-up está aberto */
+body.no-scroll {
+  overflow: hidden;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: block; /* Remove espaço extra abaixo das imagens */
 }
 
 a {
   text-decoration: none;
   color: var(--cor-primaria);
   transition: var(--transicao-rapida);
+  /* Adição de foco visível para acessibilidade */
+  outline: none; /* Remove o outline padrão para substituir por customizado */
+}
+
+/* Estilo de foco aprimorado para acessibilidade (apenas para navegação por teclado) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--cor-secundaria); /* Um azul mais claro para o foco */
+  outline-offset: 3px; /* Espaço entre o elemento e o outline */
+  border-radius: var(--borda-radius); /* Borda arredondada no foco */
 }
 
 ul, ol {
@@ -95,15 +115,15 @@ ul, ol {
 }
 
 .bloco {
-  padding: var(--espacamento-grande) 0;
+  padding: var(--espacamento-gigante) 0;
 }
 
 /* ===== FAIXA TOPO ===== */
 .faixa-topo {
   background-color: var(--cor-primaria);
   color: var(--cor-terciaria);
-  font-size: 1rem;
-  padding: 0.7rem 0;
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
   text-align: left;
   position: relative;
   z-index: 1001;
@@ -118,7 +138,12 @@ ul, ol {
 .faixa-topo .contato-rapido {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.faixa-topo .contato-rapido strong {
+  white-space: nowrap;
 }
 
 .faixa-topo a {
@@ -131,23 +156,28 @@ ul, ol {
 }
 
 .faixa-topo a:hover,
-.faixa-topo a:focus {
+.faixa-topo a:focus-visible {
   text-decoration: underline;
-  color: #fff;
+  color: var(--cor-texto-claro);
 }
 
 .faixa-topo .social-icons {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.7rem;
 }
 
-.faixa-topo .social-icon {
+/* ESTILO GLOBAL PARA ÍCONES SOCIAIS NA FAIXA TOPO E FOOTER */
+.social-icon {
   color: var(--cor-terciaria);
   font-size: 1.1rem;
   transition: var(--transicao-rapida);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.faixa-topo .social-icon:hover {
+.social-icon:hover,
+.social-icon:focus-visible {
   color: var(--cor-destaque);
   transform: translateY(-2px);
 }
@@ -165,8 +195,9 @@ header.bloco {
 
 header.scrolled {
   padding: 0.5rem 0;
-  background-color: rgba(137, 176, 211, 0.95);
-  backdrop-filter: blur(10px);
+  background-color: rgba(137, 176, 211, 0.98);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--sombra-media);
 }
 
 .header-content {
@@ -181,7 +212,8 @@ header.scrolled {
   transition: var(--transicao-rapida);
 }
 
-.logo-link:hover {
+.logo-link:hover,
+.logo-link:focus-visible {
   transform: scale(1.02);
 }
 
@@ -229,13 +261,13 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after,
-nav ul li a:focus::after,
+nav ul li a:focus-visible::after,
 nav ul li a.active::after {
   width: 100%;
 }
 
 nav ul li a:hover,
-nav ul li a:focus,
+nav ul li a:focus-visible,
 nav ul li a.active {
   color: var(--cor-primaria);
 }
@@ -249,6 +281,7 @@ nav ul li a.active {
   height: 22px;
   justify-content: space-between;
   z-index: 1002;
+  padding: 5px;
 }
 
 .menu-toggle span {
@@ -281,14 +314,16 @@ nav ul li a.active {
 
 .heading--primary {
   font-size: 2.4rem;
-  color: var(--cor-terciaria); /* Geralmente para fundos escuros */
+  color: var(--cor-primaria);
   text-align: center;
+  margin-bottom: var(--espacamento-medio);
 }
 
 .heading--secondary {
   font-size: 2rem;
-  color: var(--cor-primaria); /* Geralmente para fundos claros */
+  color: var(--cor-primaria);
   text-align: center;
+  margin-bottom: var(--espacamento-medio);
 }
 
 .heading--tertiary {
@@ -312,6 +347,7 @@ nav ul li a.active {
   background-color: var(--cor-primaria);
   color: var(--cor-texto-claro);
   text-align: center;
+  padding: var(--espacamento-gigante) 0;
 }
 
 .cta-container {
@@ -322,10 +358,14 @@ nav ul li a.active {
 .cta-title {
   font-size: 2rem;
   margin-bottom: var(--espacamento-medio);
+  color: var(--cor-texto-claro);
+  line-height: 1.2;
 }
 
 .cta-text {
   margin-bottom: var(--espacamento-grande);
+  color: var(--cor-texto-claro);
+  font-size: 1.1rem;
 }
 
 .cta-buttons {
@@ -346,10 +386,12 @@ nav ul li a.active {
   transition: var(--transicao-rapida);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: var(--sombra-suave);
 }
 
 .botao-primario:hover,
-.botao-primario:focus {
+.botao-primario:focus-visible {
   background-color: #1ad01a;
   transform: translateY(-2px);
   box-shadow: var(--sombra-media);
@@ -367,65 +409,65 @@ nav ul li a.active {
   border: 2px solid var(--cor-texto-claro);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: var(--sombra-suave);
 }
 
 .botao-secundario:hover,
-.botao-secundario:focus {
+.botao-secundario:focus-visible {
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+  box-shadow: var(--sombra-media);
 }
 
-/* ===== FOOTER (Global) - AJUSTES IMPLEMENTADOS ===== */
+/* ===== FOOTER (Global) ===== */
 footer {
   background-color: var(--cor-primaria);
   color: var(--cor-texto-claro);
-  padding: var(--espacamento-grande) 0;
+  padding: var(--espacamento-gigante) 0 var(--espacamento-grande) 0;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--espacamento-grande);
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--espacamento-grande); /* Adiciona espaçamento entre colunas em mobile */
+  margin-bottom: 0;
 }
 
-.footer-column:last-child {
-  margin-bottom: 0; /* Remove a margem do último item em mobile */
-}
-
-/* Redimensionamento da logo no footer */
 .footer-logo {
   margin-bottom: var(--espacamento-medio);
-  height: 45px; /* Ajuste para o tamanho desejado */
+  height: 45px;
   width: auto;
+  align-self: flex-start;
 }
 
-/* Alinhamento justificado para o texto da descrição */
 .footer-about {
   margin-bottom: var(--espacamento-medio);
   font-size: 0.95rem;
   line-height: 1.6;
-  text-align: justify; /* Alinhamento justificado para o texto */
+  text-align: justify;
 }
 
 .footer-social {
   display: flex;
   gap: 1rem;
+  margin-top: var(--espacamento-pequeno);
   margin-bottom: var(--espacamento-medio);
+  align-self: flex-start;
 }
 
-.footer-social-link {
+.footer-social .social-icon {
   color: var(--cor-texto-claro);
   font-size: 1.2rem;
-  transition: var(--transicao-rapida);
 }
 
-.footer-social-link:hover {
+.footer-social .social-icon:hover,
+.footer-social .social-icon:focus-visible {
   color: var(--cor-destaque);
   transform: translateY(-2px);
 }
@@ -435,6 +477,7 @@ footer {
   margin-bottom: var(--espacamento-medio);
   position: relative;
   padding-bottom: 0.5rem;
+  text-align: left;
 }
 
 .footer-heading::after {
@@ -447,59 +490,71 @@ footer {
   background-color: var(--cor-destaque);
 }
 
-/* Itens da lista "Links Rápidos" em maiúsculas */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
 .footer-links li a {
-  text-transform: uppercase; /* Texto em maiúsculas */
-  color: var(--cor-texto-claro); /* Garante a cor do link */
+  text-transform: uppercase;
+  color: var(--cor-texto-claro);
   text-decoration: none;
   transition: var(--transicao-rapida);
   display: inline-block;
 }
 
-.footer-links li a:hover {
+.footer-links li a:hover,
+.footer-links li a:focus-visible {
   color: var(--cor-destaque);
   transform: translateX(3px);
 }
 
-/* Estilos para a lista de contato do footer */
 .footer-contact-list {
-  list-style: none; /* Remove marcadores de lista */
+  list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .footer-contact-list .footer-contact-item {
   display: flex;
-  align-items: flex-start; /* Alinha ícone no topo se o texto for grande */
-  gap: 0.8rem; /* Espaçamento entre ícone e texto */
-  margin-bottom: var(--espacamento-medio); /* Espaçamento entre os itens de contato */
-  color: var(--cor-texto-claro); /* Garante a cor do texto padrão */
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: var(--espacamento-medio);
+  color: var(--cor-texto-claro);
 }
 
 .footer-contact-list .footer-contact-item a {
-  color: var(--cor-texto-claro); /* Garante a cor do link */
+  color: var(--cor-texto-claro);
   text-decoration: none;
   transition: var(--transicao-rapida);
 }
 
-.footer-contact-list .footer-contact-item a:hover {
-  color: var(--cor-destaque); /* Hover para os links */
+.footer-contact-list .footer-contact-item a:hover,
+.footer-contact-list .footer-contact-item a:focus-visible {
+  color: var(--cor-destaque);
 }
 
 .footer-contact-icon {
   color: var(--cor-destaque);
   font-size: 1.2rem;
-  margin-top: 0.2rem; /* Alinha ícone com a primeira linha do texto */
-  flex-shrink: 0; /* Evita que o ícone encolha */
+  margin-top: 0.2rem;
+  flex-shrink: 0;
 }
 
 .footer-contact-item p {
-  margin: 0; /* Remove margens padrão de p para melhor alinhamento */
-  line-height: 1.4; /* Ajusta a altura da linha para o texto de contato */
+  margin: 0;
+  line-height: 1.4;
 }
 
 .footer-contact-item small {
-  display: block; /* Faz a pequena descrição quebrar linha */
+  display: block;
   font-size: 0.8em;
   opacity: 0.8;
 }
@@ -520,6 +575,13 @@ footer {
   margin-top: 1rem;
 }
 
+/* Animações de Fade-in (global, caso outras páginas usem) */
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
 /* ===== ACESSIBILIDADE (Global) ===== */
 .skip-link {
   position: absolute;
@@ -530,6 +592,7 @@ footer {
   padding: 8px;
   z-index: 1002;
   transition: top 0.3s;
+  font-weight: bold;
 }
 
 .skip-link:focus {
@@ -539,161 +602,192 @@ footer {
 /* ===== RESPONSIVIDADE GLOBAL ===== */
 @media (max-width: 1024px) {
   html {
-    font-size: 15px;
+      font-size: 15px;
   }
-  
   .heading--primary {
-    font-size: 2.2rem;
+      font-size: 2.2rem;
   }
-  
   .heading--secondary {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
+  }
+  .subtitulo {
+      font-size: 1.15rem;
+  }
+  .footer-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--espacamento-grande);
+  }
+  .bloco {
+      padding: var(--espacamento-extra) 0;
+  }
+  .cta-section {
+      padding: var(--espacamento-extra) 0;
+  }
+  footer {
+      padding: var(--espacamento-extra) 0 var(--espacamento-grande) 0;
   }
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 14px;
+      font-size: 14px;
   }
-  
-  /* Faixa Topo */
   .faixa-topo .container {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start; /* Alinha os itens (contato-rapido e social-icons) à esquerda do container */
-    padding: 0 var(--espacamento-medio); /* Garante o padding lateral para o container */
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+      padding: 0 var(--espacamento-medio);
   }
   .faixa-topo .contato-rapido{
-    width: 100%; /* Ocupa toda a largura */
-    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-    flex-wrap: wrap; /* Permite quebra de linha em telas muito pequenas */
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
   }
   .faixa-topo .social-icons {
-    width: 100%; /* Ocupa toda a largura */
-    justify-content: flex-end; /* Alinha os ícones à direita */
-    flex-wrap: wrap; /* Permite quebra de linha em telas muito pequenas */
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
   }
-  .faixa-topo .contato-rapido b {
-      white-space: nowrap; /* Evita que 'Contrate o seu plano de saúde' quebre a linha */
-  }
-  
-  /* Header e Menu Hambúrguer */
   .menu-toggle {
-    display: flex;
-    margin-left: auto; /* Empurra para a direita */
-    align-self: center; /* Garante alinhamento vertical com o logo */
+      display: flex;
+      margin-left: auto;
+      align-self: center;
   }
-
   header.bloco .container {
-      padding: 0; /* Remove padding lateral para o header-content preencher */
+      padding: 0;
   }
   .header-content {
-      padding: 0 var(--espacamento-medio); /* Adiciona o padding diretamente ao header-content */
+      padding: 0 var(--espacamento-medio);
   }
-
-  /* Main Content Padding (para evitar sobreposição com header fixo) */
-  /* A altura da faixa topo é fixa (aprox. 1rem de font-size + padding).
-     A altura do header (logo 50px + padding).
-     Vamos considerar uma altura total para o header fixo em mobile. */
-  main {
-      padding-top: 115px; /* Ajuste este valor se ainda houver faixa azul ou sobreposição */
-  }
-  
   nav ul {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    max-width: none;
-    height: 100vh;
-    background-color: var(--cor-secundaria);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    transition: var(--transicao-media);
-    z-index: 1001;
-    box-shadow: var(--sombra-forte);
+      position: fixed;
+      top: 0;
+      transform: translateX(100%);
+      width: 100%;
+      max-width: none;
+      height: 100vh;
+      background-color: var(--cor-secundaria);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      transition: transform var(--transicao-media) ease-out;
+      z-index: 1001;
+      box-shadow: var(--sombra-forte);
   }
-  
   nav ul.active {
-    right: 0;
+      transform: translateX(0);
   }
-  
   nav ul li {
-    margin: 1rem 0;
+      margin: 1rem 0;
   }
-  
+  nav ul li a {
+      font-size: 1.2rem;
+  }
   .heading--primary {
-    font-size: 2rem;
+      font-size: 2rem;
   }
-  
   .heading--secondary {
-    font-size: 1.6rem;
+      font-size: 1.6rem;
   }
-  
+  .subtitulo {
+      font-size: 1.1rem;
+  }
   .cta-buttons {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
-  
   .cta-buttons a {
-    width: 100%;
-    text-align: center;
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
   }
-
-  /* Footer Responsividade */
+  .footer-container {
+      grid-template-columns: 1fr;
+      gap: var(--espacamento-grande);
+  }
   .footer-column {
-    margin-bottom: var(--espacamento-grande);
-    text-align: center; /* Centraliza o texto das colunas do footer em mobile */
-    align-items: center; /* Centraliza os itens flexíveis na coluna */
+      text-align: center;
+      align-items: center;
   }
-  .footer-column:last-child {
-    margin-bottom: 0;
+  .footer-logo {
+      align-self: center;
   }
-
-  /* Centraliza a linha inferior dos títulos do footer */
   .footer-heading::after {
-    left: 50%;
-    transform: translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
   }
-
-  /* Centraliza os links do footer */
-  .footer-links {
-    text-align: center;
+  .footer-links,
+  .footer-contact-list {
+      text-align: center;
   }
   .footer-links li a {
-    padding: 0.2rem 0; /* Ajusta o padding para melhor toque em mobile */
+      padding: 0.3rem 0;
   }
-
-  /* Ajustes para a lista de contatos do footer */
   .footer-contact-list .footer-contact-item {
-    justify-content: center; /* Centraliza os ícones e texto de contato */
+      justify-content: center;
+  }
+  .social-icon {
+      font-size: 1.1rem;
+  }
+  .bloco {
+      padding: var(--espacamento-grande) 0;
+  }
+  .cta-section {
+      padding: var(--espacamento-grande) 0;
+  }
+  footer {
+      padding: var(--espacamento-grande) 0 var(--espacamento-medio) 0;
   }
 }
 
 @media (max-width: 480px) {
   .bloco {
-    padding: var(--espacamento-medio) 0;
+      padding: var(--espacamento-medio) 0;
   }
-  
   .container {
-    width: 95%;
+      width: 95%;
   }
-  
   .heading--primary {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
   }
-  
   .heading--secondary {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
-  
   .heading--tertiary {
-    font-size: 1.3rem;
+      font-size: 1.3rem;
   }
-  
   .footer-container {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
+  }
+  .sobre-hero-citacao {
+      font-size: 1rem;
+  }
+  .historia-section p {
+      font-size: 1.05rem;
+  }
+  .timeline-content h3 {
+      font-size: 1.15rem;
+  }
+  .timeline-content p {
+      font-size: 0.95rem;
+  }
+  .metodo-item h3, .conquista-item h3, .valor-item h3 {
+      font-size: 1.25rem;
+  }
+  .metodo-item p, .conquista-item p, .valor-item p {
+      font-size: 0.95rem;
+  }
+  .personalized-popup-content {
+      padding: var(--espacamento-medio);
+  }
+  .popup-title {
+      font-size: 1.5rem;
+  }
+  .popup-message {
+      font-size: 1rem;
+  }
+  .close-popup-btn {
+      font-size: 1.5rem;
   }
 }

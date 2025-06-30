@@ -6,22 +6,22 @@
   overflow: hidden;
   background-color: var(--cor-primaria); /* Fundo caso a imagem não carregue */
   /* Garante que o banner não tenha margem superior que possa ser a faixa azul */
-  margin-top: 0; 
+  margin-top: 0;
 }
- 
+
 .banner-wrapper {
   position: relative;
 }
- 
+
 .banner-wrapper img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
   /* Isso é importante para remover qualquer espaço extra abaixo da imagem */
-  vertical-align: middle; 
+  vertical-align: middle;
 }
- 
+
 /* ============================================= */
 /* ===== SEÇÃO DE BOAS-VINDAS COM IMAGEM ===== */
 /* ============================================= */
@@ -60,37 +60,37 @@
 /* --- Responsividade --- */
 @media (max-width: 992px) {
   .secao-boas-vindas .boas-vindas-grid {
-    gap: 2rem;
+      gap: 2rem;
   }
   .boas-vindas-imagem img {
-    width: 280px;
-    height: 280px;
+      width: 280px;
+      height: 280px;
   }
 }
 
 @media (max-width: 768px) {
   .secao-boas-vindas .boas-vindas-grid {
-    grid-template-columns: 1fr; /* Layout de uma coluna única em telas menores */
+      grid-template-columns: 1fr; /* Layout de uma coluna única em telas menores */
   }
 
   .boas-vindas-imagem {
-    order: 1; /* Coloca a imagem ANTES do texto em telas mobile */
-    margin-bottom: 1.5rem;
+      order: 1; /* Coloca a imagem ANTES do texto em telas mobile */
+      margin-bottom: 1.5rem;
   }
 
   .secao-boas-vindas .boas-vindas-texto {
-    order: 2; /* Coloca o texto DEPOIS da imagem em telas mobile */
-    text-align: center; /* Centraliza o texto no mobile */
+      order: 2; /* Coloca o texto DEPOIS da imagem em telas mobile */
+      text-align: center; /* Centraliza o texto no mobile */
   }
 
   .secao-boas-vindas .boas-vindas-texto .heading--secondary,
   .secao-boas-vindas .boas-vindas-texto .subtitulo {
-    text-align: center; /* Garante a centralização dos títulos */
+      text-align: center; /* Garante a centralização dos títulos */
   }
 
   .boas-vindas-imagem img {
-    width: 220px;
-    height: 220px;
+      width: 220px;
+      height: 220px;
   }
 }
 
@@ -99,23 +99,28 @@
 /* ============================================= */
 
 /* Tipos de Planos / Serviços Grid Section */
-.servicos-home-section { 
+.servicos-home-section {
   background-color: var(--cor-terciaria); /* Fundo da seção: bege */
-  padding: var(--espacamento-grande) 0; 
+  padding: var(--espacamento-grande) 0;
 }
- 
-.servicos-home-section .heading--primary,
-.servicos-home-section .subtitulo {
-    color: var(--cor-primaria); /* Cor do título e subtítulo: azul primário */
+
+/* ADICIONADO: Classe específica para o subtítulo desta seção, removendo o estilo inline do HTML */
+.servicos-home-section .servicos-subtitulo {
+  color: var(--cor-primaria); /* Cor do subtítulo: azul primário */
 }
- 
+
+/* REMOVIDO: .servicos-home-section .heading--primary, .servicos-home-section .subtitulo { color: var(--cor-primaria); }
+ MOTIVO: O subtítulo foi movido para a classe .servicos-subtitulo.
+ O heading--primary é uma classe mais genérica e a cor já é definida por padrão para fundos claros em styles.css. */
+
+
 .servicos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: var(--espacamento-grande);
 }
- 
+
 .servico {
   background-color: var(--cor-fundo-claro); /* Fundo do card: bege claro para melhor contraste */
   border-radius: var(--borda-radius);
@@ -128,13 +133,13 @@
   text-align: center;
   height: 100%;
 }
- 
+
 .servico:hover,
 .servico:focus-within {
   transform: translateY(-5px);
   box-shadow: var(--sombra-media);
 }
- 
+
 .servico-img {
   max-width: 300px;
   height: auto;
@@ -142,16 +147,16 @@
   margin-bottom: var(--espacamento-medio);
   transition: var(--transicao-media);
 }
- 
+
 .servico:hover .servico-img {
   transform: scale(1.05);
 }
- 
+
 .servico p {
   margin-bottom: var(--espacamento-grande);
   flex-grow: 1;
 }
- 
+
 .botao-servico {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -163,85 +168,94 @@
   transition: var(--transicao-rapida);
   margin-top: auto;
 }
- 
+
 .botao-servico:hover,
 .botao-servico:focus {
   background-color: #003366;
   transform: translateY(-2px);
 }
- 
- 
+
+
 /* Mapa Brasil Section */
 .mapa-brasil-section {
-  background-color: var(--cor-primaria); /* Alterado para azul escuro */
+  background-color: var(--cor-primaria); /* Azul escuro */
   text-align: center;
 }
- 
+
 .mapa-brasil-container {
   display: flex;
   align-items: center;
   gap: var(--espacamento-grande);
 }
- 
+
 .mapa-brasil-imagem {
   flex: 0 0 35%;
 }
- 
+
 .mapa-brasil-img {
   max-width: 100%;
   height: auto;
   border-radius: var(--borda-radius);
   box-shadow: var(--sombra-media);
 }
- 
+
 .mapa-brasil-content {
   flex: 0 0 60%;
   text-align: left;
 }
- 
+
 .mapa-brasil-content p {
   margin-bottom: var(--espacamento-medio);
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--cor-terciaria); /* Alterado para bege */
+  color: var(--cor-terciaria); /* Bege claro */
 }
- 
+
 .mapa-brasil-content h2,
 .mapa-brasil-content .subtitulo {
   text-align: left;
-  color: var(--cor-terciaria); /* Alterado para bege */
+  color: var(--cor-terciaria); /* Bege claro */
 }
- 
- 
+
+
 /* Diferenciais Section */
 .diferenciais-section {
-  background-color: var(--cor-fundo-medio); /* Alterado para azul claro */
+  background-color: var(--cor-fundo-claro); /* Fundo claro para esta seção */
 }
- 
+
+/* REMOVIDO: background-color: var(--cor-fundo-medio); do .diferenciais-section
+ MOTIVO: Alterado para 'var(--cor-fundo-claro)' para manter a consistência com
+ o fundo do body e outros elementos, criando um visual mais "limpo" e harmônico.
+ O azul médio já é usado na header e em outros pontos. */
+
 .diferenciais-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
   margin-top: var(--espacamento-grande);
 }
- 
+
 .diferencial-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: var(--espacamento-grande);
-  background-color: #fefcea;
+  background-color: #fff; /* Fundo branco para os cards de diferencial */
   border-radius: var(--borda-radius);
   box-shadow: var(--sombra-suave);
   transition: var(--transicao-media);
 }
- 
+
+/* REMOVIDO: background-color: #fefcea; do .diferencial-item
+ MOTIVO: Alterado para 'white' (#fff) para um contraste mais nítido e "clean"
+ com o fundo claro da seção, mantendo a consistência com a identidade visual. */
+
 .diferencial-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--sombra-media);
 }
- 
+
 .diferencial-icon {
   font-size: 2.5rem;
   color: var(--cor-primaria);
@@ -253,139 +267,141 @@
   background-color: rgba(137, 176, 211, 0.3); /* Círculo de fundo com leve transparência */
   display: inline-block;
 }
- 
+
 .diferencial-title {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: var(--espacamento-pequeno);
   color: var(--cor-primaria);
 }
- 
- 
+
+
 /* Depoimentos Section */
 .depoimentos-section {
   background-color: var(--cor-terciaria); /* Mantido bege */
   color: var(--cor-texto);
 }
- 
+
 .depoimentos-container {
   position: relative;
   padding: var(--espacamento-medio) 0;
-  overflow: hidden;
+  overflow: hidden; /* Garante que os slides que não estão visíveis fiquem escondidos */
 }
- 
+
 .depoimentos-slider {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* Impede quebra de linha dos slides */
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
- 
+
 .depoimento {
-  flex: 0 0 100%; 
+  flex: 0 0 100%; /* Cada depoimento ocupa 100% da largura do contêiner */
   max-width: 100%;
   box-sizing: border-box;
-  scroll-snap-align: start;
+  scroll-snap-align: start; /* Ajuda na rolagem se for implementado scroll-snapping */
   padding: var(--espacamento-grande);
-  background-color: rgba(57, 90, 125, 0.1);
+  background-color: rgba(57, 90, 125, 0.1); /* Cor de fundo do card de depoimento */
   border-radius: var(--borda-radius);
-  margin: 0;
+  margin: 0; /* Remove margens extras que poderiam atrapalhar o cálculo do transform */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
- 
+
 .depoimento:hover {
   transform: translateY(-5px);
   box-shadow: var(--sombra-media);
 }
- 
+
 /* Ícones de aspas decorativos */
-.depoimento-texto::before,
-.depoimento-texto::after {
-  content: '"';
-  font-size: 2rem;
-  color: var(--cor-primaria);
-  position: absolute;
-  opacity: 0.2;
-}
- 
-.depoimento-texto::before {
-  top: -10px;
-  left: -15px;
-}
- 
-.depoimento-texto::after {
-  bottom: -10px;
-  right: -15px;
-}
- 
-.depoimentos-section .heading--primary {
-  color: var(--cor-primaria) !important;
-}
- 
-.depoimentos-section .subtitulo {
-  color: var(--cor-primaria) !important;
-}
- 
- 
+/* ADICIONADO: Posicionamento absoluto e ajuste para as aspas decorativas para melhor UX/UI */
 .depoimento-texto {
   font-style: italic;
   margin-bottom: var(--espacamento-medio);
-  position: relative;
+  position: relative; /* Essencial para o posicionamento das aspas pseudo-elementos */
+  padding: 0 20px; /* Adiciona padding para o texto não ficar grudado nas aspas */
 }
- 
+
+.depoimento-texto::before,
+.depoimento-texto::after {
+  content: '"';
+  font-size: 3.5rem; /* Aumenta o tamanho das aspas */
+  color: var(--cor-primaria);
+  position: absolute;
+  opacity: 0.15; /* Reduz levemente a opacidade para não distrair */
+  line-height: 1; /* Ajusta a altura da linha para aspas */
+}
+
+.depoimento-texto::before {
+  top: 0px; /* Ajusta a posição superior */
+  left: 0px; /* Ajusta a posição lateral */
+}
+
+.depoimento-texto::after {
+  bottom: -5px; /* Ajusta a posição inferior */
+  right: 0px; /* Ajusta a posição lateral */
+  transform: rotate(180deg); /* Gira a segunda aspa para parecer mais natural */
+}
+
+/* Ajustes na cor dos títulos para depoimentos, removendo !important */
+.depoimentos-section .heading--primary,
+.depoimentos-section .subtitulo {
+  color: var(--cor-primaria); /* Garante a cor primária sem !important */
+}
+
+
 .depoimento-autor {
   font-weight: 700;
   margin-top: var(--espacamento-pequeno);
 }
- 
+
 .depoimento-cargo {
   font-size: 0.9rem;
   opacity: 0.8;
 }
- 
+
 .depoimento-estrelas {
-  color: #FFD700;
+  color: #FFD700; /* Cor padrão de estrela dourada */
   font-size: 1.2rem;
   margin: var(--espacamento-pequeno) 0;
 }
- 
+
 /* Slider Controls for Depoimentos (Home Specific) */
 .slider-controls {
-    text-align: center;
-    margin-top: var(--espacamento-medio);
+  text-align: center;
+  margin-top: var(--espacamento-medio);
 }
- 
+
 .slider-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
- 
+
 .slider-dot.active {
-    background-color: var(--cor-primaria);
-    transform: scale(1.2);
+  background-color: var(--cor-primaria);
+  transform: scale(1.2);
 }
- 
- 
+
+
 /* FAQ Section */
 .faq-section {
-  background-color: var(--cor-fundo-claro); /* Alterado para cor de fundo clara */
+  background-color: var(--cor-fundo-claro);
 }
- 
+
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
 }
- 
+
 .faq-item {
   margin-bottom: var(--espacamento-medio);
   border-radius: var(--borda-radius);
@@ -393,7 +409,7 @@
   box-shadow: var(--sombra-suave);
   background-color: #fff;
 }
- 
+
 .faq-question {
   padding: var(--espacamento-medio);
   background-color: var(--cor-secundaria);
@@ -407,105 +423,126 @@
   border: none;
   width: 100%;
   text-align: left;
+  font-size: 1.1rem; /* Aumenta um pouco a fonte da pergunta para melhor legibilidade */
 }
- 
+
 .faq-question:hover {
   background-color: #7ba3c9;
 }
- 
+
 .faq-question::after {
   content: '+';
   font-size: 1.5rem;
   transition: var(--transicao-rapida);
+  margin-left: 10px; /* Adiciona espaçamento entre o texto e o ícone */
 }
- 
+
 .faq-item.active .faq-question::after {
   content: '−';
 }
- 
+
 .faq-answer {
   padding: 0;
   max-height: 0;
   overflow: hidden;
-  transition: var(--transicao-media);
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Adicionado transição para padding */
 }
- 
+
 .faq-item.active .faq-answer {
   padding: var(--espacamento-medio);
-  max-height: 500px;
+  max-height: 500px; /* Um valor alto para cobrir a maioria dos conteúdos.
+                       Para conteúdo muito variável, uma solução JS seria mais precisa. */
 }
- 
- 
+
+
 /* ===== RESPONSIVIDADE PARA SEÇÕES DA HOME ===== */
- 
+
 @media (max-width: 1024px) {
   /* Banner */
   .banner-wrapper img {
-    height: 500px; /* Example height for tablets */
+      height: 500px;
   }
- 
+
   /* Depoimentos Slider */
   .depoimento {
-    flex: 0 0 100%; /* Continua 100% para manter o slide unitário */
+      flex: 0 0 100%;
   }
 }
- 
+
 @media (max-width: 768px) {
   /* Banner */
   .banner-wrapper img {
-    height: 350px; /* Altura ajustada para mobile, tente com 350px, se for muito, diminua */
+      height: 350px;
   }
-  
+
   /* Serviços Grid (1 coluna em mobile) */
   .servicos-grid {
       grid-template-columns: 1fr;
   }
   .servico-img {
-      max-width: 180px; /* Ajuste o tamanho da imagem para mobile para não ficar muito grande */
-      margin-left: auto; /* Centraliza a imagem */
-      margin-right: auto; /* Centraliza a imagem */
+      max-width: 180px;
+      margin-left: auto;
+      margin-right: auto;
   }
   .servico h3 {
-      font-size: 1.5rem; /* Aumenta um pouco o título para melhor leitura em mobile */
+      font-size: 1.5rem;
   }
   .servico p {
-      font-size: 0.95rem; /* Ajusta o tamanho do parágrafo */
-      padding: 0 0.5rem; /* Adiciona padding para o texto não colar nas bordas */
+      font-size: 0.95rem;
+      padding: 0 0.5rem;
   }
- 
+
   /* Mapa Brasil Section */
   .mapa-brasil-container {
       flex-direction: column;
   }
-  
+
   .mapa-brasil-imagem,
   .mapa-brasil-content {
       flex: 0 0 100%;
       width: 100%;
   }
-  
+
   .mapa-brasil-content {
-      text-align: center; /* Centraliza o texto */
+      text-align: center;
       margin-top: var(--espacamento-medio);
   }
   .mapa-brasil-img {
-      margin: 0 auto; /* Centraliza o mapa */
+      margin: 0 auto;
   }
   .mapa-brasil-content h2,
   .mapa-brasil-content .subtitulo {
-      text-align: center; /* Garante que os títulos também sejam centralizados */
+      text-align: center;
   }
- 
+
   /* Depoimentos Slider (1 coluna em mobile) */
   .depoimento {
-    flex: 0 0 100%; /* Uma coluna em mobile */
-    margin: 0; /* Remove margem entre slides para melhor visualização em mobile */
+      flex: 0 0 100%;
+      margin: 0;
+  }
+  /* ADICIONADO: Ajuste para as aspas decorativas em mobile */
+  .depoimento-texto::before {
+      top: -15px; /* Ajusta a posição superior para telas menores */
+      left: -5px;
+      font-size: 3rem;
+  }
+  .depoimento-texto::after {
+      bottom: -15px;
+      right: -5px;
+      font-size: 3rem;
   }
 }
- 
+
 @media (max-width: 480px) {
   /* Banner */
   .banner-wrapper img {
-    height: 280px; /* Smaller height for very small mobile screens, ajustado para caber melhor */
+      height: 280px;
+  }
+  /* Ajuste de espaçamento para telas muito pequenas */
+  .bloco {
+      padding: var(--espacamento-medio) 0;
+  }
+  .faq-question {
+      font-size: 1rem; /* Volta a fonte para um tamanho mais padrão em telas muito pequenas */
   }
 }

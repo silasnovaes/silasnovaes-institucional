@@ -1,13 +1,22 @@
-/* Estilos específicos para a página Trabalhe Comigo */
+/* Estilos específicos para a página Trabalhe Comigo (Refeitos e Otimizados) */
+
+/* Hero Section - Trabalhe Comigo */
 .pagina-trabalhe .trabalhe-hero-section {
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     padding: var(--espacamento-extra) 0;
+    display: flex;
+    align-items: center;
+    /* REMOVIDO: overflow: hidden; e position: relative;
+       MOTIVO: Estas propriedades estavam causando o problema de layout,
+                escondendo o conteúdo subsequente da página,
+                criando um "bloco azul" indesejado abaixo da imagem do hero. */
+    margin-bottom: var(--espacamento-gigante); /* Garante espaçamento consistente com a próxima seção */
 }
 
 .pagina-trabalhe .trabalhe-hero {
     display: flex;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: var(--espacamento-grande);
@@ -15,40 +24,61 @@
 
 .pagina-trabalhe .trabalhe-hero-content {
     flex: 1 1 50%;
-    text-align: left;
+    text-align: center;
     max-width: 600px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
 }
 
 .pagina-trabalhe .trabalhe-hero-content h1 {
     font-size: 2.8rem;
     margin-bottom: var(--espacamento-medio);
+    color: var(--cor-texto-claro);
+    line-height: 1.1;
+    text-shadow: var(--sombra-suave);
 }
 
 .pagina-trabalhe .trabalhe-hero-content p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: var(--espacamento-grande);
+    color: var(--cor-terciaria);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: var(--sombra-suave);
 }
 
-.pagina-trabalhe .trabalhe-hero-btn { /* Nova classe específica para este botão */
+.pagina-trabalhe .trabalhe-hero-btn {
     margin-top: var(--espacamento-medio);
 }
 
 .pagina-trabalhe .trabalhe-hero-image {
     flex: 1 1 40%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: var(--espacamento-medio);
 }
 
 .pagina-trabalhe .trabalhe-hero-image img {
     max-width: 100%;
     height: auto;
+    border: 5px solid var(--cor-secundaria);
     border-radius: var(--borda-radius);
+    object-fit: cover;
+    display: block;
     box-shadow: var(--sombra-media);
+    transition: var(--transicao-media);
 }
 
 /* Oportunidades Section */
 .pagina-trabalhe .oportunidades-section {
     background-color: var(--cor-fundo-claro);
+    padding: var(--espacamento-extra) 0;
 }
 
 .pagina-trabalhe .oportunidades-grid {
@@ -69,11 +99,14 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    justify-content: flex-start;
+    border: 1px solid var(--cor-borda);
 }
 
 .pagina-trabalhe .oportunidade-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--sombra-media);
+    border-color: var(--cor-secundaria);
 }
 
 .pagina-trabalhe .oportunidade-icon {
@@ -85,7 +118,10 @@
     line-height: 80px;
     border-radius: 50%;
     background-color: var(--cor-secundaria);
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--sombra-suave);
 }
 
 .pagina-trabalhe .oportunidade-title {
@@ -97,11 +133,14 @@
 
 .pagina-trabalhe .oportunidade-item p {
     flex-grow: 1;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 /* Perfil Section */
 .pagina-trabalhe .perfil-section {
     background-color: var(--cor-fundo-medio);
+    padding: var(--espacamento-extra) 0;
 }
 
 .pagina-trabalhe .perfil-grid {
@@ -120,6 +159,9 @@
     align-items: flex-start;
     gap: var(--espacamento-medio);
     transition: var(--transicao-media);
+    border-left: 5px solid var(--cor-primaria);
+    padding-left: calc(var(--espacamento-grande) - 5px);
+    text-align: left;
 }
 
 .pagina-trabalhe .perfil-item:hover {
@@ -130,7 +172,7 @@
 .pagina-trabalhe .perfil-check {
     font-size: 1.5rem;
     color: var(--cor-destaque);
-    flex-shrink: 0; /* Evita que o ícone encolha */
+    flex-shrink: 0;
     margin-top: 0.2rem;
 }
 
@@ -146,88 +188,198 @@
     line-height: 1.5;
 }
 
-/* Depoimentos Equipe Section (Reutiliza estilos de depoimentos gerais, adiciona específicos) */
+/* Depoimentos Equipe Section (Slider Estilizado e Otimizado) */
 .pagina-trabalhe .depoimentos-equipe-section {
     background-color: var(--cor-primaria);
+    padding: var(--espacamento-extra) 0;
+    position: relative;
 }
 
 .pagina-trabalhe .depoimentos-equipe-section h2,
 .pagina-trabalhe .depoimentos-equipe-section .subtitulo {
     color: var(--cor-terciaria);
+    text-align: center;
 }
 
-.pagina-trabalhe .depoimentos-equipe-section .depoimento-texto {
-    color: var(--cor-terciaria);
+.pagina-trabalhe .depoimentos-container {
+    position: relative;
+    max-width: 800px;
+    margin: var(--espacamento-grande) auto 0 auto;
+    padding-bottom: var(--espacamento-gigante);
 }
 
-.pagina-trabalhe .depoimentos-equipe-section .depoimento-autor,
-.pagina-trabalhe .depoimentos-equipe-section .depoimento-cargo {
-    color: rgba(255, 255, 255, 0.8);
+.pagina-trabalhe .depoimentos-wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
 }
 
-.pagina-trabalhe .depoimentos-equipe-section .depoimento-estrelas {
-    color: #FFD700; /* Estrelas amarelas, podem ser ajustadas */
+.pagina-trabalhe .depoimentos-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Depoimento Slider para Equipe */
-.pagina-trabalhe #depoimentos-equipe-slider .depoimento {
-    background-color: rgba(137, 176, 211, 0.2); /* Fundo sutil para depoimentos da equipe */
-    border: 1px solid rgba(137, 176, 211, 0.3);
-    color: var(--cor-terciaria); /* Garante cor do texto */
-}
-.pagina-trabalhe #depoimentos-equipe-slider .depoimento-texto::before,
-.pagina-trabalhe #depoimentos-equipe-slider .depoimento-texto::after {
-    color: var(--cor-secundaria); /* Cor para as aspas */
+.pagina-trabalhe .depoimento {
+    flex-shrink: 0;
+    width: 100%;
+    padding: var(--espacamento-extra);
+    background-color: var(--cor-fundo-claro);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
 }
 
-.pagina-trabalhe .depoimentos-equipe-section .depoimentos-container {
-    padding-bottom: var(--espacamento-grande); /* Espaço para os dots */
+.pagina-trabalhe .depoimento-texto {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: var(--espacamento-medio);
+    position: relative;
+    padding: 0 var(--espacamento-grande);
+    font-size: 1.15rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.pagina-trabalhe .depoimento-texto::before,
+.pagina-trabalhe .depoimento-texto::after {
+    content: '“';
+    font-size: 3rem;
+    color: var(--cor-secundaria);
+    position: absolute;
+    opacity: 0.5;
+    font-family: serif;
+}
+
+.pagina-trabalhe .depoimento-texto::before {
+    top: -10px;
+    left: 0;
+}
+
+.pagina-trabalhe .depoimento-texto::after {
+    content: '”';
+    bottom: -10px;
+    right: 0;
+    transform: none;
+}
+
+.pagina-trabalhe .depoimento-autor {
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-pequeno);
+    font-size: 1.1rem;
+}
+
+.pagina-trabalhe .depoimento-cargo {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* Estilos para os controles de navegação (botões e dots) */
 .pagina-trabalhe .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--espacamento-medio);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.pagina-trabalhe .slider-control-btn {
+    background: var(--cor-primaria);
+    border: none;
+    font-size: 1.8rem;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+    outline: none;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    box-shadow: var(--sombra-media);
+    transition: var(--transicao-rapida);
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.pagina-trabalhe .slider-control-btn:hover,
+.pagina-trabalhe .slider-control-btn:focus-visible {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    transform: scale(1.1);
+}
+
+.pagina-trabalhe .slider-dots-depoimentos {
     text-align: center;
     margin-top: var(--espacamento-medio);
+    position: absolute;
+    bottom: var(--espacamento-medio);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espacamento-pequeno);
+    pointer-events: all;
 }
 
-.pagina-trabalhe .slider-dot {
+.pagina-trabalhe .slider-dot-depoimentos {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor dos dots inativos */
+    margin: 0 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: var(--transicao-rapida);
+    border: 1px solid var(--cor-texto-claro); /* Borda branca sutil para todos os dots */
 }
 
-.pagina-trabalhe .slider-dot.active {
-    background-color: var(--cor-terciaria);
+.pagina-trabalhe .slider-dot-depoimentos.active {
+    background-color: var(--cor-destaque); /* Cor de fundo verde para o dot ativo */
+    border-color: var(--cor-primaria); /* Borda azul escura para o dot ativo */
     transform: scale(1.2);
 }
 
-/* Form Cadastro Section */
+/* Form Cadastro Section (Otimizado e Consistente) */
 .pagina-trabalhe .form-cadastro-section {
     background-color: var(--cor-fundo-claro);
+    padding: var(--espacamento-extra) 0;
 }
 
 .pagina-trabalhe .form-cadastro-container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     background-color: var(--cor-terciaria);
-    padding: var(--espacamento-grande);
+    padding: var(--espacamento-extra);
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-media);
     color: var(--cor-primaria);
+    border: 1px solid var(--cor-borda);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Garante consistência de fontes com o resto do site */
 }
 
 .pagina-trabalhe .form-cadastro-container h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--cor-primaria);
-    margin-bottom: var(--espacamento-medio);
+    margin-bottom: var(--espacamento-grande);
     text-align: center;
 }
 
-/* Estilos de formulário reutilizados do style.css ou adaptados */
 .pagina-trabalhe .form-row {
     display: flex;
     flex-wrap: wrap;
@@ -241,6 +393,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .pagina-trabalhe .form-group.full-width {
     flex-basis: 100%;
     min-width: 100%;
@@ -251,6 +404,7 @@
     margin-bottom: var(--espacamento-pequeno);
     font-weight: 600;
     color: var(--cor-primaria);
+    font-size: 1.05rem;
 }
 
 .pagina-trabalhe .form-label .optional {
@@ -261,21 +415,21 @@
 
 .pagina-trabalhe .form-control {
     width: 100%;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.05rem;
     line-height: 1.5;
     color: var(--cor-texto);
     background-color: #fff;
-    background-clip: padding-box;
     border: 1px solid var(--cor-borda);
     border-radius: var(--borda-radius);
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: inherit; /* Garante consistência de fontes com o resto do site */
 }
 
 .pagina-trabalhe .form-control:focus {
     border-color: var(--cor-secundaria);
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(137, 176, 211, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(137, 176, 211, 0.4);
 }
 
 .pagina-trabalhe textarea.form-control {
@@ -284,27 +438,30 @@
 }
 
 .pagina-trabalhe .form-check-group {
-    margin-top: var(--espacamento-medium);
+    margin-top: var(--espacamento-grande);
+    margin-bottom: var(--espacamento-grande);
 }
 
 .pagina-trabalhe .form-check {
     display: flex;
-    align-items: center;
-    gap: var(--espacamento-pequeno);
+    align-items: flex-start;
+    gap: var(--espacamento-medio);
 }
 
 .pagina-trabalhe .form-check-input {
-    width: 1.1em;
-    height: 1.1em;
-    margin-top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.2em;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .pagina-trabalhe .form-check-label {
     font-weight: 400;
     color: var(--cor-texto);
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .pagina-trabalhe .form-check-label a {
@@ -318,7 +475,7 @@
 
 .pagina-trabalhe .form-error {
     color: var(--cor-erro);
-    font-size: 0.875em;
+    font-size: 0.9em;
     margin-top: var(--espacamento-pequeno);
     display: none;
 }
@@ -328,7 +485,7 @@
 }
 
 .pagina-trabalhe .form-control.is-invalid:focus {
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
 .pagina-trabalhe .form-control.is-invalid + .form-error,
@@ -339,9 +496,9 @@
 .pagina-trabalhe .form-submit {
     display: block;
     width: 100%;
-    max-width: 300px;
-    margin: var(--espacamento-grande) auto 0 auto;
-    padding: 1rem 1.5rem;
+    max-width: 320px;
+    margin: var(--espacamento-extra) auto 0 auto;
+    padding: 1.1rem 2rem;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--cor-terciaria);
@@ -351,12 +508,14 @@
     cursor: pointer;
     transition: var(--transicao-rapida);
     text-align: center;
+    box-shadow: var(--sombra-suave);
+    min-height: 50px;
 }
 
 .pagina-trabalhe .form-submit:hover,
-.pagina-trabalhe .form-submit:focus {
+.pagina-trabalhe .form-submit:focus-visible {
     background-color: #003366;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--sombra-media);
 }
 
@@ -370,6 +529,7 @@
     border-radius: var(--borda-radius);
     text-align: center;
     display: none;
+    font-weight: 600;
 }
 
 .pagina-trabalhe .form-message.success {
@@ -386,8 +546,116 @@
     display: block;
 }
 
+/* Estilos para Pop-ups Personalizados */
+.custom-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Garante que fique acima de tudo */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-/* Responsividade para Trabalhe Comigo */
+.custom-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-popup-content {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-forte);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.9); /* Inicia menor para animação */
+    transition: transform 0.3s ease;
+    color: var(--cor-primaria);
+}
+
+.custom-popup.active .custom-popup-content {
+    transform: scale(1); /* Expande ao ativar */
+}
+
+.close-popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    transition: var(--transicao-rapida);
+}
+
+.close-popup-btn:hover,
+.close-popup-btn:focus-visible {
+    color: var(--cor-erro);
+    transform: rotate(90deg);
+}
+
+.popup-icon {
+    font-size: 3rem;
+    color: var(--cor-destaque);
+    margin-bottom: var(--espacamento-medio);
+}
+
+.popup-title {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-pequeno);
+}
+
+.popup-message {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    margin-bottom: var(--espacamento-grande);
+    line-height: 1.5;
+}
+
+.popup-btn {
+    margin-top: var(--espacamento-medio);
+}
+
+/* Estilos específicos para o pop-up de vídeo */
+.video-popup .custom-popup-content {
+    max-width: 700px;
+}
+
+.video-popup .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: var(--borda-radius);
+    margin-bottom: var(--espacamento-medio);
+}
+
+.video-popup .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Responsividade para Trabalhe Comigo (Refeito e Otimizado) */
 @media (max-width: 992px) {
     .pagina-trabalhe .trabalhe-hero {
         flex-direction: column;
@@ -396,6 +664,30 @@
     .pagina-trabalhe .trabalhe-hero-content {
         text-align: center;
         max-width: 100%;
+    }
+    .pagina-trabalhe .trabalhe-hero-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pagina-trabalhe .depoimento-texto {
+        padding: 0 20px;
+        font-size: 1.05rem;
+    }
+    .pagina-trabalhe .slider-control-btn {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        padding: 0.5rem;
+    }
+    /* Ajuste de padding para pop-ups em telas menores */
+    .custom-popup-content {
+        padding: var(--espacamento-medio);
+    }
+    .popup-title {
+        font-size: 1.5rem;
+    }
+    .popup-message {
+        font-size: 1rem;
     }
 }
 
@@ -422,10 +714,22 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        border-left: none;
+        padding-left: var(--espacamento-grande);
+        border-bottom: 3px solid var(--cor-primaria);
+        padding-bottom: var(--espacamento-grande);
+    }
+    .pagina-trabalhe .perfil-grid .perfil-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
     }
     .pagina-trabalhe .perfil-check {
         margin-bottom: var(--espacamento-pequeno);
     }
+    .pagina-trabalhe .perfil-content p {
+        text-align: center;
+    }
+    /* Formulário em mobile (uma coluna) */
     .pagina-trabalhe .form-row {
         flex-direction: column;
         gap: var(--espacamento-medio);
@@ -435,5 +739,68 @@
     }
     .pagina-trabalhe .form-submit {
         max-width: 100%;
+    }
+    /* Reorganiza e centraliza controles do slider */
+    .pagina-trabalhe .depoimentos-container {
+        padding-bottom: var(--espacamento-gigante);
+    }
+    .pagina-trabalhe .slider-controls {
+        top: auto;
+        bottom: var(--espacamento-extra);
+        justify-content: center;
+        gap: var(--espacamento-grande);
+        flex-direction: row;
+        padding: 0;
+    }
+    .pagina-trabalhe .slider-dots-depoimentos {
+        position: absolute;
+        bottom: var(--espacamento-medio);
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-trabalhe .trabalhe-hero-content h1 {
+        font-size: 2rem;
+    }
+    .pagina-trabalhe .trabalhe-hero-content p {
+        font-size: 1rem;
+    }
+    .pagina-trabalhe .oportunidade-title {
+        font-size: 1.2rem;
+    }
+    .pagina-trabalhe .perfil-title {
+        font-size: 1.1rem;
+    }
+    .pagina-trabalhe .perfil-content p {
+        font-size: 0.9rem;
+    }
+    .pagina-trabalhe .slider-control-btn {
+        font-size: 1.3rem;
+        width: 35px;
+        height: 35px;
+        padding: 0.3rem;
+    }
+    .pagina-trabalhe .form-cadastro-container {
+        padding: var(--espacamento-grande);
+    }
+    .pagina-trabalhe .form-cadastro-container h2 {
+        font-size: 1.8rem;
+    }
+    .pagina-trabalhe .form-submit {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    .custom-popup-content {
+        padding: var(--espacamento-medio);
+    }
+    .popup-title {
+        font-size: 1.3rem;
+    }
+    .popup-message {
+        font-size: 0.95rem;
+    }
+    .popup-icon {
+        font-size: 2.5rem;
     }
 }

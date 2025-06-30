@@ -1,77 +1,139 @@
 /* Estilos específicos para a página Sobre */
+
+/* ============================================= */
+/* ===== SEÇÃO HERO (SOBRE)                ===== */
+/* ============================================= */
 .sobre-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--espacamento-grande);
-    background-color: var(--cor-fundo-escuro);
+    background-color: var(--cor-fundo-escuro); /* Fundo azul escuro */
     padding: var(--espacamento-grande) 0;
+    color: var(--cor-texto-claro); /* Texto claro para fundo escuro */
+}
+
+.sobre-hero .sobre-subtitulo {
+    color: var(--cor-terciaria); /* Cor bege claro */
+    margin-bottom: var(--espacamento-grande);
+}
+
+.sobre-hero .heading--secondary {
+    color: var(--cor-texto-claro); /* Título h1 na hero deve ser branco */
 }
 
 .sobre-hero-content-wrapper {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap;
     align-items: center;
     gap: var(--espacamento-grande);
     width: 100%;
+    justify-content: center; /* Centraliza o conteúdo hero horizontalmente */
+    margin-bottom: var(--espacamento-extra); /* Espaçamento extra entre a citação e o vídeo/próxima seção */
 }
 
 .sobre-hero-imagem {
-    flex: 0 0 35%; /* Ocupa 35% da largura em desktop */
+    flex: 0 0 auto;
     text-align: center;
-    margin-left: auto; /* Adicionado para centralizar a imagem em mobile */
-    margin-right: auto;
 }
 
 .sobre-hero-imagem img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%; /* Foto em formato redondo */
+    border-radius: 50%;
     box-shadow: var(--sombra-media);
-    border: 5px solid var(--cor-secundaria);
+    border: 6px solid var(--cor-secundaria);
+    object-fit: cover;
 }
 
 .sobre-hero-citacao {
-    flex: 1; /* Ocupa o restante do espaço */
+    flex: 1;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
     color: var(--cor-terciaria);
     border-left: 4px solid var(--cor-secundaria);
     padding-left: var(--espacamento-medio);
-    margin-top: var(--espacamento-medio); /* Mantenha para espaçamento vertical em mobile */
+    margin-top: 0;
 }
 
 .citacao-autor {
     text-align: right;
     font-weight: bold;
     margin-top: var(--espacamento-pequeno);
-    color: var(--cor-secundaria); /* Garante a cor da variável */
+    color: var(--cor-secundaria);
 }
 
+/* NOVIDADE: Estilos para a Seção de Vídeo de Apresentação */
+.video-section {
+    width: 100%;
+    max-width: 800px; /* Limita a largura do vídeo */
+    margin: var(--espacamento-extra) auto 0 auto; /* Centraliza o contêiner do vídeo em desktop */
+    text-align: center;
+}
+
+.video-title {
+    color: var(--cor-texto-claro);
+    margin-bottom: var(--espacamento-medio);
+}
+
+.video-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 (altura / largura) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Fundo preto para área do vídeo */
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-media);
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-description {
+    color: var(--cor-terciaria);
+    font-size: 0.95rem;
+    margin-top: var(--espacamento-medio);
+}
+
+
+/* ============================================= */
+/* ===== SEÇÃO HISTÓRIA                    ===== */
+/* ============================================= */
 .historia-section {
     background-color: var(--cor-terciaria);
-    padding: var(--espacamento-grande) 0; /* Ajusta o padding */
+    padding: var(--espacamento-grande) 0;
 }
 
 .historia-section p {
-    margin-bottom: var(--espacamento-grande); /* Espaçamento entre parágrafos */
+    margin-bottom: var(--espacamento-grande);
     color: var(--cor-primaria);
-    text-align: justify; /* Sugestão para melhorar a leitura de blocos de texto */
-    font-size: 1.2rem;
+    text-align: justify;
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
 .historia-section p:last-child {
-    margin-bottom: 1; /* Remove margem do último parágrafo */
+    margin-bottom: 0;
 }
 
 .historia-subtitulo {
     color: var(--cor-primaria);
     text-align: center;
-    margin-bottom: var(--espacamento-grande); /* Adiciona espaçamento após o subtítulo */
-    font-size: 1.50rem; /* Garante que mantém o tamanho padrão de subtítulo */
+    margin-bottom: var(--espacamento-grande);
+    font-size: 1.25rem;
 }
 
-
+/* ============================================= */
+/* ===== SEÇÃO LINHA DO TEMPO (TRAJETÓRIA) ===== */
+/* ============================================= */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -100,7 +162,7 @@
     width: 25px;
     height: 25px;
     right: -14px;
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-fundo-claro);
     border: 4px solid var(--cor-primaria);
     top: 15px;
     border-radius: 50%;
@@ -120,9 +182,9 @@
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid var(--cor-fundo-medio);
+    border: medium solid var(--cor-fundo-claro);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--cor-fundo-medio);
+    border-color: transparent transparent transparent var(--cor-fundo-claro);
 }
 .timeline-item.right::before {
     content: " ";
@@ -132,16 +194,16 @@
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid var(--cor-fundo-medio);
+    border: medium solid var(--cor-fundo-claro);
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--cor-fundo-medio) transparent transparent;
+    border-color: transparent var(--cor-fundo-claro) transparent transparent;
 }
 .timeline-item.right::after {
     left: -14px;
 }
 .timeline-content {
     padding: var(--espacamento-medio);
-    background-color: var(--cor-fundo-medio);
+    background-color: var(--cor-fundo-claro);
     position: relative;
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-suave);
@@ -149,17 +211,26 @@
 }
 .timeline-content h3 {
     margin-bottom: var(--espacamento-pequeno);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    color: var(--cor-primaria);
+}
+.timeline-content p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.metodo-grid, .conquistas-grid {
+/* ============================================= */
+/* ===== SEÇÃO FILOSOFIA / VALORES           ===== */
+/* ============================================= */
+.valores-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--espacamento-grande);
     margin-top: var(--espacamento-grande);
 }
-.metodo-item, .conquista-item {
-    background-color: var(--cor-terciaria);
+
+.valor-item {
+    background-color: #fff;
     padding: var(--espacamento-grande);
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-suave);
@@ -168,7 +239,60 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%; /* Garante que cards com pouco conteúdo tenham altura igual */
+    height: 100%;
+}
+
+.valor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.valor-icon {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-medio);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: rgba(137, 176, 211, 0.3);
+    display: inline-block;
+}
+
+.valor-item h3 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-pequeno);
+    font-size: 1.35rem;
+}
+
+.valor-item p {
+    color: var(--cor-primaria);
+    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ============================================= */
+/* ===== GRIDS DE MÉTODO E CONQUISTAS        ===== */
+/* ============================================= */
+.metodo-grid, .conquistas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espacamento-grande);
+    margin-top: var(--espacamento-grande);
+}
+.metodo-item, .conquista-item {
+    background-color: #fff;
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    transition: var(--transicao-media);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 .metodo-item:hover, .conquista-item:hover {
     transform: translateY(-5px);
@@ -182,42 +306,175 @@
     height: 60px;
     line-height: 60px;
     border-radius: 50%;
-    background-color: var(--cor-secundaria);
+    background-color: rgba(137, 176, 211, 0.3);
     display: inline-block;
 }
 .metodo-item h3, .conquista-item h3 {
     color: var(--cor-primaria);
     margin-bottom: var(--espacamento-pequeno);
-    font-size: 1.3rem;
+    font-size: 1.35rem;
 }
 .metodo-item p, .conquista-item p {
     color: var(--cor-primaria);
-    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante */
+    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ============================================= */
+/* ===== POP-UP PERSONALIZADO                ===== */
+/* ============================================= */
+.personalized-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 32, 67, 0.85); /* Fundo azul escuro com mais opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.personalized-popup-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.personalized-popup-content {
+    background-color: var(--cor-terciaria);
+    padding: var(--espacamento-grande);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-forte);
+    text-align: center;
+    max-width: 600px; /* Aumenta a largura máxima para o vídeo */
+    width: 90%;
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    display: flex; /* Adiciona flexbox para organizar o conteúdo interno */
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalized-popup-overlay.active .personalized-popup-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    line-height: 1;
+    transition: var(--transicao-rapida);
+}
+
+.close-popup-btn:hover {
+    color: var(--cor-erro);
+    transform: scale(1.1);
+}
+
+.popup-title {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    margin-bottom: var(--espacamento-medio);
+}
+
+.popup-message {
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    margin-bottom: var(--espacamento-grande);
+    line-height: 1.6;
+}
+
+/* Estilos para o container do vídeo no pop-up (inicialmente oculto) */
+.popup-video-container {
+    display: none; /* Oculta o vídeo por padrão */
+    margin-bottom: var(--espacamento-grande);
+    width: 100%; /* Ocupa a largura total do pop-up */
+}
+/* Estilização específica do iframe dentro do pop-up, se necessário */
+.popup-video-container iframe {
+    /* Pode adicionar bordas, sombra, etc., aqui */
+    border: 2px solid var(--cor-secundaria);
+    border-radius: var(--borda-radius);
 }
 
 
-/* Responsividade para a página Sobre */
-@media (min-width: 769px) { /* Estilos para desktop, a partir de 769px */
+.popup-cta {
+    margin-top: var(--espacamento-medio);
+}
+
+/* NOVIDADE: Estilos para os botões de redes sociais no pop-up */
+.popup-social-links {
+    display: none; /* Oculta os links sociais por padrão */
+    margin-top: var(--espacamento-grande);
+    gap: var(--espacamento-medio);
+    justify-content: center;
+    width: 100%;
+}
+
+.popup-social-links .social-icon {
+    font-size: 1.8rem; /* Ícones maiores para o pop-up */
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    transition: var(--transicao-media);
+    box-shadow: var(--sombra-suave);
+}
+
+.popup-social-links .social-icon:hover {
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-primaria);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* AJUSTE: Garante que os ícones do footer tenham a cor e tamanho definidos em styles.css para .social-icon */
+.footer-social .social-icon {
+    /* Estas propriedades já deveriam vir de styles.css, mas se precisar sobrescrever: */
+    /* color: var(--cor-terciaria); */
+    /* font-size: 1rem; */
+    /* background-color: transparent; */ /* se quiser manter sem fundo */
+}
+
+
+/* ============================================= */
+/* ===== RESPONSIVIDADE PÁGINA SOBRE         ===== */
+/* ============================================= */
+@media (min-width: 769px) {
     .sobre-hero-content-wrapper {
-        flex-wrap: nowrap; /* Não quebra linha em desktop */
-        flex-direction: row; /* Coloca imagem e citação lado a lado */
+        flex-wrap: nowrap;
+        flex-direction: row;
         align-items: center;
     }
     .sobre-hero-imagem {
-        margin-left: initial; /* Remove margens automáticas para alinhar */
+        margin-left: initial;
         margin-right: initial;
+        flex: 0 0 35%;
     }
     .sobre-hero-citacao {
-        margin-top: 0; /* Remove margem vertical que seria aplicada em mobile */
+        margin-top: 0;
     }
-    /* Alinha o título centralizado com o flexbox */
-    .sobre-hero .heading {
-        margin-bottom: var(--espacamento-grande); /* Espaçamento abaixo do título */
+    .historia-section p {
+        text-align: justify;
     }
 }
 
 @media (max-width: 768px) {
-    /* Estilos específicos para a página Sobre, em mobile */
     .sobre-hero {
         flex-direction: column;
         text-align: center;
@@ -232,9 +489,10 @@
         padding-left: 0;
         padding-top: var(--espacamento-medio);
         text-align: center;
+        font-size: 1.05rem;
     }
     .historia-section p {
-        text-align: left; /* Mantém o alinhamento em mobile, ou centralize se preferir */
+        text-align: left;
     }
     .timeline::after {
         left: 31px;
@@ -246,9 +504,9 @@
     }
     .timeline-item.left::before, .timeline-item.right::before {
         left: 60px;
-        border: medium solid var(--cor-fundo-medio);
+        border: medium solid var(--cor-fundo-claro);
         border-width: 10px 10px 10px 0;
-        border-color: transparent var(--cor-fundo-medio) transparent transparent;
+        border-color: transparent var(--cor-fundo-claro) transparent transparent;
     }
     .timeline-item.left::after, .timeline-item.right::after {
         left: 15px;
@@ -258,5 +516,49 @@
     }
     .metodo-item, .conquista-item {
         text-align: center;
+    }
+    /* Pop-up em telas menores */
+    .personalized-popup-content {
+        max-width: 90%;
+        padding: var(--espacamento-medio);
+    }
+    .popup-title {
+        font-size: 1.6rem;
+    }
+    .popup-message {
+        font-size: 1rem;
+    }
+    .popup-social-links .social-icon {
+        font-size: 1.5rem;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-hero-citacao {
+        font-size: 1rem;
+    }
+    .historia-section p {
+        font-size: 1.05rem;
+    }
+    .timeline-content h3 {
+        font-size: 1.15rem;
+    }
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+    .metodo-item h3, .conquista-item h3, .valor-item h3 {
+        font-size: 1.25rem;
+    }
+    .metodo-item p, .conquista-item p, .valor-item p {
+        font-size: 0.95rem;
+    }
+    .popup-title {
+        font-size: 1.4rem;
+    }
+    .popup-message {
+        font-size: 0.95rem;
     }
 }

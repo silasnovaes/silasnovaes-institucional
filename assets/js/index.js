@@ -11,10 +11,21 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesHome = Array.from(sliderHome.querySelectorAll('.depoimento'));
         dotsHome = Array.from(dotsContainerHome.querySelectorAll('.slider-dot'));
 
-        // Removido: O loop que adicionava/removia a classe 'active' nos slides.
-        // A visibilidade e posicionamento agora são controlados via transform no container.
+        // Se houver apenas um slide, desativa o autoslide e os controles
+        if (slidesHome.length <= 1) {
+            dotsContainerHome.style.display = 'none'; // Esconde os indicadores
+            return; // Sai da função, não inicializa o slider
+        }
 
         function showSlideHome(index) {
+            // Garante que o índice esteja dentro dos limites
+            if (index >= slidesHome.length) {
+                index = 0;
+            } else if (index < 0) {
+                index = slidesHome.length - 1;
+            }
+            currentIndexHome = index; // Atualiza o índice global
+
             // Calcula o valor do transform com base no índice do slide atual
             // Cada slide tem 100% de largura, então move em -index * 100%
             sliderHome.style.transform = `translateX(-${index * 100}%)`;
@@ -26,11 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     dot.classList.add('active');
                 }
             });
-            // Removido: O loop que adicionava/removia a classe 'active' nos slides aqui também.
         }
 
         function nextSlideHome() {
             currentIndexHome = (currentIndexHome + 1) % slidesHome.length;
+            showSlideHome(currentIndexHome);
+        }
+
+        function prevSlideHome() {
+            currentIndexHome = (currentIndexHome - 1 + slidesHome.length) % slidesHome.length;
             showSlideHome(currentIndexHome);
         }
 
@@ -47,10 +62,23 @@ document.addEventListener("DOMContentLoaded", function() {
             dot.addEventListener('click', function() {
                 const index = parseInt(this.dataset.slideIndex);
                 showSlideHome(index);
-                currentIndexHome = index; // Atualiza o índice para o autoslide
                 resetAutoSlideHome(); // Reinicia o timer ao clicar
             });
         });
+
+        // ADICIONADO: Navegação por teclado para acessibilidade
+        document.addEventListener('keydown', function(event) {
+            if (sliderHome.contains(document.activeElement) || document.activeElement.closest('#depoimentos-slider')) {
+                if (event.key === 'ArrowLeft') {
+                    prevSlideHome();
+                    resetAutoSlideHome();
+                } else if (event.key === 'ArrowRight') {
+                    nextSlideHome();
+                    resetAutoSlideHome();
+                }
+            }
+        });
+
 
         // Configuração inicial
         showSlideHome(currentIndexHome); // Garante que o primeiro slide seja exibido corretamente
