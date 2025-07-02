@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('contato-form-v2');
     const statusMessage = document.getElementById('form-contato-status-message-v2');
     const submitButton = document.getElementById('submit-contato-button-v2');
+    const formularioSection = document.querySelector('.formulario-contato-v2'); // Referência à seção do formulário principal da página
 
     // === Novo Pop-up de Boas-Vindas Personalizado ===
     const contactPageWelcomePopupShown = sessionStorage.getItem('contactPageWelcomePopupShown') === 'true';
@@ -28,19 +29,23 @@ document.addEventListener("DOMContentLoaded", function() {
             title = "Ainda não tem certeza?";
             message = "Fale com Silas pelo WhatsApp sem compromisso para tirar suas dúvidas rapidamente. É o canal mais fácil e direto para começar!";
             ctaHtml = `
-                <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" class="botao-primario">
-                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-                </a>
-                <button type="button" class="botao-secundario close-popup-btn">Prefiro o formulário</button>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5583991092624" target="_blank" rel="noopener noreferrer" class="botao-primario">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <button type="button" class="botao-secundario close-popup-btn">Continuar e ver formulário</button>
+                </div>
             `;
         } else { // Quente ou Super Quente
             title = "Pronto para dar o próximo passo?";
             message = "Seu alto engajamento mostra que você está decidido! Preencha o formulário ou ligue para Silas Novaes e finalize sua cotação agora!";
             ctaHtml = `
-                <a href="#conteudo-principal" class="botao-primario close-popup-btn">Preencher Formulário</a>
-                <a href="tel:+5583991092624" class="botao-secundario">
-                    <i class="fas fa-phone-alt"></i> Ligar Agora
-                </a>
+                <div class="cta-buttons">
+                    <a href="#contato-form-v2" class="botao-primario scroll-to-form-btn">Preencher Formulário</a>
+                    <a href="tel:+5583991092624" class="botao-secundario">
+                        <i class="fas fa-phone-alt"></i> Ligar Agora
+                    </a>
+                </div>
             `;
         }
 
@@ -51,15 +56,42 @@ document.addEventListener("DOMContentLoaded", function() {
                 title: title,
                 message: message,
                 addClass: 'contact-welcome-popup', // Classe CSS opcional para estilização específica
-                enableCloseBtn: true, // Já existe um botão no ctaHtml, mas podemos manter o 'x'
+                enableCloseBtn: true, // Habilita o botão 'x' padrão do GlobalPopupManager
                 closeOnClickOutside: true,
                 onClose: () => {
                     sessionStorage.setItem('contactPageWelcomePopupShown', 'true');
                     console.log("Pop-up de boas-vindas da página de contato fechado.");
                 },
-                onFormSubmit: (form) => {
-                    // Não há formulário principal aqui, os CTAs são links/botões simples
-                    console.log("CTA acionado no pop-up de boas-vindas da página de contato.");
+                // NOVO: onShow callback para adicionar listeners APÓS o pop-up estar no DOM
+                onShow: (popupElement) => {
+                    // Listener para o botão "Preencher Formulário" (para leads quentes/super quentes)
+                    const scrollToFormBtn = popupElement.querySelector('.scroll-to-form-btn');
+                    if (scrollToFormBtn) {
+                        scrollToFormBtn.addEventListener('click', function(event) {
+                            event.preventDefault(); // Evita que o link #conteudo-principal recarregue a página se houver conflito
+                            window.GlobalPopupManager.hidePopup(); // Fecha o pop-up
+                            // Rola suavemente para a seção do formulário
+                            if (formularioSection) {
+                                const headerHeight = document.querySelector('header.bloco').offsetHeight;
+                                window.scrollTo({
+                                    top: formularioSection.offsetTop - headerHeight - 20, // Offset para o cabeçalho
+                                    behavior: 'smooth'
+                                });
+                                console.log("Botão 'Preencher Formulário' clicado. Rolando para o formulário.");
+                            } else {
+                                console.warn("Seção do formulário não encontrada para rolagem.");
+                            }
+                        });
+                    }
+
+                    // Listener para os botões que apenas fecham o pop-up (todos os 'close-popup-btn' no ctaHtml)
+                    const ctaCloseButtons = popupElement.querySelectorAll('.cta-buttons .close-popup-btn');
+                    ctaCloseButtons.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            window.GlobalPopupManager.hidePopup(); // Fecha o pop-up
+                            console.log("Botão de fechar/continuar do CTA clicado.");
+                        });
+                    });
                 }
             }
         );
