@@ -1,7 +1,7 @@
 /*
 * Silas Novaes - Planos de Saúde
 * Arquivo CSS principal otimizado para SEO, UX/UI e responsividade
-* Versão: 4.7 - Ajustes de responsividade global, foco de acessibilidade e refinamento de espaçamentos
+* Versão: 4.9 - Implementação de estilos base para pop-ups globais e correções de scroll.
 */
 
 /* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
@@ -20,7 +20,7 @@
   --cor-erro: #dc3545;
   --cor-sucesso: #28a745;
 
-  /* Espaçamentos */
+  /* Espaçamentos (baseado em rem para melhor escalabilidade) */
   --espacamento-quase-nenhum: 0.25rem;
   --espacamento-pequeno: 0.5rem;
   --espacamento-medio: 1rem;
@@ -69,7 +69,11 @@ body {
 /* Nova classe para controlar o scroll do body quando o menu/pop-up está aberto */
 body.no-scroll {
   overflow: hidden;
+  /* Fixa a posição para evitar "saltos" visuais ao desabilitar o scroll */
+  position: fixed; 
+  width: 100%;
 }
+
 
 img {
   max-width: 100%;
@@ -81,7 +85,6 @@ a {
   text-decoration: none;
   color: var(--cor-primaria);
   transition: var(--transicao-rapida);
-  /* Adição de foco visível para acessibilidade */
   outline: none; /* Remove o outline padrão para substituir por customizado */
 }
 
@@ -388,6 +391,8 @@ nav ul li a.active {
   letter-spacing: 0.5px;
   white-space: nowrap;
   box-shadow: var(--sombra-suave);
+  border: none; /* Adicionado para garantir que não haja borda padrão do botão */
+  cursor: pointer; /* Adicionado para indicar que é clicável */
 }
 
 .botao-primario:hover,
@@ -411,6 +416,7 @@ nav ul li a.active {
   letter-spacing: 0.5px;
   white-space: nowrap;
   box-shadow: var(--sombra-suave);
+  cursor: pointer; /* Adicionado para indicar que é clicável */
 }
 
 .botao-secundario:hover,
@@ -567,6 +573,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Classes utilitárias de margem */
 .mt-1 {
   margin-top: 0.5rem;
 }
@@ -599,10 +606,169 @@ footer {
   top: 0;
 }
 
+/* ===== POP-UPS E MODAIS GLOBAIS ===== */
+/* Opcional: Adicione esta seção ao seu styles.css para estilos base de pop-ups */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Acima de tudo */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-container {
+  background-color: var(--cor-fundo-claro);
+  padding: var(--espacamento-grande);
+  border-radius: var(--borda-radius);
+  box-shadow: var(--sombra-forte);
+  max-width: 90%;
+  width: 500px;
+  position: relative;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-height: 90vh; /* Limita a altura do pop-up */
+  overflow-y: auto; /* Adiciona scroll se o conteúdo for grande */
+}
+
+.popup-overlay.active .popup-container {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: var(--espacamento-medio);
+  right: var(--espacamento-medio);
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--cor-primaria);
+  cursor: pointer;
+  transition: var(--transicao-rapida);
+  line-height: 1;
+  padding: 0;
+}
+
+.popup-close-btn:hover,
+.popup-close-btn:focus-visible {
+  color: var(--cor-erro);
+  transform: rotate(90deg);
+}
+
+.popup-title {
+  font-size: 1.8rem;
+  color: var(--cor-primaria);
+  margin-bottom: var(--espacamento-medio);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.popup-message {
+  font-size: 1.1rem;
+  color: var(--cor-texto);
+  margin-bottom: var(--espacamento-grande);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--espacamento-medio);
+  margin-top: var(--espacamento-grande);
+}
+
+/* Estilos para formulários dentro de pop-ups ou em páginas */
+.popup-form,
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-medio);
+}
+
+.form-group {
+  margin-bottom: var(--espacamento-pequeno);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--cor-primaria);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-radius);
+  font-size: 1rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-texto-claro);
+  transition: var(--transicao-rapida);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 3px rgba(137, 176, 211, 0.3);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit-btn {
+  @extend .botao-primario; /* Reutiliza estilos do botão primário */
+  width: 100%;
+  margin-top: var(--espacamento-medio);
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Estilo para pop-ups de boas-vindas com formulário pequeno */
+.welcome-popup .popup-container {
+  max-width: 450px;
+  padding: var(--espacamento-grande) var(--espacamento-medio);
+}
+
+.welcome-popup .popup-title {
+  font-size: 1.5rem;
+}
+
+.welcome-popup .popup-message {
+  font-size: 1rem;
+  margin-bottom: var(--espacamento-medio);
+}
+
+
 /* ===== RESPONSIVIDADE GLOBAL ===== */
 @media (max-width: 1024px) {
   html {
-      font-size: 15px;
+      font-size: 15px; /* Reduz a fonte base para telas maiores de tablet/laptop */
   }
   .heading--primary {
       font-size: 2.2rem;
@@ -626,11 +792,16 @@ footer {
   footer {
       padding: var(--espacamento-extra) 0 var(--espacamento-grande) 0;
   }
+  /* Pop-up */
+  .popup-container {
+      max-width: 95%;
+      padding: var(--espacamento-medio);
+  }
 }
 
 @media (max-width: 768px) {
   html {
-      font-size: 14px;
+      font-size: 14px; /* Reduz ainda mais a fonte base para tablets */
   }
   .faixa-topo .container {
       flex-direction: column;
@@ -638,7 +809,7 @@ footer {
       align-items: flex-start;
       padding: 0 var(--espacamento-medio);
   }
-  .faixa-topo .contato-rapido{
+  .faixa-topo .contato-rapido {
       width: 100%;
       justify-content: center;
       flex-wrap: wrap;
@@ -703,7 +874,7 @@ footer {
       text-align: center;
   }
   .footer-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Uma coluna para mobile */
       gap: var(--espacamento-grande);
   }
   .footer-column {
@@ -739,6 +910,16 @@ footer {
   footer {
       padding: var(--espacamento-grande) 0 var(--espacamento-medio) 0;
   }
+  /* Pop-up */
+  .popup-title {
+      font-size: 1.5rem;
+  }
+  .popup-message {
+      font-size: 1rem;
+  }
+  .popup-container {
+      padding: var(--espacamento-medio);
+  }
 }
 
 @media (max-width: 480px) {
@@ -759,35 +940,5 @@ footer {
   }
   .footer-container {
       grid-template-columns: 1fr;
-  }
-  .sobre-hero-citacao {
-      font-size: 1rem;
-  }
-  .historia-section p {
-      font-size: 1.05rem;
-  }
-  .timeline-content h3 {
-      font-size: 1.15rem;
-  }
-  .timeline-content p {
-      font-size: 0.95rem;
-  }
-  .metodo-item h3, .conquista-item h3, .valor-item h3 {
-      font-size: 1.25rem;
-  }
-  .metodo-item p, .conquista-item p, .valor-item p {
-      font-size: 0.95rem;
-  }
-  .personalized-popup-content {
-      padding: var(--espacamento-medio);
-  }
-  .popup-title {
-      font-size: 1.5rem;
-  }
-  .popup-message {
-      font-size: 1rem;
-  }
-  .close-popup-btn {
-      font-size: 1.5rem;
   }
 }

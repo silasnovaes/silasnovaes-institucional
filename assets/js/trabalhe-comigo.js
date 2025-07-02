@@ -257,24 +257,65 @@ document.addEventListener("DOMContentLoaded", function() {
     const videoPopup = document.getElementById('video-popup');
     const closeButtons = document.querySelectorAll('.close-popup-btn, .close-popup-on-click');
 
-    // Helper para abrir pop-up
-    function openPopup(popupElement) {
-        if (popupElement && !popupElement.classList.contains('active')) { // Verifica se já não está ativo
-            popupElement.classList.add('active');
-            document.body.classList.add('no-scroll');
-            popupElement.setAttribute('aria-hidden', 'false');
-            const focusableElements = popupElement.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
-            if (focusableElements.length > 0) {
-                focusableElements[0].focus();
-            }
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'popup_view',
-                    'popup_name': popupElement.id,
-                    'page_path': window.location.pathname
-                });
+    // Helper para abrir pop-up e personalizar conteúdo
+    function openPersonalizedPopup(popupElement, title, message, ctaText = '', ctaLink = '', iconClass = '', videoSrc = '') {
+        if (!popupElement || popupElement.classList.contains('active')) {
+            return;
+        }
+
+        // Popula o conteúdo do pop-up
+        popupElement.querySelector('.popup-title').textContent = title;
+        popupElement.querySelector('.popup-message').textContent = message;
+        
+        const popupIcon = popupElement.querySelector('.popup-icon');
+        if (popupIcon) {
+            popupIcon.innerHTML = `<i class="${iconClass}"></i>`;
+            popupIcon.style.display = iconClass ? 'block' : 'none';
+        }
+
+        const popupCta = popupElement.querySelector('.popup-btn');
+        if (popupCta) {
+            if (ctaText && ctaLink) {
+                popupCta.textContent = ctaText;
+                popupCta.href = ctaLink;
+                popupCta.style.display = 'inline-block';
+            } else {
+                popupCta.style.display = 'none';
             }
         }
+
+        const popupVideoContainer = popupElement.querySelector('.video-container');
+        const popupVideoIframe = popupVideoContainer ? popupVideoContainer.querySelector('iframe') : null;
+
+        if (popupVideoContainer && popupVideoIframe) {
+            if (videoSrc) {
+                popupVideoIframe.src = videoSrc;
+                popupVideoContainer.style.display = 'block';
+            } else {
+                popupVideoIframe.src = ''; // Limpa o src para pausar
+                popupVideoContainer.style.display = 'none';
+            }
+        }
+        
+        popupElement.classList.add('active');
+        document.body.classList.add('no-scroll');
+        popupElement.setAttribute('aria-hidden', 'false');
+        
+        const focusableElements = popupElement.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        if (focusableElements.length > 0) {
+            focusableElements[0].focus();
+        }
+
+        // Enviar evento para o Google Analytics via dataLayer
+        if (typeof dataLayer !== 'undefined') {
+            UserTracker.pushToDataLayer({ // Usar o método pushToDataLayer do UserTracker
+                'event': 'popup_view',
+                'popup_name': popupElement.id,
+                'page_path': window.location.pathname,
+                'popup_context': title // Adiciona o título como contexto
+            });
+        }
+        console.log(`Pop-up '${popupElement.id}' ACIONADO com conteúdo personalizado.`);
     }
 
     // Helper para fechar pop-up
@@ -283,6 +324,11 @@ document.addEventListener("DOMContentLoaded", function() {
             popupElement.classList.remove('active');
             document.body.classList.remove('no-scroll');
             popupElement.setAttribute('aria-hidden', 'true');
+            // Pausar vídeo se for um pop-up de vídeo
+            const videoIframe = popupElement.querySelector('.video-container iframe');
+            if (videoIframe) {
+                videoIframe.src = ''; // Limpar o src do iframe para parar o vídeo
+            }
         }
     }
 
@@ -295,35 +341,101 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Pop-up "Trabalhe Comigo" na entrada da página
-    // Será exibido apenas se o usuário não tiver preenchido o formulário ainda
-    if (window.location.pathname.includes('trabalhe-comigo.html')) {
-        if (!localStorage.getItem('formCadastroPreenchido')) {
-            // Pequeno delay para não ser intrusivo no carregamento inicial da página
-            setTimeout(() => {
-                openPopup(trabalheComigoPopup);
-            }, 1000); 
+    // Lógica principal de personalização ao carregar a página
+    function checkUserPathAndPersonalizePopups() {
+        const hasFormFilled = localStorage.getItem('formCadastroPreenchido') === 'true';
+        const currentPage = window.location.pathname;
+        const referrer = document.referrer;
+        const sessionHistory = window.silasNovaesUserSession.history;
+
+        // Determina se o usuário veio de index.html e esta é a primeira página relevante na sessão
+        const cameFromIndexAsFirstVisit = sessionHistory.length === 1 && 
+                                          (referrer.includes('/index.html') || referrer.endsWith('/')) &&
+                                          currentPage.includes('trabalhe-comigo.html');
+
+        console.log(`Página atual: ${currentPage}, Referrer: ${referrer}, Histórico: ${sessionHistory.length}, Veio do Index como primeira visita: ${cameFromIndexAsFirstVisit}`);
+
+        if (hasFormFilled) {
+            console.log("Formulário de cadastro já preenchido. Nenhum pop-up inicial será exibido.");
+            return; // Se já preencheu, não mostra nenhum pop-up de "trabalhe conosco"
+        }
+
+        // Pop-up inicial da página (ao carregar)
+        if (!sessionStorage.getItem('trabalheComigoPopupShown')) {
+            if (cameFromIndexAsFirstVisit) {
+                // Cenário: Usuário veio do index e está procurando emprego (primeira página após o index)
+                console.log("Cenário: Busca por Emprego. Exibindo pop-up Trabalhe Comigo padrão.");
+                setTimeout(() => {
+                    openPersonalizedPopup(
+                        trabalheComigoPopup,
+                        'Sua Oportunidade Começa Aqui!',
+                        'Preencha nosso formulário e dê o primeiro passo para uma carreira de sucesso na venda de planos de saúde.',
+                        'Acessar Formulário',
+                        '#form-cadastro',
+                        'fas fa-briefcase'
+                    );
+                    sessionStorage.setItem('trabalheComigoPopupShown', 'true');
+                }, 1000); 
+            } else {
+                // Cenário: Usuário é um cliente ou veio por curiosidade (não é a primeira página após o index)
+                console.log("Cenário: Cliente/Curiosidade. Exibindo pop-up de Indicação.");
+                setTimeout(() => {
+                    openPersonalizedPopup(
+                        trabalheComigoPopup, // Reutiliza o mesmo elemento de pop-up, muda o conteúdo
+                        'Você é Cliente Silas Novaes?',
+                        'Se você já é nosso cliente e indica novos, pode ganhar descontos exclusivos ou um Pix! Fale conosco para saber mais.',
+                        'Falar no WhatsApp',
+                        'https://wa.me/5583991092624',
+                        'fas fa-gift' // Ícone de presente/recompensa
+                    );
+                    sessionStorage.setItem('trabalheComigoPopupShown', 'true');
+                }, 1000); 
+            }
         }
     }
-    
-    // Rastreamento de scroll para pop-up de vídeo
+
+    // Rastreamento de scroll para pop-up de vídeo (personalizado pelo cenário)
     let scrolledToForm = false;
     window.addEventListener('scroll', function() {
-        if (formCadastroSection) {
+        if (formCadastroSection && !scrolledToForm) {
             const rect = formCadastroSection.getBoundingClientRect();
             // Verifica se a seção do formulário está visível na tela
             const isFormSectionVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
-            // Se o usuário desceu até o formulário E ainda não preencheu
-            if (isFormSectionVisible && !scrolledToForm && !localStorage.getItem('formCadastroPreenchido')) {
+            if (isFormSectionVisible && !localStorage.getItem('formCadastroPreenchido')) {
                 scrolledToForm = true; // Marca que já desceu
-                // Abrir pop-up de vídeo após um pequeno delay
-                setTimeout(() => {
-                    openPopup(videoPopup);
-                }, 2000); 
+                if (!sessionStorage.getItem('videoPopupShown')) {
+                    const currentPage = window.location.pathname;
+                    const referrer = document.referrer;
+                    const sessionHistory = window.silasNovaesUserSession.history;
+                    const cameFromIndexAsFirstVisit = sessionHistory.length === 1 && 
+                                                      (referrer.includes('/index.html') || referrer.endsWith('/')) &&
+                                                      currentPage.includes('trabalhe-comigo.html');
+
+                    if (cameFromIndexAsFirstVisit) {
+                        // Exibe vídeo para quem busca emprego
+                        console.log("Scroll para formulário: Cenário Busca por Emprego. Exibindo vídeo pop-up.");
+                        setTimeout(() => {
+                            openPersonalizedPopup(
+                                videoPopup,
+                                'Assista e Transforme sua Carreira!',
+                                'Descubra como você pode ter sucesso na equipe Silas Novaes. Veja o vídeo inspirador sobre a oportunidade.',
+                                'Ir para o Formulário',
+                                '#form-cadastro',
+                                'fas fa-play-circle',
+                                'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1' // URL do vídeo de carreira
+                            );
+                            sessionStorage.setItem('videoPopupShown', 'true');
+                        }, 2000); 
+                    } else {
+                        // Para clientes/curiosos, não exibimos o vídeo de carreira ao rolar até o form
+                        // Poderíamos exibir outro pop-up aqui ou nada, dependendo da estratégia.
+                        console.log("Scroll para formulário: Cenário Cliente/Curiosidade. Não exibindo vídeo pop-up de carreira.");
+                    }
+                }
                 // Enviar evento de "Scroll to Form" para o Google Analytics
                 if (typeof dataLayer !== 'undefined') {
-                    dataLayer.push({
+                    UserTracker.pushToDataLayer({
                         'event': 'scroll_to_element',
                         'element_id': 'form-cadastro',
                         'page_path': window.location.pathname
@@ -331,26 +443,59 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         }
-    });
+    }, { passive: true }); // Usar passive: true para otimizar o desempenho do scroll
 
-    // Pop-up de Intenção de Saída
-    // Será exibido se o usuário tentar sair e ainda não tiver preenchido o formulário
+    // Pop-up de Intenção de Saída (personalizado pelo cenário)
     document.addEventListener('mouseleave', function(event) {
         // Verifica se o mouse está saindo da área da janela para cima (intenção de fechar aba/navegador)
         if (event.clientY < 10 && !localStorage.getItem('formCadastroPreenchido')) {
-            // Evita que o pop-up apareça repetidamente na mesma sessão
             if (!sessionStorage.getItem('exitPopupShown')) {
-                openPopup(exitIntentPopup);
-                sessionStorage.setItem('exitPopupShown', 'true');
-                // Enviar evento de "Exit Intent" para o Google Analytics
-                if (typeof dataLayer !== 'undefined') {
-                    dataLayer.push({
-                        'event': 'exit_intent_popup',
-                        'popup_name': 'exit_intent_popup',
-                        'page_path': window.location.pathname
-                    });
+                const currentPage = window.location.pathname;
+                const referrer = document.referrer;
+                const sessionHistory = window.silasNovaesUserSession.history;
+                const cameFromIndexAsFirstVisit = sessionHistory.length === 1 && 
+                                                  (referrer.includes('/index.html') || referrer.endsWith('/')) &&
+                                                  currentPage.includes('trabalhe-comigo.html');
+
+                if (cameFromIndexAsFirstVisit) {
+                    // Pop-up de saída para quem busca emprego
+                    console.log("Exit Intent: Cenário Busca por Emprego. Exibindo pop-up de saída padrão.");
+                    openPersonalizedPopup(
+                        exitIntentPopup,
+                        'Não vá embora sem conhecer nossa proposta!',
+                        'Preencha o formulário e faça parte de uma equipe de sucesso com treinamento e comissões incríveis.',
+                        'Quero Me Candidatar!',
+                        '#form-cadastro',
+                        'fas fa-handshake'
+                    );
+                } else {
+                    // Pop-up de saída para clientes/curiosos
+                    console.log("Exit Intent: Cenário Cliente/Curiosidade. Exibindo pop-up de indicação.");
+                    openPersonalizedPopup(
+                        exitIntentPopup, // Reutiliza o mesmo elemento de pop-up
+                        'Indique e Ganhe com Silas Novaes!',
+                        'Você já é cliente? Indique amigos e familiares para nossos planos e receba benefícios exclusivos, como descontos ou Pix. Fale conosco para saber mais!',
+                        'Saber Mais',
+                        'https://wa.me/5583991092624',
+                        'fas fa-star' // Ícone de estrela/benefício
+                    );
                 }
+                sessionStorage.setItem('exitPopupShown', 'true');
             }
         }
     });
+
+    // Limpa flags de sessão que podem ter sido setadas em outras páginas
+    sessionStorage.removeItem('formSubmittedSuccessfully');
+    sessionStorage.removeItem('clickedBannerReduceMonthly'); 
+    sessionStorage.removeItem('authorityPopupShownOnAboutPage');
+
+    // Para facilitar os testes, você pode descomentar as linhas abaixo para limpar as flags
+    // a cada carregamento da página "Trabalhe Comigo". REMOVA EM AMBIENTE DE PRODUÇÃO!
+    // sessionStorage.removeItem('trabalheComigoPopupShown');
+    // sessionStorage.removeItem('videoPopupShown');
+    // sessionStorage.removeItem('exitPopupShown');
+
+    // Inicializa a personalização dos pop-ups ao carregar a página
+    checkUserPathAndPersonalizePopups();
 });

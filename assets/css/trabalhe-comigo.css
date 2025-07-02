@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     /* REMOVIDO: overflow: hidden; e position: relative;
-       MOTIVO: Estas propriedades estavam causando o problema de layout,
+        MOTIVO: Estas propriedades estavam causando o problema de layout,
                 escondendo o conteúdo subsequente da página,
                 criando um "bloco azul" indesejado abaixo da imagem do hero. */
     margin-bottom: var(--espacamento-gigante); /* Garante espaçamento consistente com a próxima seção */

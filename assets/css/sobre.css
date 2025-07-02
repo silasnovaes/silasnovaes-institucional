@@ -1,7 +1,7 @@
 /* Estilos específicos para a página Sobre */
 
 /* ============================================= */
-/* ===== SEÇÃO HERO (SOBRE)                ===== */
+/* ===== SEÇÃO HERO (SOBRE)                ===== */
 /* ============================================= */
 .sobre-hero {
     display: flex;
@@ -105,7 +105,7 @@
 
 
 /* ============================================= */
-/* ===== SEÇÃO HISTÓRIA                    ===== */
+/* ===== SEÇÃO HISTÓRIA                    ===== */
 /* ============================================= */
 .historia-section {
     background-color: var(--cor-terciaria);
@@ -220,7 +220,7 @@
 }
 
 /* ============================================= */
-/* ===== SEÇÃO FILOSOFIA / VALORES           ===== */
+/* ===== SEÇÃO FILOSOFIA / VALORES           ===== */
 /* ============================================= */
 .valores-grid {
     display: grid;
@@ -274,7 +274,7 @@
 
 
 /* ============================================= */
-/* ===== GRIDS DE MÉTODO E CONQUISTAS        ===== */
+/* ===== GRIDS DE MÉTODO E CONQUISTAS        ===== */
 /* ============================================= */
 .metodo-grid, .conquistas-grid {
     display: grid;
@@ -322,7 +322,7 @@
 }
 
 /* ============================================= */
-/* ===== POP-UP PERSONALIZADO                ===== */
+/* ===== POP-UP PERSONALIZADO                ===== */
 /* ============================================= */
 .personalized-popup-overlay {
     position: fixed;
@@ -374,7 +374,7 @@
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--cor-primaria);
+    color: var(--cor-primaria); /* MODIFICADO: Usando a cor primária para consistência */
     cursor: pointer;
     line-height: 1;
     transition: var(--transicao-rapida);
@@ -453,7 +453,7 @@
 
 
 /* ============================================= */
-/* ===== RESPONSIVIDADE PÁGINA SOBRE         ===== */
+/* ===== RESPONSIVIDADE PÁGINA SOBRE         ===== */
 /* ============================================= */
 @media (min-width: 769px) {
     .sobre-hero-content-wrapper {

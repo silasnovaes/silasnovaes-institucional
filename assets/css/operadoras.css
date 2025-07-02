@@ -345,8 +345,8 @@
     display: block;
     width: 100%;
     padding: 0.8rem 1rem;
-    background-color: var(--cor-primaria);
-    color: var(--cor-terciaria);
+    background-color: var(--cor-primaria); /* CORRIGIDO: Cor de fundo definida */
+    color: var(--cor-terciaria); /* CORRIGIDO: Cor do texto definida */
     text-align: center;
     border-radius: var(--borda-radius);
     text-decoration: none;
@@ -362,7 +362,7 @@
 }
 
 
-/* Estilos para Pop-ups */
+/* Estilos para Pop-ups (Gerais para esta página) */
 .popup-overlay {
     position: fixed;
     top: 0;

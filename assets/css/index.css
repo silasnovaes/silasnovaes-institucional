@@ -13,6 +13,15 @@
   position: relative;
 }
 
+/* NOVO: Estilo para o link do banner, para que ocupe todo o espaço da imagem */
+.banner-link {
+  display: block; /* Garante que o link ocupe toda a largura/altura */
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Remove sublinhado padrão do link */
+  line-height: 0; /* Remove espaço extra que alguns navegadores adicionam ao redor de imagens em links */
+}
+
 .banner-wrapper img {
   width: 100%;
   height: auto;
@@ -110,8 +119,8 @@
 }
 
 /* REMOVIDO: .servicos-home-section .heading--primary, .servicos-home-section .subtitulo { color: var(--cor-primaria); }
- MOTIVO: O subtítulo foi movido para a classe .servicos-subtitulo.
- O heading--primary é uma classe mais genérica e a cor já é definida por padrão para fundos claros em styles.css. */
+  MOTIVO: O subtítulo foi movido para a classe .servicos-subtitulo.
+  O heading--primary é uma classe mais genérica e a cor já é definida por padrão para fundos claros em styles.css. */
 
 
 .servicos-grid {
@@ -224,9 +233,9 @@
 }
 
 /* REMOVIDO: background-color: var(--cor-fundo-medio); do .diferenciais-section
- MOTIVO: Alterado para 'var(--cor-fundo-claro)' para manter a consistência com
- o fundo do body e outros elementos, criando um visual mais "limpo" e harmônico.
- O azul médio já é usado na header e em outros pontos. */
+  MOTIVO: Alterado para 'var(--cor-fundo-claro)' para manter a consistência com
+  o fundo do body e outros elementos, criando um visual mais "limpo" e harmônico.
+  O azul médio já é usado na header e em outros pontos. */
 
 .diferenciais-grid {
   display: grid;
@@ -248,8 +257,8 @@
 }
 
 /* REMOVIDO: background-color: #fefcea; do .diferencial-item
- MOTIVO: Alterado para 'white' (#fff) para um contraste mais nítido e "clean"
- com o fundo claro da seção, mantendo a consistência com a identidade visual. */
+  MOTIVO: Alterado para 'white' (#fff) para um contraste mais nítido e "clean"
+  com o fundo claro da seção, mantendo a consistência com a identidade visual. */
 
 .diferencial-item:hover {
   transform: translateY(-5px);
@@ -451,8 +460,12 @@
 .faq-item.active .faq-answer {
   padding: var(--espacamento-medio);
   max-height: 500px; /* Um valor alto para cobrir a maioria dos conteúdos.
-                       Para conteúdo muito variável, uma solução JS seria mais precisa. */
+           Para conteúdo muito variável, uma solução JS seria mais precisa. */
 }
+
+/* REMOVIDO: Estilos para o Pop-up "Conheça Silas Novaes"
+   MOTIVO: O pop-up e sua lógica foram movidos para o sistema global de pop-ups (scripts.js e styles.css).
+   Esses estilos específicos de página não são mais necessários aqui. */
 
 
 /* ===== RESPONSIVIDADE PARA SEÇÕES DA HOME ===== */

@@ -1,3 +1,5 @@
+// assets/js/index.js
+
 document.addEventListener("DOMContentLoaded", function() {
     // Script para Slider de Depoimentos na Home
     const sliderHome = document.getElementById('depoimentos-slider');
@@ -68,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // ADICIONADO: Navegação por teclado para acessibilidade
         document.addEventListener('keydown', function(event) {
+            // Verifica se o foco está dentro do slider ou em um de seus elementos filhos
             if (sliderHome.contains(document.activeElement) || document.activeElement.closest('#depoimentos-slider')) {
                 if (event.key === 'ArrowLeft') {
                     prevSlideHome();
@@ -79,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-
         // Configuração inicial
         showSlideHome(currentIndexHome); // Garante que o primeiro slide seja exibido corretamente
         startAutoSlideHome();
@@ -90,4 +92,34 @@ document.addEventListener("DOMContentLoaded", function() {
         dotsContainerHome.addEventListener('mouseenter', () => clearInterval(autoSlideIntervalHome));
         dotsContainerHome.addEventListener('mouseleave', startAutoSlideHome);
     }
+
+    // --- Lógica para o novo Pop-up de Captação Inicial na Home ---
+    // Usamos sessionStorage para garantir que o pop-up apareça apenas uma vez por sessão de navegação.
+    const hasInitialPopupBeenShown = sessionStorage.getItem('initial_popup_shown_this_session');
+
+    if (!hasInitialPopupBeenShown) {
+        // Obtenha o HTML do formulário simplificado do GlobalPopupManager
+        const simplifiedFormHtml = GlobalPopupManager.createSimplifiedQuotationForm();
+        
+        // Use o GlobalPopupManager para exibir o pop-up com o formulário e a copy persuasiva
+        GlobalPopupManager.showPopup(simplifiedFormHtml, {
+            title: "Encontre uma Ferramenta Avançada: Cotação de Planos de Saúde Personalizada!",
+            message: "Nesse site você encontrará uma ferramenta avançada que te mostrará exatamente qual o melhor plano de saúde para o seu perfil. Para começar, preencha o formulário abaixo:",
+            addClass: 'welcome-popup', // Adiciona uma classe específica para estilização opcional
+            enableCloseBtn: true,
+            closeOnClickOutside: true,
+            onClose: () => {
+                // Callback opcional ao fechar o pop-up
+                console.log("Pop-up inicial fechado.");
+                // Marca que o pop-up foi mostrado nesta sessão
+                sessionStorage.setItem('initial_popup_shown_this_session', 'true');
+            }
+        });
+    }
+
+    // REMOVIDO: Toda a lógica do antigo pop-up "Conheça Silas Novaes" (showSilasNovaesPopup, hideSilasNovaesPopup,
+    //           listeners de scroll, tempo e clique fora), pois foi substituído pelo GlobalPopupManager.
+    //           Também removido o rastreamento de clique no banner 'reduceMonthly' já que o UserTracker global já lida com cliques.
+    // MOTIVO: Centralização do gerenciamento de pop-ups e rastreamento de eventos no scripts.js global.
+
 });

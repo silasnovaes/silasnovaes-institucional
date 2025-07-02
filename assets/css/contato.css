@@ -8,15 +8,16 @@
     position: relative;
     overflow: hidden;
 }
-/* .pagina-contato-v2 .hero-contato-v2::before rule removed */
+
 .pagina-contato-v2 .hero-contato-v2 .container {
     position: relative;
     z-index: 2;
 }
-.pagina-contato-v2 .hero-contato-v2 h1 { /* Este é um H1 no HTML, mas foi mudado para H2 na minha correção de HTML, então se tornará H2 */
+.pagina-contato-v2 .hero-contato-v2 h1 { 
     font-size: 3rem;
     margin-bottom: var(--espacamento-pequeno);
     font-weight: 700;
+    color: var(--cor-texto-claro); /* Garante a cor branca para o H1 no hero */
 }
 .pagina-contato-v2 .hero-contato-v2 .subtitulo {
     font-size: 1.2rem;
@@ -44,7 +45,7 @@
     padding: var(--espacamento-grande);
     border-radius: var(--borda-radius);
     box-shadow: var(--sombra-media);
-    /* position: sticky; removed to fix scrolling issue */
+    /* position: sticky; removed to fix scrolling issue - Já estava comentado/removido, bom! */
     /* top: 120px; removed */
 }
 .pagina-contato-v2 .info-contato h2 {
@@ -210,6 +211,26 @@
 .pagina-contato-v2 .form-check-input.is-invalid ~ .form-error {
     display: block;
 }
+.pagina-contato-v2 .form-message {
+    margin-top: var(--espacamento-grande);
+    padding: var(--espacamento-medio);
+    border-radius: var(--borda-radius);
+    text-align: center;
+    display: none;
+}
+.pagina-contato-v2 .form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+.pagina-contato-v2 .form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
 .pagina-contato-v2 .form-submit {
     display: block;
     width: 100%;
@@ -233,25 +254,6 @@
 }
 .pagina-contato-v2 .form-submit i {
     margin-right: var(--espacamento-pequeno);
-}
-.pagina-contato-v2 .form-message {
-    margin-top: var(--espacamento-grande);
-    padding: var(--espacamento-medio);
-    border-radius: var(--borda-radius);
-    text-align: center;
-    display: none;
-}
-.pagina-contato-v2 .form-message.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    display: block;
-}
-.pagina-contato-v2 .form-message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    display: block;
 }
 
 .pagina-contato-v2 .mapa-section {
@@ -382,7 +384,7 @@
 }
 
 @media (max-width: 768px) {
-    .pagina-contato-v2 .hero-contato-v2 h2 { /* Era h1, agora h2 */
+    .pagina-contato-v2 .hero-contato-v2 h1 { /* Era h1, agora h1 */
         font-size: 2.5rem;
     }
     .pagina-contato-v2 .hero-contato-v2 .subtitulo {
